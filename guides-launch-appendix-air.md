@@ -13,8 +13,9 @@ will find:
 
 -   Reasoning behind each requirement
 
-+-------------+-------------+-------------+-------------+-------------+
+
 | **Page**    | **Requireme | **Requireme | **Expected  | **Additiona |
+
 |             | nt          | nt**        | Result**    | l           |
 |             | \#**        |             |             | Information |
 |             |             |             |             | **          |
