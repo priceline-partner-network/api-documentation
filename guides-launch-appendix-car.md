@@ -13,2095 +13,2246 @@ will find:
 
 -   Reasoning behind each requirement
 
-+-------------+-------------+-------------+-------------+-------------+
-| **Page**    | **Requireme | **Requireme | **Expected  | **Additiona |
-|             | nt          | nt**        | Result**    | l           |
-|             | \#**        |             |             | Information |
-|             |             |             |             | **          |
-+=============+=============+=============+=============+=============+
-| Results     | 1.1         | Base rate   | The base    | -   getResu |
-|             |             |             | rate (daily | ltsV3       |
-|             |             |             | or weekly)  |             |
-|             |             |             | is          | -   Returne |
-|             |             |             | displayed   | d           |
-|             |             |             | for each    |     under   |
-|             |             |             | rate        |     the     |
-|             |             |             |             |     \"base\ |
-|             |             |             |             | _rate\"     |
-|             |             |             |             |     &       |
-|             |             |             |             |     \"base\ |
-|             |             |             |             | _type\"     |
-|             |             |             |             |     nodes   |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"price |
-|             |             |             |             | \_details\" |
-|             |             |             |             |     node    |
-+-------------+-------------+-------------+-------------+-------------+
-| Results     | 1.2         | Total price | The total   | -   getResu |
-|             |             |             | price is    | ltsV3       |
-|             |             |             | displayed   |             |
-|             |             |             | for each    | -   Returne |
-|             |             |             | rate        | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"total |
-|             |             |             |             | \_price\"   |
-|             |             |             |             |     node    |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"price |
-|             |             |             |             | \_details\" |
-|             |             |             |             |     node    |
-+-------------+-------------+-------------+-------------+-------------+
-| Results     | 1.3         | Currency    | The correct | -   getResu |
-|             |             |             | currency,   | ltsV3       |
-|             |             |             | currency    |             |
-|             |             |             | code, &     | -   Returne |
-|             |             |             | currency    | d           |
-|             |             |             | symbol are  |     under   |
-|             |             |             | displayed   |     the     |
-|             |             |             |             |     \"displ |
-|             |             |             |             | ay\_currenc |
-|             |             |             |             | y\"         |
-|             |             |             |             |     &       |
-|             |             |             |             |     \"displ |
-|             |             |             |             | ay\_symbol\ |
-|             |             |             |             | "           |
-|             |             |             |             |     nodes   |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"price |
-|             |             |             |             | \_details\" |
-|             |             |             |             |     node    |
-+-------------+-------------+-------------+-------------+-------------+
-| Results     | 1.4         | Rental      | The rental  | -   getResu |
-|             |             | Company     | company     | ltsV3       |
-|             |             |             | name/logo   |             |
-|             |             |             | must be     | -   The     |
-|             |             |             | displayed   |     rental  |
-|             |             |             | for each    |     company |
-|             |             |             | rate        |     is      |
-|             |             |             |             |     returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"name\ |
-|             |             |             |             | "           |
-|             |             |             |             |     node    |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"partn |
-|             |             |             |             | er\"        |
-|             |             |             |             |     node    |
-|             |             |             |             |             |
-|             |             |             |             | -   The     |
-|             |             |             |             |     logo is |
-|             |             |             |             |     returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"logo\ |
-|             |             |             |             | "           |
-|             |             |             |             |     node    |
-+-------------+-------------+-------------+-------------+-------------+
-| Results     | 1.5         | Pickup/Drop |             | -   getResu |
-|             |             | off         |             | ltsV3       |
-|             |             | information |             |             |
-|             |             |             |             | -   The     |
-|             |             |             |             |     pickup  |
-|             |             |             |             |     locatio |
-|             |             |             |             | n           |
-|             |             |             |             |     is      |
-|             |             |             |             |     returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"locat |
-|             |             |             |             | ion\"       |
-|             |             |             |             |     node    |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"picku |
-|             |             |             |             | p\"         |
-|             |             |             |             |     node    |
-|             |             |             |             |             |
-|             |             |             |             | -   The     |
-|             |             |             |             |     dropoff |
-|             |             |             |             |     locatio |
-|             |             |             |             | n           |
-|             |             |             |             |     is      |
-|             |             |             |             |     returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"locat |
-|             |             |             |             | ion\"       |
-|             |             |             |             |     node    |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"dropo |
-|             |             |             |             | ff\"        |
-|             |             |             |             |     node    |
-+-------------+-------------+-------------+-------------+-------------+
-| Results     | 1.6         | Car type    | The car     | -   getResu |
-|             |             |             | type must   | ltsV3       |
-|             |             |             | be          |             |
-|             |             |             | displayed   | -   Returne |
-|             |             |             | for each    | d           |
-|             |             |             | rate        |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"descr |
-|             |             |             |             | iption\"    |
-|             |             |             |             |     node    |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"car\" |
-|             |             |             |             |     node    |
-+-------------+-------------+-------------+-------------+-------------+
-| Results     | 1.7         | Car         | The         | -   getResu |
-|             |             | amenities   | amenities   | ltsV3       |
-|             |             |             | must be     |             |
-|             |             |             | displayed   | -   The     |
-|             |             |             | for each    |     amount  |
-|             |             |             | rate        |     of      |
-|             |             |             |             |     passeng |
-|             |             |             |             | ers         |
-|             |             |             |             |     is      |
-|             |             |             |             |     returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"passe |
-|             |             |             |             | ngers\"     |
-|             |             |             |             |     node    |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"car\" |
-|             |             |             |             |     node    |
-|             |             |             |             |             |
-|             |             |             |             | -   The     |
-|             |             |             |             |     amount  |
-|             |             |             |             |     of      |
-|             |             |             |             |     suitcas |
-|             |             |             |             | es          |
-|             |             |             |             |     is      |
-|             |             |             |             |     returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"bags\ |
-|             |             |             |             | '           |
-|             |             |             |             |     node    |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"car\" |
-|             |             |             |             |     node    |
-|             |             |             |             |             |
-|             |             |             |             | -   The     |
-|             |             |             |             |     transmi |
-|             |             |             |             | ssion       |
-|             |             |             |             |     informa |
-|             |             |             |             | tion        |
-|             |             |             |             |     is      |
-|             |             |             |             |     returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"autom |
-|             |             |             |             | atic\_trans |
-|             |             |             |             | mission\"   |
-|             |             |             |             |     node    |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"car\" |
-|             |             |             |             |     node    |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"y |
-|             |             |             |             | es\"        |
-|             |             |             |             |         =   |
-|             |             |             |             |         aut |
-|             |             |             |             | omatic      |
-|             |             |             |             |         tra |
-|             |             |             |             | nsmission   |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"n |
-|             |             |             |             | o\"         |
-|             |             |             |             |         =   |
-|             |             |             |             |         man |
-|             |             |             |             | ual         |
-|             |             |             |             |         tra |
-|             |             |             |             | nsmission   |
-|             |             |             |             |             |
-|             |             |             |             | -   The     |
-|             |             |             |             |     air-con |
-|             |             |             |             | ditioning   |
-|             |             |             |             |     informa |
-|             |             |             |             | tion        |
-|             |             |             |             |     is      |
-|             |             |             |             |     returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"air\_ |
-|             |             |             |             | conditionin |
-|             |             |             |             | g\"         |
-|             |             |             |             |     node    |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"car\" |
-|             |             |             |             |     node    |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"y |
-|             |             |             |             | es\"        |
-|             |             |             |             |         =   |
-|             |             |             |             |         air |
-|             |             |             |             | -conditioni |
-|             |             |             |             | ng          |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"n |
-|             |             |             |             | o\"         |
-|             |             |             |             |         =   |
-|             |             |             |             |         no  |
-|             |             |             |             |         air |
-|             |             |             |             | -conditioni |
-|             |             |             |             | ng          |
-|             |             |             |             |             |
-|             |             |             |             | -   The     |
-|             |             |             |             |     mileage |
-|             |             |             |             |     informa |
-|             |             |             |             | tion        |
-|             |             |             |             |     is      |
-|             |             |             |             |     returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"milea |
-|             |             |             |             | ge\"        |
-|             |             |             |             |     node    |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"price |
-|             |             |             |             | \_details\" |
-|             |             |             |             |     node    |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"t |
-|             |             |             |             | rue\"       |
-|             |             |             |             |         =   |
-|             |             |             |             |         unl |
-|             |             |             |             | imited      |
-|             |             |             |             |         mil |
-|             |             |             |             | eage        |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"f |
-|             |             |             |             | alse\"      |
-|             |             |             |             |         =   |
-|             |             |             |             |         lim |
-|             |             |             |             | ited        |
-|             |             |             |             |         mil |
-|             |             |             |             | eage        |
-+-------------+-------------+-------------+-------------+-------------+
-| Results     | 1.8         | Search box  | A search    | -   getCarA |
-|             |             |             | box is      | utoComplete |
-|             |             |             | accessible  |             |
-|             |             |             | on the      |             |
-|             |             |             | Results     |             |
-|             |             |             | page        |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Contract    | 2.1         | Policy      | -   Credit  | -   getPoli |
-|             |             | information |     card    | cy.Car      |
-|             |             |             |     disclai |             |
-|             |             |             | mer         | -   getCont |
-|             |             |             |             | ractRequest |
-|             |             |             | -   Accepta |             |
-|             |             |             | ble         |     -   Ret |
-|             |             |             |     forms   | urned       |
-|             |             |             |     of      |         und |
-|             |             |             |     payment | er          |
-|             |             |             |     link    |         the |
-|             |             |             |             |         \"c |
-|             |             |             | -   Under   | ar\_policy\ |
-|             |             |             |     25?     | _data\"     |
-|             |             |             |     link    |         nod |
-|             |             |             |             | e.          |
-|             |             |             | -   Terms & |             |
-|             |             |             |     Conditi |             |
-|             |             |             | ons         |             |
-|             |             |             |             |             |
-|             |             |             | -   Privacy |             |
-|             |             |             |     Policy  |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Contract    | 2.2         | Pickup      | -   The     | -   getCont |
-|             |             | location    |     selecte | ractRequest |
-|             |             |             | d           |             |
-|             |             |             |     pickup  | -   Returne |
-|             |             |             |     locatio | d           |
-|             |             |             | n           |     under   |
-|             |             |             |     must be |     the     |
-|             |             |             |     display |     \"picku |
-|             |             |             | ed          | p\_airport\ |
-|             |             |             |             | _name\"     |
-|             |             |             | -   Day of  |     and     |
-|             |             |             |     the     |     subsequ |
-|             |             |             |     week    | ent         |
-|             |             |             |     must be |     address |
-|             |             |             |     include | /location   |
-|             |             |             | d           |     nodes   |
-|             |             |             |             |     for     |
-|             |             |             | -   Time of |     airport |
-|             |             |             |     day     |     locatio |
-|             |             |             |     must be | ns          |
-|             |             |             |     include |             |
-|             |             |             | d           | -   Returne |
-|             |             |             |             | d           |
-|             |             |             | -   The     |     under   |
-|             |             |             |     full    |     the     |
-|             |             |             |     address |     \"picku |
-|             |             |             |     must be | p\_address\ |
-|             |             |             |     display | "           |
-|             |             |             | ed          |     node    |
-|             |             |             |             |     and     |
-|             |             |             |             |     subsequ |
-|             |             |             |             | ent         |
-|             |             |             |             |     address |
-|             |             |             |             | /location   |
-|             |             |             |             |     nodes   |
-|             |             |             |             |     for     |
-|             |             |             |             |     off-air |
-|             |             |             |             | port        |
-|             |             |             |             |     (city)  |
-|             |             |             |             |     locatio |
-|             |             |             |             | ns          |
-+-------------+-------------+-------------+-------------+-------------+
-| Contract    | 2.3         | Dropoff     | -   The     | -   getCont |
-|             |             | location    |     selecte | ractRequest |
-|             |             | (if         | d           |             |
-|             |             | different   |     dropoff | -   Returne |
-|             |             | from        |     locatio | d           |
-|             |             | pickup)     | n           |     under   |
-|             |             |             |     must be |     the     |
-|             |             |             |     display |     \"dropo |
-|             |             |             | ed          | ff\_airport |
-|             |             |             |             | \_name\"    |
-|             |             |             | -   Day of  |     and     |
-|             |             |             |     the     |     subsequ |
-|             |             |             |     week    | ent         |
-|             |             |             |     must be |     address |
-|             |             |             |     include | /location   |
-|             |             |             | d           |     nodes   |
-|             |             |             |             |     for     |
-|             |             |             | -   Time of |     airport |
-|             |             |             |     day     |     locatio |
-|             |             |             |     must be | ns          |
-|             |             |             |     include |             |
-|             |             |             | d           | -   Returne |
-|             |             |             |             | d           |
-|             |             |             | -   The     |     under   |
-|             |             |             |     full    |     the     |
-|             |             |             |     address |     \"dropo |
-|             |             |             |     must be | ff\_address |
-|             |             |             |     display | \"          |
-|             |             |             | ed          |     node    |
-|             |             |             |             |     and     |
-|             |             |             |             |     subsequ |
-|             |             |             |             | ent         |
-|             |             |             |             |     address |
-|             |             |             |             | /location   |
-|             |             |             |             |     nodes   |
-|             |             |             |             |     for     |
-|             |             |             |             |     off-air |
-|             |             |             |             | port        |
-|             |             |             |             |     (city)  |
-|             |             |             |             |     locatio |
-|             |             |             |             | ns          |
-+-------------+-------------+-------------+-------------+-------------+
-| Contract    | 2.4         | Counter     | The data    | -   getCont |
-|             |             | directions/ | returned    | ractRequest |
-|             |             | airport     | must be     |             |
-|             |             | terminal    | displayed;  | -   Returne |
-|             |             | information | it can be   | d           |
-|             |             |             | hidden      |     under   |
-|             |             |             | behind a    |     the     |
-|             |             |             | click       |     \"shutt |
-|             |             |             |             | le\_text\"  |
-|             |             |             |             |     node.   |
-+-------------+-------------+-------------+-------------+-------------+
-| Contract    | 2.5         | Hours of    | The rental  | -   getCont |
-|             |             | operation   | company\'s  | ractRequest |
-|             |             |             | hours of    |             |
-|             |             |             | operations  | -   Returne |
-|             |             |             | are         | d           |
-|             |             |             | displayed   |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"open\ |
-|             |             |             |             | "           |
-|             |             |             |             |     &       |
-|             |             |             |             |     \"close |
-|             |             |             |             | \"          |
-|             |             |             |             |     nodes   |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"picku |
-|             |             |             |             | p\_hours\_d |
-|             |             |             |             | ata\"       |
-|             |             |             |             |     node    |
-|             |             |             |             |     for     |
-|             |             |             |             |     pickup  |
-|             |             |             |             |     locatio |
-|             |             |             |             | ns.         |
-|             |             |             |             |             |
-|             |             |             |             | -   Returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"open\ |
-|             |             |             |             | "           |
-|             |             |             |             |     &       |
-|             |             |             |             |     \"close |
-|             |             |             |             | \"          |
-|             |             |             |             |     nodes   |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"dropo |
-|             |             |             |             | ff\_hours\_ |
-|             |             |             |             | data\"      |
-|             |             |             |             |     node    |
-|             |             |             |             |     for     |
-|             |             |             |             |     dropoff |
-|             |             |             |             |     locatio |
-|             |             |             |             | ns          |
-|             |             |             |             |     (if     |
-|             |             |             |             |     differe |
-|             |             |             |             | nt          |
-|             |             |             |             |     than    |
-|             |             |             |             |     pickup) |
-|             |             |             |             | .           |
-+-------------+-------------+-------------+-------------+-------------+
-| Contract    | 2.6         | Rental      | The rental  | -   getCont |
-|             |             | company     | company     | ractRequest |
-|             |             |             | name/logo   |             |
-|             |             |             | is          | -   The     |
-|             |             |             | displayed   |     rental  |
-|             |             |             |             |     company |
-|             |             |             |             |     is      |
-|             |             |             |             |     returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"partn |
-|             |             |             |             | er\_name\"  |
-|             |             |             |             |     node    |
-|             |             |             |             |             |
-|             |             |             |             | -   The     |
-|             |             |             |             |     logo is |
-|             |             |             |             |     returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"partn |
-|             |             |             |             | er\_logo\"  |
-|             |             |             |             |     node    |
-+-------------+-------------+-------------+-------------+-------------+
-| Contract    | 2.7         | Car type    | The car     | -   getCont |
-|             |             |             | type is     | ractRequest |
-|             |             |             | displayed   |             |
-|             |             |             |             | -   Returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"descr |
-|             |             |             |             | iption\"    |
-|             |             |             |             |     node    |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"car\_ |
-|             |             |             |             | info\"      |
-|             |             |             |             |     node    |
-+-------------+-------------+-------------+-------------+-------------+
-| Contract    | 2.8         | Car         | The         | -   getCont |
-|             |             | amenities   | amenities   | ractRequest |
-|             |             |             | are         |             |
-|             |             |             | displayed   | -   The     |
-|             |             |             |             |     amount  |
-|             |             |             |             |     of      |
-|             |             |             |             |     passeng |
-|             |             |             |             | ers         |
-|             |             |             |             |     is      |
-|             |             |             |             |     returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"passe |
-|             |             |             |             | ngers\"     |
-|             |             |             |             |     node    |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"car\_ |
-|             |             |             |             | info\"      |
-|             |             |             |             |     node    |
-|             |             |             |             |             |
-|             |             |             |             | -   The     |
-|             |             |             |             |     amount  |
-|             |             |             |             |     of      |
-|             |             |             |             |     suitcas |
-|             |             |             |             | es          |
-|             |             |             |             |     is      |
-|             |             |             |             |     returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"bags\ |
-|             |             |             |             | '           |
-|             |             |             |             |     node    |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"car\" |
-|             |             |             |             |     node    |
-|             |             |             |             |             |
-|             |             |             |             | -   The     |
-|             |             |             |             |     transmi |
-|             |             |             |             | ssion       |
-|             |             |             |             |     informa |
-|             |             |             |             | tion        |
-|             |             |             |             |     is      |
-|             |             |             |             |     returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"autom |
-|             |             |             |             | atic\_trans |
-|             |             |             |             | mission\"   |
-|             |             |             |             |     node    |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"car\" |
-|             |             |             |             |     node    |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"y |
-|             |             |             |             | es\"        |
-|             |             |             |             |         =   |
-|             |             |             |             |         aut |
-|             |             |             |             | omatic      |
-|             |             |             |             |         tra |
-|             |             |             |             | nsmission   |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"n |
-|             |             |             |             | o\"         |
-|             |             |             |             |         =   |
-|             |             |             |             |         man |
-|             |             |             |             | ual         |
-|             |             |             |             |         tra |
-|             |             |             |             | nsmission   |
-|             |             |             |             |             |
-|             |             |             |             | -   The     |
-|             |             |             |             |     air-con |
-|             |             |             |             | ditioning   |
-|             |             |             |             |     informa |
-|             |             |             |             | tion        |
-|             |             |             |             |     is      |
-|             |             |             |             |     returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"air\_ |
-|             |             |             |             | conditionin |
-|             |             |             |             | g\"         |
-|             |             |             |             |     node    |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"car\" |
-|             |             |             |             |     node    |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"y |
-|             |             |             |             | es\"        |
-|             |             |             |             |         =   |
-|             |             |             |             |         air |
-|             |             |             |             | -conditioni |
-|             |             |             |             | ng          |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"n |
-|             |             |             |             | o\"         |
-|             |             |             |             |         =   |
-|             |             |             |             |         no  |
-|             |             |             |             |         air |
-|             |             |             |             | -conditioni |
-|             |             |             |             | ng          |
-+-------------+-------------+-------------+-------------+-------------+
-| Contract    | 2.9         | Mileage     | The mileage | -   getCont |
-|             |             |             | is          | ractRequest |
-|             |             |             | displayed   |             |
-|             |             |             |             | -   The     |
-|             |             |             |             |     mileage |
-|             |             |             |             |     informa |
-|             |             |             |             | tion        |
-|             |             |             |             |     is      |
-|             |             |             |             |     returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"milea |
-|             |             |             |             | ge\"        |
-|             |             |             |             |     node    |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"price |
-|             |             |             |             | \_details\" |
-|             |             |             |             |     node    |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"u |
-|             |             |             |             | nlimited\"  |
-|             |             |             |             |         =   |
-|             |             |             |             |         unl |
-|             |             |             |             | imited      |
-|             |             |             |             |         mil |
-|             |             |             |             | eage        |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"l |
-|             |             |             |             | imited\"    |
-|             |             |             |             |         =   |
-|             |             |             |             |         lim |
-|             |             |             |             | ited        |
-|             |             |             |             |         mil |
-|             |             |             |             | eage        |
-+-------------+-------------+-------------+-------------+-------------+
-| Contract    | 2.1.0       | Free        | Verbiage or | Front end   |
-|             |             | cancellatio | banner is   | change for  |
-|             |             | n           | displayed   | the partner |
-|             |             | verbiage    | for post    |             |
-|             |             | for         | paid rates  |             |
-|             |             | post-paid   |             |             |
-|             |             | rates       |             |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Contract    | 2.1.1       | Summary of  | -   The     | -   getCont |
-|             |             | Charges     |     base    | ractRequest |
-|             |             |             |     rate is |             |
-|             |             |             |     display | -   The     |
-|             |             |             | ed          |     base    |
-|             |             |             |             |     rate is |
-|             |             |             | -   The     |     returne |
-|             |             |             |     number  | d           |
-|             |             |             |     of      |     under   |
-|             |             |             |     days/we |     the     |
-|             |             |             | eks         |     \"displ |
-|             |             |             |     is      | ay\_price\" |
-|             |             |             |     display |     node    |
-|             |             |             | ed          |     within  |
-|             |             |             |             |     the     |
-|             |             |             | -   Extra   |     \"prici |
-|             |             |             |     day     | ng\"        |
-|             |             |             |     rate is |     node.   |
-|             |             |             |     display |             |
-|             |             |             | ed          | -   The     |
-|             |             |             |     when    |     correct |
-|             |             |             |     returne |     label   |
-|             |             |             | d           |     as well |
-|             |             |             |             |     as      |
-|             |             |             | -   The     |     number  |
-|             |             |             |     Taxes   |     of      |
-|             |             |             |     and     |     days/we |
-|             |             |             |     Fees is | eks         |
-|             |             |             |     display |     are     |
-|             |             |             | ed          |     returne |
-|             |             |             |             | d           |
-|             |             |             |     -   Not |     under   |
-|             |             |             |         dis |     the     |
-|             |             |             | played      |     \"type\ |
-|             |             |             |         for | "           |
-|             |             |             |         pre |     &       |
-|             |             |             | paid        |     \"facto |
-|             |             |             |         rat | r\"         |
-|             |             |             | es,         |     nodes   |
-|             |             |             |         lum |     within  |
-|             |             |             | ped         |     the     |
-|             |             |             |         int |     \"prici |
-|             |             |             | o           | ng\"        |
-|             |             |             |         tot |     node.   |
-|             |             |             | al          |             |
-|             |             |             |             |     -   Ext |
-|             |             |             |     -   \"T | ra          |
-|             |             |             | axes        |         day |
-|             |             |             |         and |         rat |
-|             |             |             |         Fee | e           |
-|             |             |             | s\"         |         is  |
-|             |             |             |         is  |         ret |
-|             |             |             |         hyp | urned       |
-|             |             |             | erlinked    |         und |
-|             |             |             |         to  | er          |
-|             |             |             |         a   |         the |
-|             |             |             |         lig |         \"t |
-|             |             |             | ht          | ype\"       |
-|             |             |             |         box |         &   |
-|             |             |             |         tha |         \"f |
-|             |             |             | t           | actor\"     |
-|             |             |             |         dis |         nod |
-|             |             |             | plays       | es          |
-|             |             |             |         add |         wit |
-|             |             |             | itional     | hin         |
-|             |             |             |         ver |         the |
-|             |             |             | biage       |         2nd |
-|             |             |             |             |         \"b |
-|             |             |             | -   The     | reakdown\"  |
-|             |             |             |     total   |         clu |
-|             |             |             |     is      | ster        |
-|             |             |             |     display |             |
-|             |             |             | ed          |         -   |
-|             |             |             |             |  type       |
-|             |             |             |     -   Pos |             |
-|             |             |             | t           |  =          |
-|             |             |             |         pai |             |
-|             |             |             | d           |  \"Extra    |
-|             |             |             |         rat |             |
-|             |             |             | es          |  Day\"      |
-|             |             |             |         dis |             |
-|             |             |             | play        |         -   |
-|             |             |             |         the |  factor     |
-|             |             |             |         amo |             |
-|             |             |             | unt         |  =          |
-|             |             |             |         due |             |
-|             |             |             |         at  |  amount     |
-|             |             |             |         cou |             |
-|             |             |             | nter        |  of         |
-|             |             |             |             |             |
-|             |             |             |     -   Pre |  extra      |
-|             |             |             | paid        |             |
-|             |             |             |         rat |  days       |
-|             |             |             | es          |             |
-|             |             |             |         dis | -   The     |
-|             |             |             | play        |     Taxes   |
-|             |             |             |         the |     and     |
-|             |             |             |         amo |     Fees    |
-|             |             |             | unt         |     are     |
-|             |             |             |         due |     returne |
-|             |             |             |         now | d           |
-|             |             |             |             |     under   |
-|             |             |             | -   The     |     the     |
-|             |             |             |     price   |     \"sourc |
-|             |             |             |     disclai | e\_total\"  |
-|             |             |             | mer         |     node    |
-|             |             |             |     is      |     within  |
-|             |             |             |     display |     the     |
-|             |             |             | ed          |     \"taxes |
-|             |             |             |             | \_and\_fees |
-|             |             |             |             | \"          |
-|             |             |             |             |     node.   |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"T |
-|             |             |             |             | axes        |
-|             |             |             |             |         and |
-|             |             |             |             |         Fee |
-|             |             |             |             | s\"         |
-|             |             |             |             |         mus |
-|             |             |             |             | t           |
-|             |             |             |             |         be  |
-|             |             |             |             |         a   |
-|             |             |             |             |         hyp |
-|             |             |             |             | erlink      |
-|             |             |             |             |         tha |
-|             |             |             |             | t           |
-|             |             |             |             |         dis |
-|             |             |             |             | plays       |
-|             |             |             |             |         add |
-|             |             |             |             | itional     |
-|             |             |             |             |         ver |
-|             |             |             |             | biage       |
-|             |             |             |             |         tha |
-|             |             |             |             | t           |
-|             |             |             |             |         is  |
-|             |             |             |             |         ret |
-|             |             |             |             | urned       |
-|             |             |             |             |         und |
-|             |             |             |             | er          |
-|             |             |             |             |         the |
-|             |             |             |             |         \"b |
-|             |             |             |             | reakdown\_d |
-|             |             |             |             | ata\"       |
-|             |             |             |             |         nod |
-|             |             |             |             | e           |
-|             |             |             |             |         wit |
-|             |             |             |             | hin         |
-|             |             |             |             |         the |
-|             |             |             |             |         \"t |
-|             |             |             |             | axes\_and\_ |
-|             |             |             |             | fees\"      |
-|             |             |             |             |         nod |
-|             |             |             |             | e.          |
-|             |             |             |             |             |
-|             |             |             |             | -   The     |
-|             |             |             |             |     correct |
-|             |             |             |             |     label   |
-|             |             |             |             |     and     |
-|             |             |             |             |     total   |
-|             |             |             |             |     are     |
-|             |             |             |             |     returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"total |
-|             |             |             |             | \_label\".  |
-|             |             |             |             |             |
-|             |             |             |             |     -   The |
-|             |             |             |             |         tot |
-|             |             |             |             | al          |
-|             |             |             |             |         wil |
-|             |             |             |             | l           |
-|             |             |             |             |         ret |
-|             |             |             |             | urned       |
-|             |             |             |             |         und |
-|             |             |             |             | er          |
-|             |             |             |             |         the |
-|             |             |             |             |         \"p |
-|             |             |             |             | repaid\_at\ |
-|             |             |             |             | _counter\"  |
-|             |             |             |             |         for |
-|             |             |             |             |         pos |
-|             |             |             |             | t           |
-|             |             |             |             |         pai |
-|             |             |             |             | d           |
-|             |             |             |             |         boo |
-|             |             |             |             | kings       |
-|             |             |             |             |             |
-|             |             |             |             |     -   The |
-|             |             |             |             |         tot |
-|             |             |             |             | al          |
-|             |             |             |             |         wil |
-|             |             |             |             | l           |
-|             |             |             |             |         ret |
-|             |             |             |             | urned       |
-|             |             |             |             |         und |
-|             |             |             |             | er          |
-|             |             |             |             |         the |
-|             |             |             |             |         \"p |
-|             |             |             |             | repaid\_at\ |
-|             |             |             |             | _booking\"  |
-|             |             |             |             |         nod |
-|             |             |             |             | e           |
-|             |             |             |             |         for |
-|             |             |             |             |         pre |
-|             |             |             |             | paid        |
-|             |             |             |             |         boo |
-|             |             |             |             | kings.      |
-|             |             |             |             |             |
-|             |             |             |             | -   If      |
-|             |             |             |             |     wanting |
-|             |             |             |             |     to      |
-|             |             |             |             |     display |
-|             |             |             |             |     a       |
-|             |             |             |             |     differe |
-|             |             |             |             | nt          |
-|             |             |             |             |     currenc |
-|             |             |             |             | y           |
-|             |             |             |             |     other   |
-|             |             |             |             |     than    |
-|             |             |             |             |     the     |
-|             |             |             |             |     source  |
-|             |             |             |             |     (curren |
-|             |             |             |             | cy          |
-|             |             |             |             |     used to |
-|             |             |             |             |     book),  |
-|             |             |             |             |     use the |
-|             |             |             |             |     \"displ |
-|             |             |             |             | ay\"        |
-|             |             |             |             |     nodes   |
-|             |             |             |             |     instead |
-|             |             |             |             |     of the  |
-|             |             |             |             |     \"sourc |
-|             |             |             |             | e\"         |
-|             |             |             |             |     nodes.  |
-|             |             |             |             |             |
-|             |             |             |             | -   The     |
-|             |             |             |             |     Price   |
-|             |             |             |             |     Disclai |
-|             |             |             |             | mer         |
-|             |             |             |             |     is a    |
-|             |             |             |             |     front   |
-|             |             |             |             |     end     |
-|             |             |             |             |     change  |
-|             |             |             |             |     for the |
-|             |             |             |             |     partner |
-+-------------+-------------+-------------+-------------+-------------+
-| Contract    | 2.1.2       | Important   | -   The     | -   getCont |
-|             |             | Information |     Importa | ractRequest |
-|             |             |             | nt          |             |
-|             |             |             |     Informa | -   Returne |
-|             |             |             | tion        | d           |
-|             |             |             |     must be |     under   |
-|             |             |             |     display |     the     |
-|             |             |             | ed          |     \"impor |
-|             |             |             |     for the | tant\_infor |
-|             |             |             |     selecte | mation\"    |
-|             |             |             | d           |     node,   |
-|             |             |             |     rate    |     each    |
-|             |             |             |             |     cluster |
-|             |             |             | -   Each    |     that    |
-|             |             |             |     invento |     returns |
-|             |             |             | ry          |     \"manda |
-|             |             |             |     type    | tory\"      |
-|             |             |             |     has a   |     within  |
-|             |             |             |     differe |     the     |
-|             |             |             | nt          |     \"displ |
-|             |             |             |     set of  | ay\"        |
-|             |             |             |     verbiag |     node    |
-|             |             |             | e           |     must be |
-|             |             |             |             |     display |
-|             |             |             |             | ed          |
-|             |             |             |             |             |
-|             |             |             |             | -   \#START |
-|             |             |             |             | \_ANCHOR\_P |
-|             |             |             |             | ARTNERPAYME |
-|             |             |             |             | NTOPTIONS\# |
-|             |             |             |             | partner     |
-|             |             |             |             |     payment |
-|             |             |             |             |     options |
-|             |             |             |             | \#END\_ANCH |
-|             |             |             |             | OR\_PARTNER |
-|             |             |             |             | PAYMENTOPTI |
-|             |             |             |             | ONS\#       |
-|             |             |             |             |     pulls   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"car\_ |
-|             |             |             |             | policy\_dat |
-|             |             |             |             | a\"         |
-|             |             |             |             |     node.   |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"p |
-|             |             |             |             | artner      |
-|             |             |             |             |         pay |
-|             |             |             |             | ment        |
-|             |             |             |             |         opt |
-|             |             |             |             | ions\"      |
-|             |             |             |             |         is  |
-|             |             |             |             |         a   |
-|             |             |             |             |         hyp |
-|             |             |             |             | erlink      |
-|             |             |             |             |             |
-|             |             |             |             | -   \#START |
-|             |             |             |             | \_ANCHOR\_R |
-|             |             |             |             | ENTALPOLICY |
-|             |             |             |             | ANDRULES\#r |
-|             |             |             |             | ental       |
-|             |             |             |             |     policy  |
-|             |             |             |             |     and     |
-|             |             |             |             |     rules   |
-|             |             |             |             |     informa |
-|             |             |             |             | tion\#END\_ |
-|             |             |             |             | ANCHOR\_REN |
-|             |             |             |             | TALPOLICYAN |
-|             |             |             |             | DRULES\#    |
-|             |             |             |             |     pulls t |
-|             |             |             |             | he          |
-|             |             |             |             |     \"car\_ |
-|             |             |             |             | policy\_dat |
-|             |             |             |             | a\"         |
-|             |             |             |             |     node.   |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"r |
-|             |             |             |             | ental       |
-|             |             |             |             |         pol |
-|             |             |             |             | icy         |
-|             |             |             |             |         and |
-|             |             |             |             |         rul |
-|             |             |             |             | es          |
-|             |             |             |             |         inf |
-|             |             |             |             | ormation\"  |
-|             |             |             |             |         is  |
-|             |             |             |             |         a   |
-|             |             |             |             |         hyp |
-|             |             |             |             | erlink      |
-|             |             |             |             |             |
-|             |             |             |             | -   \#START |
-|             |             |             |             | \_ANCHOR\_T |
-|             |             |             |             | ERMSANDCOND |
-|             |             |             |             | ITIONS\#ter |
-|             |             |             |             | ms          |
-|             |             |             |             |     and     |
-|             |             |             |             |     conditi |
-|             |             |             |             | ons\#END\_A |
-|             |             |             |             | NCHOR\_TERM |
-|             |             |             |             | SANDCONDITI |
-|             |             |             |             | ONS\#       |
-|             |             |             |             |     pulls   |
-|             |             |             |             |     the     |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"t |
-|             |             |             |             | erms        |
-|             |             |             |             |         and |
-|             |             |             |             |         con |
-|             |             |             |             | ditions\"   |
-|             |             |             |             |         is  |
-|             |             |             |             |         a   |
-|             |             |             |             |         hyp |
-|             |             |             |             | erlink      |
-|             |             |             |             |             |
-|             |             |             |             | -   \#START |
-|             |             |             |             | \_ANCHOR\_P |
-|             |             |             |             | RIVACYPOLIC |
-|             |             |             |             | Y\#privacy  |
-|             |             |             |             |     policy\ |
-|             |             |             |             | #END\_ANCHO |
-|             |             |             |             | R\_PRIVACYP |
-|             |             |             |             | OLICY\#     |
-|             |             |             |             |     pulls   |
-|             |             |             |             |     the     |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"p |
-|             |             |             |             | rivacy      |
-|             |             |             |             |         pol |
-|             |             |             |             | icy\"       |
-|             |             |             |             |         is  |
-|             |             |             |             |         a   |
-|             |             |             |             |         hyp |
-|             |             |             |             | erlink      |
-|             |             |             |             |             |
-|             |             |             |             | -   \#START |
-|             |             |             |             | \_ANCHOR\_P |
-|             |             |             |             | REPAID\#Pay |
-|             |             |             |             |     Now\#EN |
-|             |             |             |             | D\_ANCHOR\_ |
-|             |             |             |             | PREPAID\#   |
-|             |             |             |             |     pulls   |
-|             |             |             |             |     the     |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"P |
-|             |             |             |             | ay          |
-|             |             |             |             |         Now |
-|             |             |             |             | \"          |
-|             |             |             |             |         is  |
-|             |             |             |             |         a   |
-|             |             |             |             |         hyp |
-|             |             |             |             | erlink      |
-|             |             |             |             |             |
-|             |             |             |             | -   \#START |
-|             |             |             |             | \_ANCHOR\_P |
-|             |             |             |             | REPAID\#Can |
-|             |             |             |             | cellation   |
-|             |             |             |             |     fees\#E |
-|             |             |             |             | ND\_ANCHOR\ |
-|             |             |             |             | _PREPAID\#  |
-|             |             |             |             |     pulls   |
-|             |             |             |             |     the     |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"C |
-|             |             |             |             | ancellation |
-|             |             |             |             |         fee |
-|             |             |             |             | s\"         |
-|             |             |             |             |         is  |
-|             |             |             |             |         a   |
-|             |             |             |             |         hyp |
-|             |             |             |             | erlink      |
-+-------------+-------------+-------------+-------------+-------------+
-| Success     | 3.1         | Booking     | The status  | -   getCarL |
-|             |             | status      | of the      | ookUp       |
-|             |             |             | reservation |             |
-|             |             |             | is          | -   Returne |
-|             |             |             | displayed   | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"statu |
-|             |             |             |             | s\"         |
-|             |             |             |             |     node    |
-+-------------+-------------+-------------+-------------+-------------+
-| Success     | 3.2         | Trip Id     | The Trip Id | -   getCarL |
-|             |             |             | that is     | ookUp       |
-|             |             |             | returned is |             |
-|             |             |             | displayed   | -   Returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"booki |
-|             |             |             |             | ng\_id\"    |
-|             |             |             |             |     node    |
-+-------------+-------------+-------------+-------------+-------------+
-| Success     | 3.3         | Rental      | The rental  | -   getCarL |
-|             |             | company     | company     | ookUp       |
-|             |             | confirmatio | confirmatio |             |
-|             |             | n           | n           | -   Returne |
-|             |             | number      | number that | d           |
-|             |             |             | is returned |     under   |
-|             |             |             | is          |     the     |
-|             |             |             | displayed   |     \"partn |
-|             |             |             |             | er\_confirm |
-|             |             |             |             | ation\_numb |
-|             |             |             |             | er\"        |
-|             |             |             |             |     node    |
-+-------------+-------------+-------------+-------------+-------------+
-| Success     | 3.4         | Map to      | Link to map | -   getCarL |
-|             |             | pickup      | showing the | ookUp       |
-|             |             | location    | pickup      |             |
-|             |             |             | location is |             |
-|             |             |             | displayed   |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Success     | 3.5         | Link to     | The link    | -   getCanc |
-|             |             | change/canc | can perform | elRequest   |
-|             |             | el          | the look up |             |
-|             |             | reservation | or it can   |             |
-|             |             |             | lead to a   |             |
-|             |             |             | page where  |             |
-|             |             |             | the user    |             |
-|             |             |             | can look up |             |
-|             |             |             | and make    |             |
-|             |             |             | amendments  |             |
-|             |             |             | to their    |             |
-|             |             |             | reservation |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Success     | 3.6         | Links to    | The links   | -   getRese |
-|             |             | print or    | are         | ndItinerary |
-|             |             | email       | displayed   |             |
-|             |             | itinerary   | clearly     |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Success     | 3.7         | Pickup      | -   The     | -   getCarL |
-|             |             | location    |     selecte | ookUp       |
-|             |             |             | d           |             |
-|             |             |             |     pickup  | -   Returne |
-|             |             |             |     locatio | d           |
-|             |             |             | n           |     under   |
-|             |             |             |     must be |     the     |
-|             |             |             |     display |     \"picku |
-|             |             |             | ed          | p\_name\"   |
-|             |             |             |             |     and     |
-|             |             |             | -   Day of  |     subsequ |
-|             |             |             |     the     | ent         |
-|             |             |             |     week    |     address |
-|             |             |             |     must be | /location   |
-|             |             |             |     include |     nodes   |
-|             |             |             | d           |             |
-|             |             |             |             |             |
-|             |             |             | -   Time of |             |
-|             |             |             |     day     |             |
-|             |             |             |     must be |             |
-|             |             |             |     include |             |
-|             |             |             | d           |             |
-|             |             |             |             |             |
-|             |             |             | -   The     |             |
-|             |             |             |     full    |             |
-|             |             |             |     address |             |
-|             |             |             |     must be |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Success     | 3.8         | Dropoff     | -   The     | -   getCarL |
-|             |             | location    |     selecte | ookUp       |
-|             |             | (if         | d           |             |
-|             |             | different   |     dropoff | -   Returne |
-|             |             | from        |     locatio | d           |
-|             |             | pickup)     | n           |     under   |
-|             |             |             |     must be |     the     |
-|             |             |             |     display |     \"dropo |
-|             |             |             | ed          | ff\_name\"  |
-|             |             |             |             |     and     |
-|             |             |             | -   Day of  |     subsequ |
-|             |             |             |     the     | ent         |
-|             |             |             |     week    |     address |
-|             |             |             |     must be | /location   |
-|             |             |             |     include |     nodes   |
-|             |             |             | d           |             |
-|             |             |             |             |             |
-|             |             |             | -   Time of |             |
-|             |             |             |     day     |             |
-|             |             |             |     must be |             |
-|             |             |             |     include |             |
-|             |             |             | d           |             |
-|             |             |             |             |             |
-|             |             |             | -   The     |             |
-|             |             |             |     full    |             |
-|             |             |             |     address |             |
-|             |             |             |     must be |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Success     | 3.9         | Counter     | The data    | -   getCarL |
-|             |             | directions/ | returned is | ookUp       |
-|             |             | airport     | displayed;  |             |
-|             |             | terminal    | it can be   | -   Returne |
-|             |             | information | hidden      | d           |
-|             |             |             | behind a    |     under   |
-|             |             |             | click       |     the     |
-|             |             |             |             |     \"shutt |
-|             |             |             |             | le\_text\"  |
-|             |             |             |             |     node.   |
-+-------------+-------------+-------------+-------------+-------------+
-| Success     | 3.1.0       | Hours of    | The rental  | -   getCarL |
-|             |             | operation   | company\'s  | ookUp       |
-|             |             |             | hours of    |             |
-|             |             |             | operations  | -   Returne |
-|             |             |             | are         | d           |
-|             |             |             | displayed   |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"open\ |
-|             |             |             |             | "           |
-|             |             |             |             |     &       |
-|             |             |             |             |     \"close |
-|             |             |             |             | \"          |
-|             |             |             |             |     nodes   |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"picku |
-|             |             |             |             | p\_hours\_d |
-|             |             |             |             | ata\"       |
-|             |             |             |             |     node    |
-|             |             |             |             |     for     |
-|             |             |             |             |     pickup  |
-|             |             |             |             |     locatio |
-|             |             |             |             | ns.         |
-|             |             |             |             |             |
-|             |             |             |             | -   Returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"open\ |
-|             |             |             |             | "           |
-|             |             |             |             |     &       |
-|             |             |             |             |     \"close |
-|             |             |             |             | \"          |
-|             |             |             |             |     nodes   |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"dropo |
-|             |             |             |             | ff\_hours\_ |
-|             |             |             |             | data\"      |
-|             |             |             |             |     node    |
-|             |             |             |             |     for     |
-|             |             |             |             |     dropoff |
-|             |             |             |             |     locatio |
-|             |             |             |             | ns          |
-|             |             |             |             |     (if     |
-|             |             |             |             |     differe |
-|             |             |             |             | nt          |
-|             |             |             |             |     than    |
-|             |             |             |             |     pickup) |
-|             |             |             |             | .           |
-+-------------+-------------+-------------+-------------+-------------+
-| Success     | 3.1.1       | Rental      | The rental  | -   getCarL |
-|             |             | company     | company     | ookUp       |
-|             |             |             | name/logo   |             |
-|             |             |             | is          | -   The     |
-|             |             |             | displayed   |     rental  |
-|             |             |             |             |     company |
-|             |             |             |             |     is      |
-|             |             |             |             |     returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"partn |
-|             |             |             |             | er\_name\"  |
-|             |             |             |             |     node    |
-|             |             |             |             |             |
-|             |             |             |             | -   The     |
-|             |             |             |             |     logo is |
-|             |             |             |             |     returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"partn |
-|             |             |             |             | er\_logo\"  |
-|             |             |             |             |     node    |
-+-------------+-------------+-------------+-------------+-------------+
-| Success     | 3.1.2       | Car type    | The car     | -   getCarL |
-|             |             |             | type is     | ookUp       |
-|             |             |             | displayed   |             |
-|             |             |             |             | -   Returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"descr |
-|             |             |             |             | iption\"    |
-|             |             |             |             |     node    |
-|             |             |             |             |     within  |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"car\_ |
-|             |             |             |             | info\"      |
-|             |             |             |             |     node    |
-+-------------+-------------+-------------+-------------+-------------+
-| Success     | 3.1.3       | Summary of  | -   The     | -   getCarL |
-|             |             | Charges     |     base    | ookUp       |
-|             |             |             |     rate is |             |
-|             |             |             |     display | -   The     |
-|             |             |             | ed          |     base    |
-|             |             |             |             |     rate is |
-|             |             |             | -   The     |     returne |
-|             |             |             |     number  | d           |
-|             |             |             |     of      |     under   |
-|             |             |             |     days/we |     the     |
-|             |             |             | eks         |     \"displ |
-|             |             |             |     is      | ay\_price\" |
-|             |             |             |     display |     node    |
-|             |             |             | ed          |     within  |
-|             |             |             |             |     the     |
-|             |             |             | -   Extra   |     \"prici |
-|             |             |             |     day     | ng\"        |
-|             |             |             |     rate is |     node.   |
-|             |             |             |     display |             |
-|             |             |             | ed          | -   The     |
-|             |             |             |     when    |     correct |
-|             |             |             |     returne |     label   |
-|             |             |             | d           |     as well |
-|             |             |             |             |     as      |
-|             |             |             | -   The     |     number  |
-|             |             |             |     Taxes   |     of      |
-|             |             |             |     and     |     days/we |
-|             |             |             |     Fees is | eks         |
-|             |             |             |     display |     are     |
-|             |             |             | ed          |     returne |
-|             |             |             |             | d           |
-|             |             |             |     -   Not |     under   |
-|             |             |             |         dis |     the     |
-|             |             |             | played      |     \"type\ |
-|             |             |             |         for | "           |
-|             |             |             |         pre |     &       |
-|             |             |             | paid        |     \"facto |
-|             |             |             |         rat | r\"         |
-|             |             |             | es,         |     nodes   |
-|             |             |             |         lum |     within  |
-|             |             |             | ped         |     the     |
-|             |             |             |         int |     \"prici |
-|             |             |             | o           | ng\"        |
-|             |             |             |         tot |     node.   |
-|             |             |             | al          |             |
-|             |             |             |             |     -   Ext |
-|             |             |             |     -   \"T | ra          |
-|             |             |             | axes        |         day |
-|             |             |             |         and |         rat |
-|             |             |             |         Fee | e           |
-|             |             |             | s\"         |         is  |
-|             |             |             |         is  |         ret |
-|             |             |             |         hyp | urned       |
-|             |             |             | erlinked    |         und |
-|             |             |             |         to  | er          |
-|             |             |             |         a   |         the |
-|             |             |             |         lig |         \"t |
-|             |             |             | ht          | ype\"       |
-|             |             |             |         box |         &   |
-|             |             |             |         tha |         \"f |
-|             |             |             | t           | actor\"     |
-|             |             |             |         dis |         nod |
-|             |             |             | plays       | es          |
-|             |             |             |         add |         wit |
-|             |             |             | itional     | hin         |
-|             |             |             |         ver |         the |
-|             |             |             | biage       |         2nd |
-|             |             |             |             |         \"b |
-|             |             |             | -   The     | reakdown\"  |
-|             |             |             |     total   |         clu |
-|             |             |             |     is      | ster        |
-|             |             |             |     display |             |
-|             |             |             | ed          |     -   -   |
-|             |             |             |             |  type       |
-|             |             |             |     -   Pos |             |
-|             |             |             | t           |  =          |
-|             |             |             |         pai |             |
-|             |             |             | d           |  \"Extra    |
-|             |             |             |         rat |             |
-|             |             |             | es          |  Day\"      |
-|             |             |             |         dis |             |
-|             |             |             | play        |         -   |
-|             |             |             |         the |  factor     |
-|             |             |             |         amo |             |
-|             |             |             | unt         |  =          |
-|             |             |             |         due |             |
-|             |             |             |         at  |  amount     |
-|             |             |             |         cou |             |
-|             |             |             | nter        |  of         |
-|             |             |             |             |             |
-|             |             |             |     -   Pre |  extra      |
-|             |             |             | paid        |             |
-|             |             |             |         rat |  days       |
-|             |             |             | es          |             |
-|             |             |             |         dis | -   The     |
-|             |             |             | play        |     Taxes   |
-|             |             |             |         the |     and     |
-|             |             |             |         amo |     Fees    |
-|             |             |             | unt         |     are     |
-|             |             |             |         due |     returne |
-|             |             |             |         now | d           |
-|             |             |             |             |     under   |
-|             |             |             | -   The     |     the     |
-|             |             |             |     price   |     \"sourc |
-|             |             |             |     disclai | e\_total\"  |
-|             |             |             | mer         |     node    |
-|             |             |             |     is      |     within  |
-|             |             |             |     display |     the     |
-|             |             |             | ed          |     \"taxes |
-|             |             |             |             | \_and\_fees |
-|             |             |             |             | \"          |
-|             |             |             |             |     node.   |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"T |
-|             |             |             |             | axes        |
-|             |             |             |             |         and |
-|             |             |             |             |         Fee |
-|             |             |             |             | s\"         |
-|             |             |             |             |         mus |
-|             |             |             |             | t           |
-|             |             |             |             |         be  |
-|             |             |             |             |         a   |
-|             |             |             |             |         hyp |
-|             |             |             |             | erlink      |
-|             |             |             |             |         tha |
-|             |             |             |             | t           |
-|             |             |             |             |         dis |
-|             |             |             |             | plays       |
-|             |             |             |             |         add |
-|             |             |             |             | itional     |
-|             |             |             |             |         ver |
-|             |             |             |             | biage       |
-|             |             |             |             |         tha |
-|             |             |             |             | t           |
-|             |             |             |             |         is  |
-|             |             |             |             |         ret |
-|             |             |             |             | urned       |
-|             |             |             |             |         und |
-|             |             |             |             | er          |
-|             |             |             |             |         the |
-|             |             |             |             |         \"b |
-|             |             |             |             | reakdown\_d |
-|             |             |             |             | ata\"       |
-|             |             |             |             |         nod |
-|             |             |             |             | e           |
-|             |             |             |             |         wit |
-|             |             |             |             | hin         |
-|             |             |             |             |         the |
-|             |             |             |             |         \"t |
-|             |             |             |             | axes\_and\_ |
-|             |             |             |             | fees\"      |
-|             |             |             |             |         nod |
-|             |             |             |             | e.          |
-|             |             |             |             |             |
-|             |             |             |             | -   The     |
-|             |             |             |             |     correct |
-|             |             |             |             |     label   |
-|             |             |             |             |     and     |
-|             |             |             |             |     total   |
-|             |             |             |             |     are     |
-|             |             |             |             |     returne |
-|             |             |             |             | d           |
-|             |             |             |             |     under   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"total |
-|             |             |             |             | \_label\".  |
-|             |             |             |             |             |
-|             |             |             |             |     -   The |
-|             |             |             |             |         tot |
-|             |             |             |             | al          |
-|             |             |             |             |         wil |
-|             |             |             |             | l           |
-|             |             |             |             |         ret |
-|             |             |             |             | urned       |
-|             |             |             |             |         und |
-|             |             |             |             | er          |
-|             |             |             |             |         the |
-|             |             |             |             |         \"p |
-|             |             |             |             | repaid\_at\ |
-|             |             |             |             | _counter\"  |
-|             |             |             |             |         for |
-|             |             |             |             |         pos |
-|             |             |             |             | t           |
-|             |             |             |             |         pai |
-|             |             |             |             | d           |
-|             |             |             |             |         boo |
-|             |             |             |             | kings       |
-|             |             |             |             |             |
-|             |             |             |             |     -   The |
-|             |             |             |             |         tot |
-|             |             |             |             | al          |
-|             |             |             |             |         wil |
-|             |             |             |             | l           |
-|             |             |             |             |         ret |
-|             |             |             |             | urned       |
-|             |             |             |             |         und |
-|             |             |             |             | er          |
-|             |             |             |             |         the |
-|             |             |             |             |         \"p |
-|             |             |             |             | repaid\_at\ |
-|             |             |             |             | _booking\"  |
-|             |             |             |             |         nod |
-|             |             |             |             | e           |
-|             |             |             |             |         for |
-|             |             |             |             |         pre |
-|             |             |             |             | paid        |
-|             |             |             |             |         boo |
-|             |             |             |             | kings.      |
-|             |             |             |             |             |
-|             |             |             |             | -   If      |
-|             |             |             |             |     wanting |
-|             |             |             |             |     to      |
-|             |             |             |             |     display |
-|             |             |             |             |     a       |
-|             |             |             |             |     differe |
-|             |             |             |             | nt          |
-|             |             |             |             |     currenc |
-|             |             |             |             | y           |
-|             |             |             |             |     other   |
-|             |             |             |             |     than    |
-|             |             |             |             |     the     |
-|             |             |             |             |     source  |
-|             |             |             |             |     (curren |
-|             |             |             |             | cy          |
-|             |             |             |             |     used to |
-|             |             |             |             |     book),  |
-|             |             |             |             |     use the |
-|             |             |             |             |     \"displ |
-|             |             |             |             | ay\"        |
-|             |             |             |             |     nodes   |
-|             |             |             |             |     instead |
-|             |             |             |             |     of the  |
-|             |             |             |             |     \"sourc |
-|             |             |             |             | e\"         |
-|             |             |             |             |     nodes.  |
-|             |             |             |             |             |
-|             |             |             |             | -   The     |
-|             |             |             |             |     Price   |
-|             |             |             |             |     Disclai |
-|             |             |             |             | mer         |
-|             |             |             |             |     is a    |
-|             |             |             |             |     front   |
-|             |             |             |             |     end     |
-|             |             |             |             |     change  |
-|             |             |             |             |     for the |
-|             |             |             |             |     partner |
-+-------------+-------------+-------------+-------------+-------------+
-| Success     | 3.1.4       | Important   | -   The     | -   getCarL |
-|             |             | Information |     Importa | ookUp       |
-|             |             |             | nt          |             |
-|             |             |             |     Informa | -   Returne |
-|             |             |             | tion        | d           |
-|             |             |             |     must be |     under   |
-|             |             |             |     display |     the     |
-|             |             |             | ed          |     \"impor |
-|             |             |             |     for the | tant\_infor |
-|             |             |             |     selecte | mation\"    |
-|             |             |             | d           |     node,   |
-|             |             |             |     rate    |     each    |
-|             |             |             |             |     cluster |
-|             |             |             | -   Each    |     that    |
-|             |             |             |     invento |     returns |
-|             |             |             | ry          |     \"manda |
-|             |             |             |     type    | tory\"      |
-|             |             |             |     has a   |     within  |
-|             |             |             |     differe |     the     |
-|             |             |             | nt          |     \"displ |
-|             |             |             |     set of  | ay\"        |
-|             |             |             |     verbiag |     node    |
-|             |             |             | e           |     must be |
-|             |             |             |             |     display |
-|             |             |             |             | ed          |
-|             |             |             |             |             |
-|             |             |             |             | -   \#START |
-|             |             |             |             | \_ANCHOR\_P |
-|             |             |             |             | ARTNERPAYME |
-|             |             |             |             | NTOPTIONS\# |
-|             |             |             |             | partner     |
-|             |             |             |             |     payment |
-|             |             |             |             |     options |
-|             |             |             |             | \#END\_ANCH |
-|             |             |             |             | OR\_PARTNER |
-|             |             |             |             | PAYMENTOPTI |
-|             |             |             |             | ONS\#       |
-|             |             |             |             |     pulls   |
-|             |             |             |             |     the     |
-|             |             |             |             |     \"car\_ |
-|             |             |             |             | policy\_dat |
-|             |             |             |             | a\"         |
-|             |             |             |             |     node.   |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"p |
-|             |             |             |             | artner      |
-|             |             |             |             |         pay |
-|             |             |             |             | ment        |
-|             |             |             |             |         opt |
-|             |             |             |             | ions\"      |
-|             |             |             |             |         is  |
-|             |             |             |             |         a   |
-|             |             |             |             |         hyp |
-|             |             |             |             | erlink      |
-|             |             |             |             |             |
-|             |             |             |             | -   \#START |
-|             |             |             |             | \_ANCHOR\_R |
-|             |             |             |             | ENTALPOLICY |
-|             |             |             |             | ANDRULES\#r |
-|             |             |             |             | ental       |
-|             |             |             |             |     policy  |
-|             |             |             |             |     and     |
-|             |             |             |             |     rules   |
-|             |             |             |             |     informa |
-|             |             |             |             | tion\#END\_ |
-|             |             |             |             | ANCHOR\_REN |
-|             |             |             |             | TALPOLICYAN |
-|             |             |             |             | DRULES\#    |
-|             |             |             |             |     pulls t |
-|             |             |             |             | he          |
-|             |             |             |             |     \"car\_ |
-|             |             |             |             | policy\_dat |
-|             |             |             |             | a\"         |
-|             |             |             |             |     node.   |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"r |
-|             |             |             |             | ental       |
-|             |             |             |             |         pol |
-|             |             |             |             | icy         |
-|             |             |             |             |         and |
-|             |             |             |             |         rul |
-|             |             |             |             | es          |
-|             |             |             |             |         inf |
-|             |             |             |             | ormation\"  |
-|             |             |             |             |         is  |
-|             |             |             |             |         a   |
-|             |             |             |             |         hyp |
-|             |             |             |             | erlink      |
-|             |             |             |             |             |
-|             |             |             |             | -   \#START |
-|             |             |             |             | \_ANCHOR\_T |
-|             |             |             |             | ERMSANDCOND |
-|             |             |             |             | ITIONS\#ter |
-|             |             |             |             | ms          |
-|             |             |             |             |     and     |
-|             |             |             |             |     conditi |
-|             |             |             |             | ons\#END\_A |
-|             |             |             |             | NCHOR\_TERM |
-|             |             |             |             | SANDCONDITI |
-|             |             |             |             | ONS\#       |
-|             |             |             |             |     pulls   |
-|             |             |             |             |     the     |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"t |
-|             |             |             |             | erms        |
-|             |             |             |             |         and |
-|             |             |             |             |         con |
-|             |             |             |             | ditions\"   |
-|             |             |             |             |         is  |
-|             |             |             |             |         a   |
-|             |             |             |             |         hyp |
-|             |             |             |             | erlink      |
-|             |             |             |             |             |
-|             |             |             |             | -   \#START |
-|             |             |             |             | \_ANCHOR\_P |
-|             |             |             |             | RIVACYPOLIC |
-|             |             |             |             | Y\#privacy  |
-|             |             |             |             |     policy\ |
-|             |             |             |             | #END\_ANCHO |
-|             |             |             |             | R\_PRIVACYP |
-|             |             |             |             | OLICY\#     |
-|             |             |             |             |     pulls   |
-|             |             |             |             |     the     |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"p |
-|             |             |             |             | rivacy      |
-|             |             |             |             |         pol |
-|             |             |             |             | icy\"       |
-|             |             |             |             |         is  |
-|             |             |             |             |         a   |
-|             |             |             |             |         hyp |
-|             |             |             |             | erlink      |
-|             |             |             |             |             |
-|             |             |             |             | -   \#START |
-|             |             |             |             | \_ANCHOR\_P |
-|             |             |             |             | REPAID\#Pay |
-|             |             |             |             |     Now\#EN |
-|             |             |             |             | D\_ANCHOR\_ |
-|             |             |             |             | PREPAID\#   |
-|             |             |             |             |     pulls   |
-|             |             |             |             |     the     |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"P |
-|             |             |             |             | ay          |
-|             |             |             |             |         Now |
-|             |             |             |             | \"          |
-|             |             |             |             |         is  |
-|             |             |             |             |         a   |
-|             |             |             |             |         hyp |
-|             |             |             |             | erlink      |
-|             |             |             |             |             |
-|             |             |             |             | -   \#START |
-|             |             |             |             | \_ANCHOR\_P |
-|             |             |             |             | REPAID\#Can |
-|             |             |             |             | cellation   |
-|             |             |             |             |     fees\#E |
-|             |             |             |             | ND\_ANCHOR\ |
-|             |             |             |             | _PREPAID\#  |
-|             |             |             |             |     pulls   |
-|             |             |             |             |     the     |
-|             |             |             |             |             |
-|             |             |             |             |     -   \"C |
-|             |             |             |             | ancellation |
-|             |             |             |             |         fee |
-|             |             |             |             | s\"         |
-|             |             |             |             |         is  |
-|             |             |             |             |         a   |
-|             |             |             |             |         hyp |
-|             |             |             |             | erlink      |
-+-------------+-------------+-------------+-------------+-------------+
-| Success     | 3.1.5       | Customer    | -   The     | -   getCarL |
-|             |             | Service     |     correct | ookUp       |
-|             |             | phone       |     Custome |             |
-|             |             | number      | r           |             |
-|             |             |             |     Service |             |
-|             |             |             |     number  |             |
-|             |             |             |     is      |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-|             |             |             |             |             |
-|             |             |             | -   The     |             |
-|             |             |             |     rental  |             |
-|             |             |             |     company |             |
-|             |             |             | \'s         |             |
-|             |             |             |     phone   |             |
-|             |             |             |     number  |             |
-|             |             |             |     is      |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Success     | 3.1.6       | Driver name | The driver  | -   getCarL |
-|             |             |             | name        | ookUp       |
-|             |             |             | entered on  |             |
-|             |             |             | the         |             |
-|             |             |             | Contract    |             |
-|             |             |             | page is     |             |
-|             |             |             | displayed   |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Conf. Email | 4.1         | Booking     | The status  |             |
-|             |             | status      | of the      |             |
-|             |             |             | reservation |             |
-|             |             |             | is          |             |
-|             |             |             | displayed   |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Conf. Email | 4.2         | Trip Id     | The Trip Id |             |
-|             |             |             | that is     |             |
-|             |             |             | returned is |             |
-|             |             |             | displayed   |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Conf. Email | 4.3         | Rental      | The rental  |             |
-|             |             | company     | company     |             |
-|             |             | confirmatio | confirmatio |             |
-|             |             | n           | n           |             |
-|             |             | number      | number that |             |
-|             |             |             | is returned |             |
-|             |             |             | is          |             |
-|             |             |             | displayed   |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Conf. Email | 4.4         | Driver name | The driver  |             |
-|             |             |             | name        |             |
-|             |             |             | entered on  |             |
-|             |             |             | the         |             |
-|             |             |             | Contract    |             |
-|             |             |             | page is     |             |
-|             |             |             | displayed   |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Conf. Email | 4.5         | Summary of  | -   The     |             |
-|             |             | Charges     |     base    |             |
-|             |             |             |     rate is |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-|             |             |             |             |             |
-|             |             |             | -   The     |             |
-|             |             |             |     number  |             |
-|             |             |             |     of      |             |
-|             |             |             |     days/we |             |
-|             |             |             | eks         |             |
-|             |             |             |     is      |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-|             |             |             |             |             |
-|             |             |             | -   Extra   |             |
-|             |             |             |     day     |             |
-|             |             |             |     rate is |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-|             |             |             |     when    |             |
-|             |             |             |     returne |             |
-|             |             |             | d           |             |
-|             |             |             |             |             |
-|             |             |             | -   The     |             |
-|             |             |             |     Taxes   |             |
-|             |             |             |     and     |             |
-|             |             |             |     Fees is |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-|             |             |             |             |             |
-|             |             |             |     -   Not |             |
-|             |             |             |         dis |             |
-|             |             |             | played      |             |
-|             |             |             |         for |             |
-|             |             |             |         pre |             |
-|             |             |             | paid        |             |
-|             |             |             |         rat |             |
-|             |             |             | es,         |             |
-|             |             |             |         lum |             |
-|             |             |             | ped         |             |
-|             |             |             |         int |             |
-|             |             |             | o           |             |
-|             |             |             |         tot |             |
-|             |             |             | al          |             |
-|             |             |             |             |             |
-|             |             |             |     -   \"T |             |
-|             |             |             | axes        |             |
-|             |             |             |         and |             |
-|             |             |             |         Fee |             |
-|             |             |             | s\"         |             |
-|             |             |             |         is  |             |
-|             |             |             |         hyp |             |
-|             |             |             | erlinked    |             |
-|             |             |             |         to  |             |
-|             |             |             |         a   |             |
-|             |             |             |         lig |             |
-|             |             |             | ht          |             |
-|             |             |             |         box |             |
-|             |             |             |         tha |             |
-|             |             |             | t           |             |
-|             |             |             |         dis |             |
-|             |             |             | plays       |             |
-|             |             |             |         add |             |
-|             |             |             | itional     |             |
-|             |             |             |         ver |             |
-|             |             |             | biage       |             |
-|             |             |             |             |             |
-|             |             |             | -   The     |             |
-|             |             |             |     total   |             |
-|             |             |             |     is      |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-|             |             |             |             |             |
-|             |             |             |     -   Pos |             |
-|             |             |             | t           |             |
-|             |             |             |         pai |             |
-|             |             |             | d           |             |
-|             |             |             |         rat |             |
-|             |             |             | es          |             |
-|             |             |             |         dis |             |
-|             |             |             | play        |             |
-|             |             |             |         the |             |
-|             |             |             |         amo |             |
-|             |             |             | unt         |             |
-|             |             |             |         due |             |
-|             |             |             |         at  |             |
-|             |             |             |         cou |             |
-|             |             |             | nter        |             |
-|             |             |             |             |             |
-|             |             |             |     -   Pre |             |
-|             |             |             | paid        |             |
-|             |             |             |         rat |             |
-|             |             |             | es          |             |
-|             |             |             |         dis |             |
-|             |             |             | play        |             |
-|             |             |             |         the |             |
-|             |             |             |         amo |             |
-|             |             |             | unt         |             |
-|             |             |             |         due |             |
-|             |             |             |         now |             |
-|             |             |             |             |             |
-|             |             |             | -   The     |             |
-|             |             |             |     price   |             |
-|             |             |             |     disclai |             |
-|             |             |             | mer         |             |
-|             |             |             |     is      |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Conf. Email | 4.6         | Rental      | The rental  |             |
-|             |             | company     | company     |             |
-|             |             |             | name/logo   |             |
-|             |             |             | is          |             |
-|             |             |             | displayed   |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Conf. Email | 4.7         | Car type    | The car     |             |
-|             |             |             | type is     |             |
-|             |             |             | displayed   |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Conf. Email | 4.8         | Car         | The         |             |
-|             |             | amenities   | amenities   |             |
-|             |             |             | are         |             |
-|             |             |             | displayed   |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Conf. Email | 4.9         | Pickup      | -   The     |             |
-|             |             | location    |     selecte |             |
-|             |             |             | d           |             |
-|             |             |             |     pickup  |             |
-|             |             |             |     locatio |             |
-|             |             |             | n           |             |
-|             |             |             |     must be |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-|             |             |             |             |             |
-|             |             |             | -   Day of  |             |
-|             |             |             |     the     |             |
-|             |             |             |     week    |             |
-|             |             |             |     must be |             |
-|             |             |             |     include |             |
-|             |             |             | d           |             |
-|             |             |             |             |             |
-|             |             |             | -   Time of |             |
-|             |             |             |     day     |             |
-|             |             |             |     must be |             |
-|             |             |             |     include |             |
-|             |             |             | d           |             |
-|             |             |             |             |             |
-|             |             |             | -   The     |             |
-|             |             |             |     full    |             |
-|             |             |             |     address |             |
-|             |             |             |     must be |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Conf. Email | 4.1.0       | Dropoff     | -   The     |             |
-|             |             | location    |     selecte |             |
-|             |             | (if         | d           |             |
-|             |             | different   |     dropoff |             |
-|             |             | from        |     locatio |             |
-|             |             | pickup)     | n           |             |
-|             |             |             |     must be |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-|             |             |             |             |             |
-|             |             |             | -   Day of  |             |
-|             |             |             |     the     |             |
-|             |             |             |     week    |             |
-|             |             |             |     must be |             |
-|             |             |             |     include |             |
-|             |             |             | d           |             |
-|             |             |             |             |             |
-|             |             |             | -   Time of |             |
-|             |             |             |     day     |             |
-|             |             |             |     must be |             |
-|             |             |             |     include |             |
-|             |             |             | d           |             |
-|             |             |             |             |             |
-|             |             |             | -   The     |             |
-|             |             |             |     full    |             |
-|             |             |             |     address |             |
-|             |             |             |     must be |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Conf. Email | 4.1.1       | Counter     | The data    |             |
-|             |             | directions/ | returned is |             |
-|             |             | airport     | displayed   |             |
-|             |             | terminal    |             |             |
-|             |             | information |             |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Conf. Email | 4.1.2       | Customer    | -   The     |             |
-|             |             | Service     |     correct |             |
-|             |             | phone       |     Custome |             |
-|             |             | number      | r           |             |
-|             |             |             |     Service |             |
-|             |             |             |     number  |             |
-|             |             |             |     is      |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-|             |             |             |             |             |
-|             |             |             | -   The     |             |
-|             |             |             |     rental  |             |
-|             |             |             |     company |             |
-|             |             |             | \'s         |             |
-|             |             |             |     phone   |             |
-|             |             |             |     number  |             |
-|             |             |             |     is      |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Cancel      | 5.1         | Booking     | The status  |             |
-| Email       |             | status      | of the      |             |
-|             |             |             | reservation |             |
-|             |             |             | is          |             |
-|             |             |             | displayed   |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Cancel      | 5.2         | Trip Id     | The Trip Id |             |
-| Email       |             |             | that is     |             |
-|             |             |             | returned is |             |
-|             |             |             | displayed   |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Cancel      | 5.3         | Driver name | The driver  |             |
-| Email       |             |             | name        |             |
-|             |             |             | entered on  |             |
-|             |             |             | the         |             |
-|             |             |             | Contract    |             |
-|             |             |             | page is     |             |
-|             |             |             | displayed   |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Cancel      | 5.4         | Rental      | The rental  |             |
-| Email       |             | company     | company     |             |
-|             |             |             | name/logo   |             |
-|             |             |             | is          |             |
-|             |             |             | displayed   |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Cancel      | 5.5         | Car type    | The         |             |
-| Email       |             |             | amenities   |             |
-|             |             |             | are         |             |
-|             |             |             | displayed   |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Cancel      | 5.6         | Pickup      | -   The     |             |
-| Email       |             | location    |     selecte |             |
-|             |             |             | d           |             |
-|             |             |             |     pickup  |             |
-|             |             |             |     locatio |             |
-|             |             |             | n           |             |
-|             |             |             |     must be |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-|             |             |             |             |             |
-|             |             |             | -   Day of  |             |
-|             |             |             |     the     |             |
-|             |             |             |     week    |             |
-|             |             |             |     must be |             |
-|             |             |             |     include |             |
-|             |             |             | d           |             |
-|             |             |             |             |             |
-|             |             |             | -   Time of |             |
-|             |             |             |     day     |             |
-|             |             |             |     must be |             |
-|             |             |             |     include |             |
-|             |             |             | d           |             |
-|             |             |             |             |             |
-|             |             |             | -   The     |             |
-|             |             |             |     full    |             |
-|             |             |             |     address |             |
-|             |             |             |     must be |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Cancel      | 5.7         | Dropoff     | -   The     |             |
-| Email       |             | location    |     selecte |             |
-|             |             | (if         | d           |             |
-|             |             | different   |     dropoff |             |
-|             |             | from        |     locatio |             |
-|             |             | pickup)     | n           |             |
-|             |             |             |     must be |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-|             |             |             |             |             |
-|             |             |             | -   Day of  |             |
-|             |             |             |     the     |             |
-|             |             |             |     week    |             |
-|             |             |             |     must be |             |
-|             |             |             |     include |             |
-|             |             |             | d           |             |
-|             |             |             |             |             |
-|             |             |             | -   Time of |             |
-|             |             |             |     day     |             |
-|             |             |             |     must be |             |
-|             |             |             |     include |             |
-|             |             |             | d           |             |
-|             |             |             |             |             |
-|             |             |             | -   The     |             |
-|             |             |             |     full    |             |
-|             |             |             |     address |             |
-|             |             |             |     must be |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-+-------------+-------------+-------------+-------------+-------------+
-| Cancel      | 5.8         | Customer    | -   The     |             |
-| Email       |             | Service     |     correct |             |
-|             |             | phone       |     Custome |             |
-|             |             | number      | r           |             |
-|             |             |             |     Service |             |
-|             |             |             |     number  |             |
-|             |             |             |     is      |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-|             |             |             |             |             |
-|             |             |             | -   The     |             |
-|             |             |             |     rental  |             |
-|             |             |             |     company |             |
-|             |             |             | \'s         |             |
-|             |             |             |     phone   |             |
-|             |             |             |     number  |             |
-|             |             |             |     is      |             |
-|             |             |             |     display |             |
-|             |             |             | ed          |             |
-+-------------+-------------+-------------+-------------+-------------+
+<table border="1" cellspacing="0" cellpadding="0" width="100%">
+ 	<tbody>
+ 		<tr>
+ 			<td border="1px">
+ 				<p align="center">
+ 					<strong>Page</strong>
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p align="center">
+ 					<strong>Requirement #</strong>
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p align="center">
+ 					<strong>Requirement</strong>
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p align="center">
+ 					<strong>Expected Result</strong>
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p align="center">
+ 					<strong>Additional Information</strong>
+ 				</p>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Results
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					1.1
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Base rate
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The base rate (daily or weekly) is displayed for each rate
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getResultsV3
+ 					</li>
+ 					<li>
+ 						Returned under the "base_rate" &amp; "base_type" nodes
+ 						under the "price_details" node
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Results
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					1.2
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Total price
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The total price is displayed for each rate
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getResultsV3
+ 					</li>
+ 					<li>
+ 						Returned under the "total_price" node within the
+ 						"price_details" node
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Results
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					1.3
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Currency
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The correct currency, currency code, &amp; currency symbol
+ 					are displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getResultsV3
+ 					</li>
+ 					<li>
+ 						Returned under the "display_currency" &amp;
+ 						"display_symbol" nodes within the "price_details" node
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Results
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					1.4
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Rental Company
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The rental company name/logo must be displayed for each
+ 					rate
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getResultsV3
+ 					</li>
+ 					<li>
+ 						The rental company is returned under the "name" node
+ 						within the "partner" node
+ 					</li>
+ 					<li>
+ 						The logo is returned under the "logo" node
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Results
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					1.5
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Pickup/Dropoff information
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getResultsV3
+ 					</li>
+ 					<li>
+ 						The pickup location is returned under the "location"
+ 						node within the "pickup" node
+ 					</li>
+ 					<li>
+ 						The dropoff location is returned under the "location"
+ 						node within the "dropoff" node
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Results
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					1.6
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Car type
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The car type must be displayed for each rate
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getResultsV3
+ 					</li>
+ 					<li>
+ 						Returned under the "description" node under the "car"
+ 						node
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Results
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					1.7
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Car amenities
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The amenities must be displayed for each rate
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getResultsV3
+ 					</li>
+ 					<li>
+ 						The amount of passengers is returned under the
+ 						"passengers" node within the "car" node
+ 					</li>
+ 					<li>
+ 						The amount of suitcases is returned under the "bags'
+ 						node within the "car" node
+ 					</li>
+ 					<li>
+ 						The transmission information is returned under the
+ 						"automatic_transmission" node within the "car" node
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							"yes" = automatic transmission
+ 						</li>
+ 						<li>
+ 							"no" = manual transmission
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						The air-conditioning information is returned under the
+ 						"air_conditioning" node within the "car" node
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							"yes" = air-conditioning
+ 						</li>
+ 						<li>
+ 							"no" = no air-conditioning
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						The mileage information is returned under the "mileage"
+ 						node within the "price_details" node
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							"true" = unlimited mileage
+ 						</li>
+ 						<li>
+ 							"false" = limited mileage
+ 						</li>
+ 					</ul>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Results
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					1.8
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Search box
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					A search box is accessible on the Results page
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getCarAutoComplete
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Contract
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					2.1
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Policy information
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						Credit card disclaimer
+ 					</li>
+ 					<li>
+ 						Acceptable forms of payment link
+ 					</li>
+ 					<li>
+ 						Under 25? link
+ 					</li>
+ 					<li>
+ 						Terms &amp; Conditions
+ 					</li>
+ 					<li>
+ 						Privacy Policy
+ 					</li>
+ 				</ul>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getPolicy.Car
+ 					</li>
+ 					<li>
+ 						getContractRequest
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							Returned under the "car_policy_data" node.
+ 						</li>
+ 					</ul>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Contract
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					2.2
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Pickup location
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						The selected pickup location must be displayed
+ 					</li>
+ 					<li>
+ 						Day of the week must be included
+ 					</li>
+ 					<li>
+ 						Time of day must be included
+ 					</li>
+ 					<li>
+ 						The full address must be displayed
+ 					</li>
+ 				</ul>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getContractRequest
+ 					</li>
+ 					<li>
+ 						Returned under the "pickup_airport_name" and subsequent
+ 						address/location nodes for airport locations
+ 					</li>
+ 					<li>
+ 						Returned under the "pickup_address" node and subsequent
+ 						address/location nodes for off-airport (city) locations
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Contract
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					2.3
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Dropoff location (if different from pickup)
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						The selected dropoff location must be displayed
+ 					</li>
+ 					<li>
+ 						Day of the week must be included
+ 					</li>
+ 					<li>
+ 						Time of day must be included
+ 					</li>
+ 					<li>
+ 						The full address must be displayed
+ 					</li>
+ 				</ul>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getContractRequest
+ 					</li>
+ 					<li>
+ 						Returned under the "dropoff_airport_name" and
+ 						subsequent address/location nodes for airport locations
+ 					</li>
+ 					<li>
+ 						Returned under the "dropoff_address" node and
+ 						subsequent address/location nodes for off-airport
+ 						(city) locations
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Contract
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					2.4
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Counter directions/airport terminal information
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The data returned must be displayed; it can be hidden
+ 					behind a click
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getContractRequest
+ 					</li>
+ 					<li>
+ 						Returned under the "shuttle_text" node.
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Contract
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					2.5
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Hours of operation
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The rental company's hours of operations are displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getContractRequest
+ 					</li>
+ 					<li>
+ 						Returned under the "open" &amp; "close" nodes within
+ 						the "pickup_hours_data" node for pickup locations.
+ 					</li>
+ 					<li>
+ 						Returned under the "open" &amp; "close" nodes within
+ 						the "dropoff_hours_data" node for dropoff locations (if
+ 						different than pickup).
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Contract
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					2.6
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Rental company
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The rental company name/logo is displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getContractRequest
+ 					</li>
+ 					<li>
+ 						The rental company is returned under the "partner_name"
+ 						node
+ 					</li>
+ 					<li>
+ 						The logo is returned under the "partner_logo" node
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Contract
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					2.7
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Car type
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The car type is displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getContractRequest
+ 					</li>
+ 					<li>
+ 						Returned under the "description" node within the
+ 						"car_info" node
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Contract
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					2.8
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Car amenities
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The amenities are displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getContractRequest
+ 					</li>
+ 					<li>
+ 						The amount of passengers is returned under the
+ 						"passengers" node within the "car_info" node
+ 					</li>
+ 					<li>
+ 						The amount of suitcases is returned under the "bags'
+ 						node within the "car" node
+ 					</li>
+ 					<li>
+ 						The transmission information is returned under the
+ 						"automatic_transmission" node within the "car" node
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							"yes" = automatic transmission
+ 						</li>
+ 						<li>
+ 							"no" = manual transmission
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						The air-conditioning information is returned under the
+ 						"air_conditioning" node within the "car" node
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							"yes" = air-conditioning
+ 						</li>
+ 						<li>
+ 							"no" = no air-conditioning
+ 						</li>
+ 					</ul>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Contract
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					2.9
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Mileage
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The mileage is displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getContractRequest
+ 					</li>
+ 					<li>
+ 						The mileage information is returned under the "mileage"
+ 						node within the "price_details" node
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							"unlimited" = unlimited mileage
+ 						</li>
+ 						<li>
+ 							"limited" = limited mileage
+ 						</li>
+ 					</ul>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Contract
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					2.1.0
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Free cancellation verbiage for post-paid rates
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Verbiage or banner is displayed for post paid rates
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Front end change for the partner
+ 				</p>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Contract
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					2.1.1
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Summary of Charges
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						The base rate is displayed
+ 					</li>
+ 					<li>
+ 						The number of days/weeks is displayed
+ 					</li>
+ 					<li>
+ 						Extra day rate is displayed when returned
+ 					</li>
+ 					<li>
+ 						The Taxes and Fees is displayed
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							Not displayed for prepaid rates, lumped into total
+ 						</li>
+ 						<li>
+ 							"Taxes and Fees" is hyperlinked to a light box that
+ 							displays additional verbiage
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						The total is displayed
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							Post paid rates display the amount due at counter
+ 						</li>
+ 						<li>
+ 							Prepaid rates display the amount due now
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						The price disclaimer is displayed
+ 					</li>
+ 				</ul>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getContractRequest
+ 					</li>
+ 					<li>
+ 						The base rate is returned under the "display_price"
+ 						node within the "pricing" node.
+ 					</li>
+ 					<li>
+ 						The correct label as well as number of days/weeks are
+ 						returned under the "type" &amp; "factor" nodes within
+ 						the "pricing" node.
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							Extra day rate is returned under the "type" &amp;
+ 							"factor" nodes within the 2nd "breakdown" cluster
+ 						</li>
+ 						<ul type="square">
+ 							<li>
+ 								type = "Extra Day"
+ 							</li>
+ 							<li>
+ 								factor = amount of extra days
+ 							</li>
+ 						</ul>
+ 					</ul>
+ 					<li>
+ 						The Taxes and Fees are returned under the
+ 						"source_total" node within the "taxes_and_fees" node.
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							"Taxes and Fees" must be a hyperlink that displays
+ 							additional verbiage that is returned under the
+ 							"breakdown_data" node within the "taxes_and_fees"
+ 							node.
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						The correct label and total are returned under the
+ 						"total_label".
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							The total will returned under the
+ 							"prepaid_at_counter" for post paid bookings
+ 						</li>
+ 						<li>
+ 							The total will returned under the
+ 							"prepaid_at_booking" node for prepaid bookings.
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						If wanting to display a different currency other than
+ 						the source (currency used to book), use the "display"
+ 						nodes instead of the "source" nodes.
+ 					</li>
+ 					<li>
+ 						The Price Disclaimer is a front end change for the
+ 						partner
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Contract
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					2.1.2
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Important Information
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						The Important Information must be displayed for the
+ 						selected rate
+ 					</li>
+ 					<li>
+ 						Each inventory type has a different set of verbiage
+ 					</li>
+ 				</ul>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getContractRequest
+ 					</li>
+ 					<li>
+ 						Returned under the "important_information" node, each
+ 						cluster that returns "mandatory" within the "display"
+ 						node must be displayed
+ 					</li>
+ 					<li>
+ 						#START_ANCHOR_PARTNERPAYMENTOPTIONS#partner payment
+ 						options#END_ANCHOR_PARTNERPAYMENTOPTIONS# pulls the
+ 						"car_policy_data" node.
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							"partner payment options" is a hyperlink
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						#START_ANCHOR_RENTALPOLICYANDRULES#rental policy and
+ 						rules information#END_ANCHOR_RENTALPOLICYANDRULES#
+ 						pulls the "car_policy_data" node.
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							"rental policy and rules information" is a
+ 							hyperlink
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						#START_ANCHOR_TERMSANDCONDITIONS#terms and
+ 						conditions#END_ANCHOR_TERMSANDCONDITIONS# pulls the
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							"terms and conditions" is a hyperlink
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						#START_ANCHOR_PRIVACYPOLICY#privacy
+ 						policy#END_ANCHOR_PRIVACYPOLICY# pulls the
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							"privacy policy" is a hyperlink
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						#START_ANCHOR_PREPAID#Pay Now#END_ANCHOR_PREPAID# pulls
+ 						the
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							"Pay Now" is a hyperlink
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						#START_ANCHOR_PREPAID#Cancellation
+ 						fees#END_ANCHOR_PREPAID# pulls the
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							"Cancellation fees" is a hyperlink
+ 						</li>
+ 					</ul>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Success
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					3.1
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Booking status
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The status of the reservation is displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getCarLookUp
+ 					</li>
+ 					<li>
+ 						Returned under the "status" node
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Success
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					3.2
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Trip Id
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The Trip Id that is returned is displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getCarLookUp
+ 					</li>
+ 					<li>
+ 						Returned under the "booking_id" node
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Success
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					3.3
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Rental company confirmation number
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The rental company confirmation number that is returned is
+ 					displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getCarLookUp
+ 					</li>
+ 					<li>
+ 						Returned under the "partner_confirmation_number" node
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Success
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					3.4
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Map to pickup location
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Link to map showing the pickup location is displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getCarLookUp
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Success
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					3.5
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Link to change/cancel reservation
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The link can perform the look up or it can lead to a page
+ 					where the user can look up and make amendments to their
+ 					reservation
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getCancelRequest
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Success
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					3.6
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Links to print or email itinerary
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The links are displayed clearly
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getResendItinerary
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Success
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					3.7
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Pickup location
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						The selected pickup location must be displayed
+ 					</li>
+ 					<li>
+ 						Day of the week must be included
+ 					</li>
+ 					<li>
+ 						Time of day must be included
+ 					</li>
+ 					<li>
+ 						The full address must be displayed
+ 					</li>
+ 				</ul>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getCarLookUp
+ 					</li>
+ 					<li>
+ 						Returned under the "pickup_name" and subsequent
+ 						address/location nodes
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Success
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					3.8
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Dropoff location (if different from pickup)
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						The selected dropoff location must be displayed
+ 					</li>
+ 					<li>
+ 						Day of the week must be included
+ 					</li>
+ 					<li>
+ 						Time of day must be included
+ 					</li>
+ 					<li>
+ 						The full address must be displayed
+ 					</li>
+ 				</ul>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getCarLookUp
+ 					</li>
+ 					<li>
+ 						Returned under the "dropoff_name" and subsequent
+ 						address/location nodes
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Success
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					3.9
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Counter directions/airport terminal information
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The data returned is displayed; it can be hidden behind a
+ 					click
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getCarLookUp
+ 					</li>
+ 					<li>
+ 						Returned under the "shuttle_text" node.
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Success
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					3.1.0
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Hours of operation
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The rental company's hours of operations are displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getCarLookUp
+ 					</li>
+ 					<li>
+ 						Returned under the "open" &amp; "close" nodes within
+ 						the "pickup_hours_data" node for pickup locations.
+ 					</li>
+ 					<li>
+ 						Returned under the "open" &amp; "close" nodes within
+ 						the "dropoff_hours_data" node for dropoff locations (if
+ 						different than pickup).
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Success
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					3.1.1
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Rental company
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The rental company name/logo is displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getCarLookUp
+ 					</li>
+ 					<li>
+ 						The rental company is returned under the "partner_name"
+ 						node
+ 					</li>
+ 					<li>
+ 						The logo is returned under the "partner_logo" node
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Success
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					3.1.2
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Car type
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The car type is displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getCarLookUp
+ 					</li>
+ 					<li>
+ 						Returned under the "description" node within the
+ 						"car_info" node
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Success
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					3.1.3
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Summary of Charges
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						The base rate is displayed
+ 					</li>
+ 					<li>
+ 						The number of days/weeks is displayed
+ 					</li>
+ 					<li>
+ 						Extra day rate is displayed when returned
+ 					</li>
+ 					<li>
+ 						The Taxes and Fees is displayed
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							Not displayed for prepaid rates, lumped into total
+ 						</li>
+ 						<li>
+ 							"Taxes and Fees" is hyperlinked to a light box that
+ 							displays additional verbiage
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						The total is displayed
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							Post paid rates display the amount due at counter
+ 						</li>
+ 						<li>
+ 							Prepaid rates display the amount due now
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						The price disclaimer is displayed
+ 					</li>
+ 				</ul>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getCarLookUp
+ 					</li>
+ 					<li>
+ 						The base rate is returned under the "display_price"
+ 						node within the "pricing" node.
+ 					</li>
+ 					<li>
+ 						The correct label as well as number of days/weeks are
+ 						returned under the "type" &amp; "factor" nodes within
+ 						the "pricing" node.
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							Extra day rate is returned under the "type" &amp;
+ 							"factor" nodes within the 2nd "breakdown" cluster
+ 						</li>
+ 					</ul>
+ 				</ul>
+ 				<p>
+ 					o
+ 				</p>
+ 				<ul type="disc">
+ 					<ul type="circle">
+ 						<ul type="square">
+ 							<li>
+ 								type = "Extra Day"
+ 							</li>
+ 							<li>
+ 								factor = amount of extra days
+ 							</li>
+ 						</ul>
+ 					</ul>
+ 					<li>
+ 						The Taxes and Fees are returned under the
+ 						"source_total" node within the "taxes_and_fees" node.
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							"Taxes and Fees" must be a hyperlink that displays
+ 							additional verbiage that is returned under the
+ 							"breakdown_data" node within the "taxes_and_fees"
+ 							node.
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						The correct label and total are returned under the
+ 						"total_label".
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							The total will returned under the
+ 							"prepaid_at_counter" for post paid bookings
+ 						</li>
+ 						<li>
+ 							The total will returned under the
+ 							"prepaid_at_booking" node for prepaid bookings.
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						If wanting to display a different currency other than
+ 						the source (currency used to book), use the "display"
+ 						nodes instead of the "source" nodes.
+ 					</li>
+ 					<li>
+ 						The Price Disclaimer is a front end change for the
+ 						partner
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Success
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					3.1.4
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Important Information
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						The Important Information must be displayed for the
+ 						selected rate
+ 					</li>
+ 					<li>
+ 						Each inventory type has a different set of verbiage
+ 					</li>
+ 				</ul>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getCarLookUp
+ 					</li>
+ 					<li>
+ 						Returned under the "important_information" node, each
+ 						cluster that returns "mandatory" within the "display"
+ 						node must be displayed
+ 					</li>
+ 					<li>
+ 						#START_ANCHOR_PARTNERPAYMENTOPTIONS#partner payment
+ 						options#END_ANCHOR_PARTNERPAYMENTOPTIONS# pulls the
+ 						"car_policy_data" node.
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							"partner payment options" is a hyperlink
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						#START_ANCHOR_RENTALPOLICYANDRULES#rental policy and
+ 						rules information#END_ANCHOR_RENTALPOLICYANDRULES#
+ 						pulls the "car_policy_data" node.
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							"rental policy and rules information" is a
+ 							hyperlink
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						#START_ANCHOR_TERMSANDCONDITIONS#terms and
+ 						conditions#END_ANCHOR_TERMSANDCONDITIONS# pulls the
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							"terms and conditions" is a hyperlink
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						#START_ANCHOR_PRIVACYPOLICY#privacy
+ 						policy#END_ANCHOR_PRIVACYPOLICY# pulls the
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							"privacy policy" is a hyperlink
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						#START_ANCHOR_PREPAID#Pay Now#END_ANCHOR_PREPAID# pulls
+ 						the
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							"Pay Now" is a hyperlink
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						#START_ANCHOR_PREPAID#Cancellation
+ 						fees#END_ANCHOR_PREPAID# pulls the
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							"Cancellation fees" is a hyperlink
+ 						</li>
+ 					</ul>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Success
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					3.1.5
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Customer Service phone number
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						The correct Customer Service number is displayed
+ 					</li>
+ 					<li>
+ 						The rental company's phone number is displayed
+ 					</li>
+ 				</ul>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getCarLookUp
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Success
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					3.1.6
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Driver name
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The driver name entered on the Contract page is displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						getCarLookUp
+ 					</li>
+ 				</ul>
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Conf. Email
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					4.1
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Booking status
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The status of the reservation is displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Conf. Email
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					4.2
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Trip Id
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The Trip Id that is returned is displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Conf. Email
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					4.3
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Rental company confirmation number
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The rental company confirmation number that is returned is
+ 					displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Conf. Email
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					4.4
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Driver name
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The driver name entered on the Contract page is displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Conf. Email
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					4.5
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Summary of Charges
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						The base rate is displayed
+ 					</li>
+ 					<li>
+ 						The number of days/weeks is displayed
+ 					</li>
+ 					<li>
+ 						Extra day rate is displayed when returned
+ 					</li>
+ 					<li>
+ 						The Taxes and Fees is displayed
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							Not displayed for prepaid rates, lumped into total
+ 						</li>
+ 						<li>
+ 							"Taxes and Fees" is hyperlinked to a light box that
+ 							displays additional verbiage
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						The total is displayed
+ 					</li>
+ 					<ul type="circle">
+ 						<li>
+ 							Post paid rates display the amount due at counter
+ 						</li>
+ 						<li>
+ 							Prepaid rates display the amount due now
+ 						</li>
+ 					</ul>
+ 					<li>
+ 						The price disclaimer is displayed
+ 					</li>
+ 				</ul>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Conf. Email
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					4.6
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Rental company
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The rental company name/logo is displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Conf. Email
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					4.7
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Car type
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The car type is displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Conf. Email
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					4.8
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Car amenities
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The amenities are displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Conf. Email
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					4.9
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Pickup location
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						The selected pickup location must be displayed
+ 					</li>
+ 					<li>
+ 						Day of the week must be included
+ 					</li>
+ 					<li>
+ 						Time of day must be included
+ 					</li>
+ 					<li>
+ 						The full address must be displayed
+ 					</li>
+ 				</ul>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Conf. Email
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					4.1.0
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Dropoff location (if different from pickup)
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						The selected dropoff location must be displayed
+ 					</li>
+ 					<li>
+ 						Day of the week must be included
+ 					</li>
+ 					<li>
+ 						Time of day must be included
+ 					</li>
+ 					<li>
+ 						The full address must be displayed
+ 					</li>
+ 				</ul>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Conf. Email
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					4.1.1
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Counter directions/airport terminal information
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The data returned is displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Conf. Email
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					4.1.2
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Customer Service phone number
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						The correct Customer Service number is displayed
+ 					</li>
+ 					<li>
+ 						The rental company's phone number is displayed
+ 					</li>
+ 				</ul>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Cancel Email
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					5.1
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Booking status
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The status of the reservation is displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Cancel Email
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					5.2
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Trip Id
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The Trip Id that is returned is displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Cancel Email
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					5.3
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Driver name
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The driver name entered on the Contract page is displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Cancel Email
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					5.4
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Rental company
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The rental company name/logo is displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Cancel Email
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					5.5
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Car type
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					The amenities are displayed
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Cancel Email
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					5.6
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Pickup location
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						The selected pickup location must be displayed
+ 					</li>
+ 					<li>
+ 						Day of the week must be included
+ 					</li>
+ 					<li>
+ 						Time of day must be included
+ 					</li>
+ 					<li>
+ 						The full address must be displayed
+ 					</li>
+ 				</ul>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Cancel Email
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					5.7
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Dropoff location (if different from pickup)
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						The selected dropoff location must be displayed
+ 					</li>
+ 					<li>
+ 						Day of the week must be included
+ 					</li>
+ 					<li>
+ 						Time of day must be included
+ 					</li>
+ 					<li>
+ 						The full address must be displayed
+ 					</li>
+ 				</ul>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 		</tr>
+ 		<tr>
+ 			<td border="1px">
+ 				<p>
+ 					Cancel Email
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					5.8
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<p>
+ 					Customer Service phone number
+ 				</p>
+ 			</td>
+ 			<td border="1px">
+ 				<ul type="disc">
+ 					<li>
+ 						The correct Customer Service number is displayed
+ 					</li>
+ 					<li>
+ 						The rental company's phone number is displayed
+ 					</li>
+ 				</ul>
+ 			</td>
+ 			<td border="1px">
+ 			</td>
+ 		</tr>
+ 	</tbody>
+ </table>
