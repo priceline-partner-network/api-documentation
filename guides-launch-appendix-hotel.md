@@ -12,1913 +12,2492 @@ will find:
 -   Details about where each requirement can be found
 
 -   Reasoning behind each requirement
-
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| **Page**  | **Require | **Require | **Expecte | **Additio | **Reasoni |
-|           | ment      | ment**    | d         | nal       | ng        |
-|           | \#**      |           | Result**  | Informati | for       |
-|           |           |           |           | on**      | Requireme |
-|           |           |           |           |           | nts**     |
-+===========+===========+===========+===========+===========+===========+
-| Results   | 1.1       | Average   | -   The   | -   getEx |           |
-|           |           | Nightly   |     Avg.  | press.Res |           |
-|           |           | Rate      |     Night | ults      |           |
-|           |           |           | ly        |           |           |
-|           |           |           |     Rate  | -   Retur |           |
-|           |           |           |     is    | ned       |           |
-|           |           |           |     displ |     under |           |
-|           |           |           | ayed      |     the   |           |
-|           |           |           |     for   |     \"sou |           |
-|           |           |           |     each  | rce\_nigh |           |
-|           |           |           |     prope | t\_price\ |           |
-|           |           |           | rly       | "         |           |
-|           |           |           |           |     node  |           |
-|           |           |           | -   The   |     withi |           |
-|           |           |           |     rate  | n         |           |
-|           |           |           |     is    |     the   |           |
-|           |           |           |     not   |     \"nig |           |
-|           |           |           |     multi | ht\_price |           |
-|           |           |           | plied     | \_data\"  |           |
-|           |           |           |     by    |     clust |           |
-|           |           |           |     the   | er        |           |
-|           |           |           |     numbe |     for   |           |
-|           |           |           | r         |     each  |           |
-|           |           |           |     of    |     prope |           |
-|           |           |           |     night | rty       |           |
-|           |           |           | s         |           |           |
-|           |           |           |     or    | -   If a  |           |
-|           |           |           |     rooms |     value |           |
-|           |           |           |           |     is    |           |
-|           |           |           |           |     retur |           |
-|           |           |           |           | ned       |           |
-|           |           |           |           |     that  |           |
-|           |           |           |           |     has   |           |
-|           |           |           |           |     trunc |           |
-|           |           |           |           | ated      |           |
-|           |           |           |           |     a     |           |
-|           |           |           |           |     trail |           |
-|           |           |           |           | ing       |           |
-|           |           |           |           |     zero, |           |
-|           |           |           |           |     that  |           |
-|           |           |           |           |     must  |           |
-|           |           |           |           |     be    |           |
-|           |           |           |           |     displ |           |
-|           |           |           |           | ayed      |           |
-|           |           |           |           |     in    |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     prope |           |
-|           |           |           |           | r         |           |
-|           |           |           |           |     monet |           |
-|           |           |           |           | ary       |           |
-|           |           |           |           |     forma |           |
-|           |           |           |           | t         |           |
-|           |           |           |           |     (two  |           |
-|           |           |           |           |     decim |           |
-|           |           |           |           | al        |           |
-|           |           |           |           |     place |           |
-|           |           |           |           | s         |           |
-|           |           |           |           |     or    |           |
-|           |           |           |           |     whole |           |
-|           |           |           |           |     dolla |           |
-|           |           |           |           | r)        |           |
-|           |           |           |           |           |           |
-|           |           |           |           | -   If    |           |
-|           |           |           |           |     using |           |
-|           |           |           |           |     a     |           |
-|           |           |           |           |     diffe |           |
-|           |           |           |           | rent      |           |
-|           |           |           |           |     curre |           |
-|           |           |           |           | ncy       |           |
-|           |           |           |           |     than  |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     sourc |           |
-|           |           |           |           | e         |           |
-|           |           |           |           |     curre |           |
-|           |           |           |           | ncy,      |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"dis |           |
-|           |           |           |           | play\_nig |           |
-|           |           |           |           | ht\_price |           |
-|           |           |           |           | \"        |           |
-|           |           |           |           |     node  |           |
-|           |           |           |           |     can   |           |
-|           |           |           |           |     be    |           |
-|           |           |           |           |     used  |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Results   | 1.2       | Currency  | The corre | -   getEx |           |
-|           |           |           | ct        | press.Res |           |
-|           |           |           | currency, | ults      |           |
-|           |           |           | currency  |           |           |
-|           |           |           | code, &   | -   Retur |           |
-|           |           |           | currency  | ned       |           |
-|           |           |           | symbol    |     under |           |
-|           |           |           | are       |     the   |           |
-|           |           |           | displayed |     \"sou |           |
-|           |           |           |           | rce\_curr |           |
-|           |           |           |           | ency\"    |           |
-|           |           |           |           |     &     |           |
-|           |           |           |           |     \"sou |           |
-|           |           |           |           | rce\_symb |           |
-|           |           |           |           | ol\"      |           |
-|           |           |           |           |     nodes |           |
-|           |           |           |           |     withi |           |
-|           |           |           |           | n         |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"pri |           |
-|           |           |           |           | ce\_detai |           |
-|           |           |           |           | ls\"      |           |
-|           |           |           |           |     clust |           |
-|           |           |           |           | er        |           |
-|           |           |           |           |     for   |           |
-|           |           |           |           |     each  |           |
-|           |           |           |           |     prope |           |
-|           |           |           |           | rty       |           |
-|           |           |           |           |           |           |
-|           |           |           |           | -   If    |           |
-|           |           |           |           |     using |           |
-|           |           |           |           |     a     |           |
-|           |           |           |           |     diffe |           |
-|           |           |           |           | rent      |           |
-|           |           |           |           |     curre |           |
-|           |           |           |           | ncy       |           |
-|           |           |           |           |     than  |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     sourc |           |
-|           |           |           |           | e         |           |
-|           |           |           |           |     curre |           |
-|           |           |           |           | ncy,      |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"dis |           |
-|           |           |           |           | play\_cur |           |
-|           |           |           |           | rency\"   |           |
-|           |           |           |           |     &     |           |
-|           |           |           |           |     \"dis |           |
-|           |           |           |           | play\_sym |           |
-|           |           |           |           | bol\"     |           |
-|           |           |           |           |     nodes |           |
-|           |           |           |           |     can   |           |
-|           |           |           |           |     be    |           |
-|           |           |           |           |     used  |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Results   | 1.3       | Full      | The full  | -   getEx |           |
-|           |           | property  | property  | press.Res |           |
-|           |           | name      | name must | ults      |           |
-|           |           |           | be        |           |           |
-|           |           |           | displayed | -   Retur |           |
-|           |           |           | for each  | ned       |           |
-|           |           |           | property  |     under |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"nam |           |
-|           |           |           |           | e\"       |           |
-|           |           |           |           |     node  |           |
-|           |           |           |           |     withi |           |
-|           |           |           |           | n         |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"rat |           |
-|           |           |           |           | e\_data\" |           |
-|           |           |           |           |     clust |           |
-|           |           |           |           | er        |           |
-|           |           |           |           |     for   |           |
-|           |           |           |           |     each  |           |
-|           |           |           |           |     prope |           |
-|           |           |           |           | rty       |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Results   | 1.4       | Full      | -   For   | -   getEx |           |
-|           |           | property  |     US/CA | press.Res |           |
-|           |           | address   |     prope | ults      |           |
-|           |           |           | rties,    |           |           |
-|           |           |           |     the   | -   Retur |           |
-|           |           |           |     Provi | ned       |           |
-|           |           |           | nce/State |     under |           |
-|           |           |           |     code  |     the   |           |
-|           |           |           |     are   |     \"add |           |
-|           |           |           |     requi | ress\"    |           |
-|           |           |           | red       |     clust |           |
-|           |           |           |           | er        |           |
-|           |           |           | -   For   |     withi |           |
-|           |           |           |     prope | n         |           |
-|           |           |           | rties     |     the   |           |
-|           |           |           |     anywh |     \"rat |           |
-|           |           |           | ere       | e\_data\" |           |
-|           |           |           |     else  |     node  |           |
-|           |           |           |     in    |     for   |           |
-|           |           |           |     the   |     each  |           |
-|           |           |           |     world |     prope |           |
-|           |           |           | ,         | rty       |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     Count |           |           |
-|           |           |           | ry        |           |           |
-|           |           |           |     code  |           |           |
-|           |           |           |     is    |           |           |
-|           |           |           |     requi |           |           |
-|           |           |           | red       |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Results   | 1.5       | Star      | The       | -   getEx |           |
-|           |           | rating    | correct   | press.Res |           |
-|           |           |           | star      | ults      |           |
-|           |           |           | rating    |           |           |
-|           |           |           | must be   | -   Retur |           |
-|           |           |           | displayed | ned       |           |
-|           |           |           | for each  |     under |           |
-|           |           |           | property  |     the   |           |
-|           |           |           |           |     \"sta |           |
-|           |           |           |           | r\_rating |           |
-|           |           |           |           | \"        |           |
-|           |           |           |           |     node  |           |
-|           |           |           |           |     withi |           |
-|           |           |           |           | n         |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"rat |           |
-|           |           |           |           | e\_data\" |           |
-|           |           |           |           |     node  |           |
-|           |           |           |           |     for   |           |
-|           |           |           |           |     each  |           |
-|           |           |           |           |     prope |           |
-|           |           |           |           | rty       |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Results   | 1.6       | Search    | A search  | -   Can   |           |
-|           |           | box       | box must  |     be a  |           |
-|           |           |           | be        |     slimm |           |
-|           |           |           | accessibl | ed        |           |
-|           |           |           | e         |     down  |           |
-|           |           |           | on the    |     versi |           |
-|           |           |           | Results   | on        |           |
-|           |           |           | page      |     of    |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     Hotel |           |
-|           |           |           |           |     searc |           |
-|           |           |           |           | h         |           |
-|           |           |           |           |     box   |           |
-|           |           |           |           |           |           |
-|           |           |           |           | -   getAu |           |
-|           |           |           |           | toSuggest |           |
-|           |           |           |           | V2        |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Details   | 2.1       | Full      | The full  | -   getHo |           |
-|           |           | property  | property  | telDetail |           |
-|           |           | name      | name must | s         |           |
-|           |           |           | be        |           |           |
-|           |           |           | displayed | -   Downl |           |
-|           |           |           | for the   | oad       |           |
-|           |           |           | selected  |     optio |           |
-|           |           |           | property  | n         |           |
-|           |           |           |           |     avail |           |
-|           |           |           |           | able      |           |
-|           |           |           |           |           |           |
-|           |           |           |           | -   Retur |           |
-|           |           |           |           | ned       |           |
-|           |           |           |           |     under |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"nam |           |
-|           |           |           |           | e\"       |           |
-|           |           |           |           |     node  |           |
-|           |           |           |           |     withi |           |
-|           |           |           |           | n         |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"hot |           |
-|           |           |           |           | el\_data\ |           |
-|           |           |           |           | "         |           |
-|           |           |           |           |     clust |           |
-|           |           |           |           | er        |           |
-|           |           |           |           |     for   |           |
-|           |           |           |           |     each  |           |
-|           |           |           |           |     prope |           |
-|           |           |           |           | rty       |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Details   | 2.2       | Full      | -   For   | -   getHo |           |
-|           |           | property  |     US/CA | telDetail |           |
-|           |           | address   |     prope | s         |           |
-|           |           |           | rties,    |           |           |
-|           |           |           |     the   | -   Downl |           |
-|           |           |           |     Provi | oad       |           |
-|           |           |           | nce/State |     optio |           |
-|           |           |           |     code  | n         |           |
-|           |           |           |     are   |     avail |           |
-|           |           |           |     requi | able      |           |
-|           |           |           | red       |           |           |
-|           |           |           |           | -   Retur |           |
-|           |           |           | -   For   | ned       |           |
-|           |           |           |     prope |     under |           |
-|           |           |           | rties     |     the   |           |
-|           |           |           |     anywh |     \"add |           |
-|           |           |           | ere       | ress\"    |           |
-|           |           |           |     else  |     node  |           |
-|           |           |           |     in    |     withi |           |
-|           |           |           |     the   | n         |           |
-|           |           |           |     world |     the   |           |
-|           |           |           | ,         |     \"hot |           |
-|           |           |           |     the   | el\_data\ |           |
-|           |           |           |     Count | "         |           |
-|           |           |           | ry        |     clust |           |
-|           |           |           |     code  | er        |           |
-|           |           |           |     is    |     for   |           |
-|           |           |           |     requi |     each  |           |
-|           |           |           | red       |     prope |           |
-|           |           |           |           | rty       |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Details   | 2.3       | Star      | The       | -   getHo |           |
-|           |           | rating    | correct   | telDetail |           |
-|           |           |           | star      | s         |           |
-|           |           |           | rating    |           |           |
-|           |           |           | must be   | -   Downl |           |
-|           |           |           | displayed | oad       |           |
-|           |           |           | for each  |     optio |           |
-|           |           |           | property  | n         |           |
-|           |           |           |           |     avail |           |
-|           |           |           |           | able      |           |
-|           |           |           |           |           |           |
-|           |           |           |           | -   Retur |           |
-|           |           |           |           | ned       |           |
-|           |           |           |           |     under |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"sta |           |
-|           |           |           |           | r\_rating |           |
-|           |           |           |           | \"        |           |
-|           |           |           |           |     node  |           |
-|           |           |           |           |     withi |           |
-|           |           |           |           | n         |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"hot |           |
-|           |           |           |           | el\_data\ |           |
-|           |           |           |           | "         |           |
-|           |           |           |           |     clust |           |
-|           |           |           |           | er        |           |
-|           |           |           |           |     for   |           |
-|           |           |           |           |     each  |           |
-|           |           |           |           |     prope |           |
-|           |           |           |           | rty       |           |
-|           |           |           |           |     retur |           |
-|           |           |           |           | ned       |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Details   | 2.4       | Hotel     | The hotel | -   getHo |           |
-|           |           | descripti | descripti | telDetail |           |
-|           |           | on        | on        | s         |           |
-|           |           |           | must be   |           |           |
-|           |           |           | displayed | -   Downl |           |
-|           |           |           | ,         | oad       |           |
-|           |           |           | it can be |     optio |           |
-|           |           |           | partially | n         |           |
-|           |           |           | collapsed |     avail |           |
-|           |           |           | ,         | able      |           |
-|           |           |           | but must  |           |           |
-|           |           |           | be        | -   Retur |           |
-|           |           |           | visible   | ned       |           |
-|           |           |           | and       |     under |           |
-|           |           |           | accessibl |     the   |           |
-|           |           |           | e         |     \"hot |           |
-|           |           |           |           | el\_descr |           |
-|           |           |           |           | iption\"  |           |
-|           |           |           |           |     node  |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Details   | 2.5       | Amenities | The       | -   getHo |           |
-|           |           |           | amenities | telDetail |           |
-|           |           |           | that are  | s         |           |
-|           |           |           | returned  |           |           |
-|           |           |           | for the   | -   Downl |           |
-|           |           |           | property  | oad       |           |
-|           |           |           | must be   |     optio |           |
-|           |           |           | displayed | n         |           |
-|           |           |           |           |     avail |           |
-|           |           |           |           | able      |           |
-|           |           |           |           |           |           |
-|           |           |           |           | -   Retur |           |
-|           |           |           |           | ned       |           |
-|           |           |           |           |     under |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"ame |           |
-|           |           |           |           | nity\_dat |           |
-|           |           |           |           | a\"       |           |
-|           |           |           |           |     nodes |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Details   | 2.6       | Reviews   | The       | -   getHo |           |
-|           |           |           | review    | telReview |           |
-|           |           |           | data      | s         |           |
-|           |           |           | returned  |           |           |
-|           |           |           | must be   |           |           |
-|           |           |           | displayed |           |           |
-|           |           |           | ;         |           |           |
-|           |           |           | they can  |           |           |
-|           |           |           | be hidden |           |           |
-|           |           |           | behind a  |           |           |
-|           |           |           | click     |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Details   | 2.7       | Average   | -   The   | -   getHo |           |
-|           |           | Nightly   |     Avg.  | telDetail |           |
-|           |           | Rate      |     Night | s         |           |
-|           |           |           | ly        |           |           |
-|           |           |           |     Rate  | -   Downl |           |
-|           |           |           |     is    | oad       |           |
-|           |           |           |     displ |     optio |           |
-|           |           |           | ayed      | n         |           |
-|           |           |           |     for   |     avail |           |
-|           |           |           |     each  | able      |           |
-|           |           |           |     prope |           |           |
-|           |           |           | rly       | -   Retur |           |
-|           |           |           |           | ned       |           |
-|           |           |           | -   The   |     under |           |
-|           |           |           |     corre |     the   |           |
-|           |           |           | ct        |     \"sou |           |
-|           |           |           |     curre | rce\_pric |           |
-|           |           |           | ncy,      | e\"       |           |
-|           |           |           |     curre |     node  |           |
-|           |           |           | ncy       |     withi |           |
-|           |           |           |     code, | n         |           |
-|           |           |           |     &     |     the   |           |
-|           |           |           |     curre |     \"sta |           |
-|           |           |           | ncy       | tic\_low\ |           |
-|           |           |           |     symbo | _rate\"   |           |
-|           |           |           | l         |     clust |           |
-|           |           |           |     are   | er        |           |
-|           |           |           |     displ |     for   |           |
-|           |           |           | ayed      |     each  |           |
-|           |           |           |           |     prope |           |
-|           |           |           | -   The   | rty       |           |
-|           |           |           |     rate  |     retur |           |
-|           |           |           |     is    | ned       |           |
-|           |           |           |     not   |           |           |
-|           |           |           |     multi | -   If a  |           |
-|           |           |           | plied     |     value |           |
-|           |           |           |     by    |     is    |           |
-|           |           |           |     the   |     retur |           |
-|           |           |           |     numbe | ned       |           |
-|           |           |           | r         |     that  |           |
-|           |           |           |     of    |     has   |           |
-|           |           |           |     night |     trunc |           |
-|           |           |           | s         | ated      |           |
-|           |           |           |     or    |     a     |           |
-|           |           |           |     rooms |     trail |           |
-|           |           |           |           | ing       |           |
-|           |           |           |           |     zero, |           |
-|           |           |           |           |     that  |           |
-|           |           |           |           |     must  |           |
-|           |           |           |           |     be    |           |
-|           |           |           |           |     displ |           |
-|           |           |           |           | ayed      |           |
-|           |           |           |           |     in    |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     prope |           |
-|           |           |           |           | r         |           |
-|           |           |           |           |     monet |           |
-|           |           |           |           | ary       |           |
-|           |           |           |           |     forma |           |
-|           |           |           |           | t         |           |
-|           |           |           |           |           |           |
-|           |           |           |           | -   If    |           |
-|           |           |           |           |     using |           |
-|           |           |           |           |     a     |           |
-|           |           |           |           |     diffe |           |
-|           |           |           |           | rent      |           |
-|           |           |           |           |     curre |           |
-|           |           |           |           | ncy       |           |
-|           |           |           |           |     than  |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     sourc |           |
-|           |           |           |           | e         |           |
-|           |           |           |           |     curre |           |
-|           |           |           |           | ncy,      |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"dis |           |
-|           |           |           |           | play\_pri |           |
-|           |           |           |           | ce\"      |           |
-|           |           |           |           |     node  |           |
-|           |           |           |           |     can   |           |
-|           |           |           |           |     be    |           |
-|           |           |           |           |     used  |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Details   | 2.8       | Currency  | The corre | -   getHo |           |
-|           |           |           | ct        | telDetail |           |
-|           |           |           | currency, | s         |           |
-|           |           |           | currency  |           |           |
-|           |           |           | code, &   | -   Downl |           |
-|           |           |           | currency  | oad       |           |
-|           |           |           | symbol    |     optio |           |
-|           |           |           | are       | n         |           |
-|           |           |           | displayed |     avail |           |
-|           |           |           |           | able      |           |
-|           |           |           |           |           |           |
-|           |           |           |           | -   Retur |           |
-|           |           |           |           | ned       |           |
-|           |           |           |           |     under |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"sou |           |
-|           |           |           |           | rce\_curr |           |
-|           |           |           |           | ency\"    |           |
-|           |           |           |           |     &     |           |
-|           |           |           |           |     \"sou |           |
-|           |           |           |           | rce\_symb |           |
-|           |           |           |           | ol\"      |           |
-|           |           |           |           |     nodes |           |
-|           |           |           |           |     withi |           |
-|           |           |           |           | n         |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"sta |           |
-|           |           |           |           | tic\_low\ |           |
-|           |           |           |           | _rate\"   |           |
-|           |           |           |           |     clust |           |
-|           |           |           |           | er        |           |
-|           |           |           |           |     for   |           |
-|           |           |           |           |     each  |           |
-|           |           |           |           |     prope |           |
-|           |           |           |           | rty       |           |
-|           |           |           |           |     retur |           |
-|           |           |           |           | ned       |           |
-|           |           |           |           |           |           |
-|           |           |           |           | -   If    |           |
-|           |           |           |           |     using |           |
-|           |           |           |           |     a     |           |
-|           |           |           |           |     diffe |           |
-|           |           |           |           | rent      |           |
-|           |           |           |           |     curre |           |
-|           |           |           |           | ncy       |           |
-|           |           |           |           |     than  |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     sourc |           |
-|           |           |           |           | e         |           |
-|           |           |           |           |     curre |           |
-|           |           |           |           | ncy,      |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"dis |           |
-|           |           |           |           | play\_cur |           |
-|           |           |           |           | rency\"   |           |
-|           |           |           |           |     &     |           |
-|           |           |           |           |     \"dis |           |
-|           |           |           |           | play\_sym |           |
-|           |           |           |           | bol\"     |           |
-|           |           |           |           |     nodes |           |
-|           |           |           |           |     can   |           |
-|           |           |           |           |     be    |           |
-|           |           |           |           |     used  |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Details   | 2.9       | Room/Rate | The       | -   getEx |           |
-|           |           | descripti | descripti | press.Mul |           |
-|           |           | on        | on        | tiContrac |           |
-|           |           |           | that is   | t         |           |
-|           |           |           | returned  |           |           |
-|           |           |           | for each  | -   Retur |           |
-|           |           |           | rate must | ned       |           |
-|           |           |           | be        |     under |           |
-|           |           |           | displayed |     the   |           |
-|           |           |           |           |     \"tit |           |
-|           |           |           |           | le\"      |           |
-|           |           |           |           |     &     |           |
-|           |           |           |           |     \"des |           |
-|           |           |           |           | cription\ |           |
-|           |           |           |           | "         |           |
-|           |           |           |           |     nodes |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Details   | 2.1.1     | Cancellat | The       | -   getEx |           |
-|           |           | ion       | cancellat | press.Mul |           |
-|           |           | policy    | ion       | tiContrac |           |
-|           |           |           | policy    | t         |           |
-|           |           |           | must be   |           |           |
-|           |           |           | displayed | -   Retur |           |
-|           |           |           | for each  | ned       |           |
-|           |           |           | rate      |     under |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"is\ |           |
-|           |           |           |           | _cancella |           |
-|           |           |           |           | ble\"     |           |
-|           |           |           |           |     &     |           |
-|           |           |           |           |     \"fre |           |
-|           |           |           |           | e\_cancel |           |
-|           |           |           |           | lation\"  |           |
-|           |           |           |           |     nodes |           |
-|           |           |           |           | .         |           |
-|           |           |           |           |           |           |
-|           |           |           |           |     -   0 |           |
-|           |           |           |           |         = |           |
-|           |           |           |           |         c |           |
-|           |           |           |           | ancellabl |           |
-|           |           |           |           | e,        |           |
-|           |           |           |           |         f |           |
-|           |           |           |           | ree       |           |
-|           |           |           |           |           |           |
-|           |           |           |           |     -   1 |           |
-|           |           |           |           |         = |           |
-|           |           |           |           |         n |           |
-|           |           |           |           | ot        |           |
-|           |           |           |           |         c |           |
-|           |           |           |           | ancellabl |           |
-|           |           |           |           | e,        |           |
-|           |           |           |           |         n |           |
-|           |           |           |           | ot        |           |
-|           |           |           |           |         f |           |
-|           |           |           |           | ree       |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Details   | 2.1.2     | Promo     | Promo     | -   getEx |           |
-|           |           | data      | data must | press.Mul |           |
-|           |           |           | be        | tiContrac |           |
-|           |           |           | displayed | t         |           |
-|           |           |           | for each  |           |           |
-|           |           |           | rate, if  | -   Retur |           |
-|           |           |           | returned  | ned       |           |
-|           |           |           |           |     under |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"pro |           |
-|           |           |           |           | mo\"      |           |
-|           |           |           |           |     node  |           |
-|           |           |           |           |     withi |           |
-|           |           |           |           | n         |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"det |           |
-|           |           |           |           | ails\_sum |           |
-|           |           |           |           | mary\"    |           |
-|           |           |           |           |     clust |           |
-|           |           |           |           | er        |           |
-|           |           |           |           |     for   |           |
-|           |           |           |           |     each  |           |
-|           |           |           |           |     rate  |           |
-|           |           |           |           |     retur |           |
-|           |           |           |           | ned       |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Contract  | 3.1       | Full      | The full  | -   getCo |           |
-|           |           | property  | property  | ntractReq |           |
-|           |           | name      | name must | uest      |           |
-|           |           |           | be        |           |           |
-|           |           |           | displayed | -   Retur |           |
-|           |           |           | for the   | ned       |           |
-|           |           |           | selected  |     under |           |
-|           |           |           | property  |     the   |           |
-|           |           |           |           |     \"hot |           |
-|           |           |           |           | el\_name\ |           |
-|           |           |           |           | "         |           |
-|           |           |           |           |     node  |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Contract  | 3.2       | Full      | -   For   | -   getCo |           |
-|           |           | property  |     US/CA | ntractReq |           |
-|           |           | address   |     prope | uest      |           |
-|           |           |           | rties,    |           |           |
-|           |           |           |     the   | -   Retur |           |
-|           |           |           |     Provi | ned       |           |
-|           |           |           | nce/State |     under |           |
-|           |           |           |     code  |     the   |           |
-|           |           |           |     are   |     \"add |           |
-|           |           |           |     requi | ress\"    |           |
-|           |           |           | red       |     node  |           |
-|           |           |           |           |           |           |
-|           |           |           | -   For   |           |           |
-|           |           |           |     prope |           |           |
-|           |           |           | rties     |           |           |
-|           |           |           |     anywh |           |           |
-|           |           |           | ere       |           |           |
-|           |           |           |     else  |           |           |
-|           |           |           |     in    |           |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     world |           |           |
-|           |           |           | ,         |           |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     Count |           |           |
-|           |           |           | ry        |           |           |
-|           |           |           |     code  |           |           |
-|           |           |           |     is    |           |           |
-|           |           |           |     requi |           |           |
-|           |           |           | red       |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Contract  | 3.3       | Room/Rate | The       | -   getCo |           |
-|           |           | descripti | descripti | ntractReq |           |
-|           |           | on        | on        | uest      |           |
-|           |           |           | that is   |           |           |
-|           |           |           | returned  | -   Retur |           |
-|           |           |           | for the   | ned       |           |
-|           |           |           | selected  |     under |           |
-|           |           |           | rate must |     the   |           |
-|           |           |           | be        |     \"tit |           |
-|           |           |           | displayed | le\"      |           |
-|           |           |           |           |     &     |           |
-|           |           |           |           |     \"des |           |
-|           |           |           |           | cription\ |           |
-|           |           |           |           | "         |           |
-|           |           |           |           |     nodes |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Contract  | 3.4       | Promo     | Promo     | -   getCo |           |
-|           |           | data      | data must | ntractReq |           |
-|           |           |           | be        | uest      |           |
-|           |           |           | displayed |           |           |
-|           |           |           | for the   | -   Retur |           |
-|           |           |           | selected  | ned       |           |
-|           |           |           | rate, if  |     under |           |
-|           |           |           | returned  |     the   |           |
-|           |           |           |           |     \"pro |           |
-|           |           |           |           | mo\"      |           |
-|           |           |           |           |     node  |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Contract  | 3.5       | Check-In  | The       | -   getCo |           |
-|           |           | date      | selected  | ntractReq |           |
-|           |           |           | check-in  | uest      |           |
-|           |           |           | date must |           |           |
-|           |           |           | be        | -   Retur |           |
-|           |           |           | displayed | ned       |           |
-|           |           |           |           |     under |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"che |           |
-|           |           |           |           | ck\_in\"  |           |
-|           |           |           |           |     node  |           |
-|           |           |           |           |           |           |
-|           |           |           |           | -   Day   |           |
-|           |           |           |           |     of    |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     week  |           |
-|           |           |           |           |     is    |           |
-|           |           |           |           |     recom |           |
-|           |           |           |           | mended,   |           |
-|           |           |           |           |     but   |           |
-|           |           |           |           |     not   |           |
-|           |           |           |           |     requi |           |
-|           |           |           |           | red       |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Contract  | 3.6       | Check-Out | The       | -   getCo |           |
-|           |           | date      | selected  | ntractReq |           |
-|           |           |           | check-out | uest      |           |
-|           |           |           | date must |           |           |
-|           |           |           | be        | -   Retur |           |
-|           |           |           | displayed | ned       |           |
-|           |           |           |           |     under |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"che |           |
-|           |           |           |           | ck\_out\" |           |
-|           |           |           |           |     node  |           |
-|           |           |           |           |           |           |
-|           |           |           |           | -   Day   |           |
-|           |           |           |           |     of    |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     week  |           |
-|           |           |           |           |     is    |           |
-|           |           |           |           |     recom |           |
-|           |           |           |           | mended,   |           |
-|           |           |           |           |     but   |           |
-|           |           |           |           |     not   |           |
-|           |           |           |           |     requi |           |
-|           |           |           |           | red       |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Contract  | 3.7       | Summary   | -   The   | -   getCo | -   The   |
-|           |           | of        |     avg.  | ntractReq |     Resor |
-|           |           | Charges   |     night | uest      | t         |
-|           |           |           | ly        |           |     Fee   |
-|           |           |           |     rate  | -   Avg.  |     is    |
-|           |           |           |     is    |     night |     requi |
-|           |           |           |     displ | ly        | red       |
-|           |           |           | ayed      |     rate  |     by    |
-|           |           |           |     for   |     is    |     law,  |
-|           |           |           |     the   |     retur |     as    |
-|           |           |           |     selec | ned       |     per   |
-|           |           |           | ted       |     under |     Legal |
-|           |           |           |     rate  |     the   | .         |
-|           |           |           |           |     \"dis |           |
-|           |           |           | -   The   | play\_pri | -   Taxes |
-|           |           |           |     numbe | ce\"      |     &     |
-|           |           |           | r         |     node  |     Fees  |
-|           |           |           |     of    |           |     legal |
-|           |           |           |     night | -   Numbe | ese       |
-|           |           |           | s         | r         |     is    |
-|           |           |           |     is    |     of    |     requi |
-|           |           |           |     displ |     night | red       |
-|           |           |           | ayed      | s         |     by    |
-|           |           |           |           |     is    |     law,  |
-|           |           |           | -   The   |     retur |     as    |
-|           |           |           |     numbe | ned       |     per   |
-|           |           |           | r         |     under |     Legal |
-|           |           |           |     of    |     the   | .         |
-|           |           |           |     rooms |     \"num |           |
-|           |           |           |     is    | \_nights\ |           |
-|           |           |           |     displ | "         |           |
-|           |           |           | ayed      |     node  |           |
-|           |           |           |           |           |           |
-|           |           |           | -   The   | -   Numbe |           |
-|           |           |           |     Taxes | r         |           |
-|           |           |           |     and   |     of    |           |
-|           |           |           |     Fees  |     rooms |           |
-|           |           |           |     are   |     is    |           |
-|           |           |           |     displ |     displ |           |
-|           |           |           | ayed      | ayed      |           |
-|           |           |           |           |     under |           |
-|           |           |           |     -   \ |     the   |           |
-|           |           |           | "Taxes    |     \"num |           |
-|           |           |           |         a | \_rooms\" |           |
-|           |           |           | nd        |     node  |           |
-|           |           |           |         F |           |           |
-|           |           |           | ees\"     | -   Taxes |           |
-|           |           |           |         i |     &     |           |
-|           |           |           | s         |     Fees  |           |
-|           |           |           |         h |     are   |           |
-|           |           |           | yperlinke |     displ |           |
-|           |           |           | d         | ayed      |           |
-|           |           |           |         t |     under |           |
-|           |           |           | o         |     the   |           |
-|           |           |           |         a |     \"dis |           |
-|           |           |           |         l | play\_tax |           |
-|           |           |           | ight      | es\"      |           |
-|           |           |           |         b |     node  |           |
-|           |           |           | ox        |           |           |
-|           |           |           |         t |     -   \ |           |
-|           |           |           | hat       | "Taxes    |           |
-|           |           |           |         d |         & |           |
-|           |           |           | isplays   |         F |           |
-|           |           |           |         a | ees\"     |           |
-|           |           |           | dditional |         m |           |
-|           |           |           |         v | ust       |           |
-|           |           |           | erbiage   |         b |           |
-|           |           |           |           | e         |           |
-|           |           |           | -   The   |         a |           |
-|           |           |           |     Resor |         l |           |
-|           |           |           | t         | ink       |           |
-|           |           |           |     Fee   |         t |           |
-|           |           |           |     is    | o         |           |
-|           |           |           |     displ |         d |           |
-|           |           |           | ayed,     | isplay    |           |
-|           |           |           |     if    |         a |           |
-|           |           |           |     appli | dditional |           |
-|           |           |           | cable     |         v |           |
-|           |           |           |           | erbiage   |           |
-|           |           |           | -   The   |         t |           |
-|           |           |           |     room  | hat       |           |
-|           |           |           |     subto |         i |           |
-|           |           |           | tal       | s         |           |
-|           |           |           |     is    |         r |           |
-|           |           |           |     displ | eturned   |           |
-|           |           |           | ayed      |         u |           |
-|           |           |           |           | nder      |           |
-|           |           |           | -   The   |         t |           |
-|           |           |           |     total | he        |           |
-|           |           |           |     price |         \ |           |
-|           |           |           |     is    | "taxes\_a |           |
-|           |           |           |     displ | nd\_fees\ |           |
-|           |           |           | ayed      | _policy\" |           |
-|           |           |           |           |         n |           |
-|           |           |           | -   The c | ode       |           |
-|           |           |           | orrect    |           |           |
-|           |           |           |     curre | -   Resor |           |
-|           |           |           | ncy,      | t         |           |
-|           |           |           |     curre |     Fee   |           |
-|           |           |           | ncy       |     is    |           |
-|           |           |           |     code, |     displ |           |
-|           |           |           |     &     | ayed      |           |
-|           |           |           |     curre |     under |           |
-|           |           |           | ncy       |     the   |           |
-|           |           |           |     symbo |     \"dis |           |
-|           |           |           | l         | play\_pro |           |
-|           |           |           |     are   | perty\_fe |           |
-|           |           |           |     displ | e\"       |           |
-|           |           |           | ayed      |     node  |           |
-|           |           |           |           |           |           |
-|           |           |           |           | -   Room  |           |
-|           |           |           |           |     subto |           |
-|           |           |           |           | tal       |           |
-|           |           |           |           |     is    |           |
-|           |           |           |           |     displ |           |
-|           |           |           |           | ayed      |           |
-|           |           |           |           |     under |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"dis |           |
-|           |           |           |           | play\_sub |           |
-|           |           |           |           | total\"   |           |
-|           |           |           |           |     node  |           |
-|           |           |           |           |           |           |
-|           |           |           |           | -   Total |           |
-|           |           |           |           |     price |           |
-|           |           |           |           |     is    |           |
-|           |           |           |           |     displ |           |
-|           |           |           |           | ayed      |           |
-|           |           |           |           |     under |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"dis |           |
-|           |           |           |           | play\_tot |           |
-|           |           |           |           | al\"      |           |
-|           |           |           |           |     node  |           |
-|           |           |           |           |           |           |
-|           |           |           |           | -   The   |           |
-|           |           |           |           |     curre |           |
-|           |           |           |           | ncy       |           |
-|           |           |           |           |     infor |           |
-|           |           |           |           | mation    |           |
-|           |           |           |           |     is    |           |
-|           |           |           |           |     retur |           |
-|           |           |           |           | ned       |           |
-|           |           |           |           |     under |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"dis |           |
-|           |           |           |           | play\_cur |           |
-|           |           |           |           | rency\"   |           |
-|           |           |           |           |     &     |           |
-|           |           |           |           |     \"dis |           |
-|           |           |           |           | play\_sym |           |
-|           |           |           |           | bol\"     |           |
-|           |           |           |           |     nodes |           |
-|           |           |           |           |           |           |
-|           |           |           |           | -   If a  |           |
-|           |           |           |           |     value |           |
-|           |           |           |           |     is    |           |
-|           |           |           |           |     retur |           |
-|           |           |           |           | ned       |           |
-|           |           |           |           |     that  |           |
-|           |           |           |           |     has   |           |
-|           |           |           |           |     trunc |           |
-|           |           |           |           | ated      |           |
-|           |           |           |           |     a     |           |
-|           |           |           |           |     trail |           |
-|           |           |           |           | ing       |           |
-|           |           |           |           |     zero, |           |
-|           |           |           |           |     that  |           |
-|           |           |           |           |     must  |           |
-|           |           |           |           |     be    |           |
-|           |           |           |           |     displ |           |
-|           |           |           |           | ayed      |           |
-|           |           |           |           |     in    |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     prope |           |
-|           |           |           |           | r         |           |
-|           |           |           |           |     monet |           |
-|           |           |           |           | ary       |           |
-|           |           |           |           |     forma |           |
-|           |           |           |           | t         |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Contract  | 3.8       | Important | -   The   | -   getCo | -   Must  |
-|           |           | Informati |     Impor | ntractReq |     be    |
-|           |           | on        | tant      | uest      |     displ |
-|           |           |           |     Infor |           | ayed      |
-|           |           |           | mation    | -   Retur |     as is |
-|           |           |           |     must  | ned       |     if    |
-|           |           |           |     be    |     under |     Price |
-|           |           |           |     displ |     the   | line      |
-|           |           |           | ayed      |     \"imp |     is    |
-|           |           |           |     for   | ortant\_i |     MOR,  |
-|           |           |           |     the   | nformatio |     as    |
-|           |           |           |     selec | n\"       |     per   |
-|           |           |           | ted       |     node  |     Legal |
-|           |           |           |     rate  |           | /CS.      |
-|           |           |           |           | -   All   |           |
-|           |           |           | -   Each  |     title |           |
-|           |           |           |     inven | s         |           |
-|           |           |           | tory      |     &     |           |
-|           |           |           |     type  |     parag |           |
-|           |           |           |     has a | raphs     |           |
-|           |           |           |     diffe |     must  |           |
-|           |           |           | rent      |     be    |           |
-|           |           |           |     set   |     displ |           |
-|           |           |           |     of    | ayed      |           |
-|           |           |           |     verbi |     as    |           |
-|           |           |           | age       |     recei |           |
-|           |           |           |           | ved       |           |
-|           |           |           | -   Verbi |           |           |
-|           |           |           | age       |           |           |
-|           |           |           |     also  |           |           |
-|           |           |           |     diffe |           |           |
-|           |           |           | rs        |           |           |
-|           |           |           |     by    |           |           |
-|           |           |           |     cance |           |           |
-|           |           |           | llation   |           |           |
-|           |           |           |     polic |           |           |
-|           |           |           | y         |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Contract  | 3.9       | Terms and | The Terms | -   getPo |           |
-|           |           | Condition | and       | licy.Hote |           |
-|           |           | s         | Condition | l         |           |
-|           |           |           | s         |           |           |
-|           |           |           | must be   |           |           |
-|           |           |           | displayed |           |           |
-|           |           |           | ;         |           |           |
-|           |           |           | they can  |           |           |
-|           |           |           | be hidden |           |           |
-|           |           |           | behind a  |           |           |
-|           |           |           | click     |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Contract  | 3.1.1     | Privacy   | The       | -   getPo |           |
-|           |           | Policy    | Privacy   | licy.Hote |           |
-|           |           |           | Policy    | l         |           |
-|           |           |           | must be   |           |           |
-|           |           |           | displayed |           |           |
-|           |           |           | ;         |           |           |
-|           |           |           | it can be |           |           |
-|           |           |           | hidden    |           |           |
-|           |           |           | behind a  |           |           |
-|           |           |           | click     |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Contract  | 3.1.2     | Customer  | -   The   | Front end |           |
-|           |           | agreement |     custo | change    |           |
-|           |           |           | mer       | for the   |           |
-|           |           |           |     must  | partner   |           |
-|           |           |           |     agree |           |           |
-|           |           |           |     to    |           |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     price |           |           |
-|           |           |           |     and   |           |           |
-|           |           |           |     all   |           |           |
-|           |           |           |     terms |           |           |
-|           |           |           |     in    |           |           |
-|           |           |           |     order |           |           |
-|           |           |           |     to    |           |           |
-|           |           |           |     book, |           |           |
-|           |           |           |     this  |           |           |
-|           |           |           |     can   |           |           |
-|           |           |           |     be:   |           |           |
-|           |           |           |           |           |           |
-|           |           |           |     -   I |           |           |
-|           |           |           | nitials   |           |           |
-|           |           |           |         i |           |           |
-|           |           |           | nput      |           |           |
-|           |           |           |         b |           |           |
-|           |           |           | ox        |           |           |
-|           |           |           |           |           |           |
-|           |           |           |     -   C |           |           |
-|           |           |           | heck      |           |           |
-|           |           |           |         b |           |           |
-|           |           |           | ox        |           |           |
-|           |           |           |           |           |           |
-|           |           |           |     -   e |           |           |
-|           |           |           | tc.       |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Success   | 4.1       | Full      | The full  | -   getEx |           |
-|           |           | property  | property  | press.Loo |           |
-|           |           | name      | name must | kup       |           |
-|           |           |           | be        |           |           |
-|           |           |           | displayed | -   Retur |           |
-|           |           |           | for the   | ned       |           |
-|           |           |           | selected  |     under |           |
-|           |           |           | property  |     the   |           |
-|           |           |           |           |     \"hot |           |
-|           |           |           |           | el\_name\ |           |
-|           |           |           |           | "         |           |
-|           |           |           |           |     node  |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Success   | 4.2       | Full      | -   For   | -   getEx |           |
-|           |           | property  |     US/CA | press.Loo |           |
-|           |           | address   |     prope | kup       |           |
-|           |           |           | rties,    |           |           |
-|           |           |           |     the   | -   Retur |           |
-|           |           |           |     Provi | ned       |           |
-|           |           |           | nce/State |     under |           |
-|           |           |           |     code  |     the   |           |
-|           |           |           |     are   |     \"add |           |
-|           |           |           |     requi | ress\"    |           |
-|           |           |           | red       |     node  |           |
-|           |           |           |           |           |           |
-|           |           |           | -   For   |           |           |
-|           |           |           |     prope |           |           |
-|           |           |           | rties     |           |           |
-|           |           |           |     anywh |           |           |
-|           |           |           | ere       |           |           |
-|           |           |           |     else  |           |           |
-|           |           |           |     in    |           |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     world |           |           |
-|           |           |           | ,         |           |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     Count |           |           |
-|           |           |           | ry        |           |           |
-|           |           |           |     code  |           |           |
-|           |           |           |     is    |           |           |
-|           |           |           |     requi |           |           |
-|           |           |           | red       |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Success   | 4.3       | Room/Rate | The       | -   getEx |           |
-|           |           | descripti | descripti | press.Loo |           |
-|           |           | on        | on        | kup       |           |
-|           |           |           | that is   |           |           |
-|           |           |           | returned  | -   Retur |           |
-|           |           |           | for the   | ned       |           |
-|           |           |           | selected  |     under |           |
-|           |           |           | rate must |     the   |           |
-|           |           |           | be        |     \"roo |           |
-|           |           |           | displayed | m\_type\" |           |
-|           |           |           |           |     node  |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Success   | 4.4       | Promo     | Promo     | -   getEx |           |
-|           |           | data      | data must | press.Loo |           |
-|           |           |           | be        | kup       |           |
-|           |           |           | displayed |           |           |
-|           |           |           | for the   | -   Retur |           |
-|           |           |           | selected  | ned       |           |
-|           |           |           | rate, if  |     under |           |
-|           |           |           | returned  |     the   |           |
-|           |           |           |           |     \"pro |           |
-|           |           |           |           | mo\_data\ |           |
-|           |           |           |           | "         |           |
-|           |           |           |           |     node  |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Success   | 4.5       | Check-In  | -   The   | -   getEx |           |
-|           |           | date      |     selec | press.Loo |           |
-|           |           |           | ted       | kup       |           |
-|           |           |           |     check |           |           |
-|           |           |           | -in       | -   Retur |           |
-|           |           |           |     date  | ned       |           |
-|           |           |           |     must  |     under |           |
-|           |           |           |     be    |     the   |           |
-|           |           |           |     displ |     \"che |           |
-|           |           |           | ayed      | ck\_in\"  |           |
-|           |           |           |           |     node  |           |
-|           |           |           | -   Day   |           |           |
-|           |           |           |     of    |           |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     week  |           |           |
-|           |           |           |     must  |           |           |
-|           |           |           |     be    |           |           |
-|           |           |           |     inclu |           |           |
-|           |           |           | ded       |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Success   | 4.6       | Check-Out | -   The   | -   getEx |           |
-|           |           | date      |     selec | press.Loo |           |
-|           |           |           | ted       | kup       |           |
-|           |           |           |     check |           |           |
-|           |           |           | -out      | -   Retur |           |
-|           |           |           |     date  | ned       |           |
-|           |           |           |     must  |     under |           |
-|           |           |           |     be    |     the   |           |
-|           |           |           |     displ |     \"che |           |
-|           |           |           | ayed      | ck\_out\" |           |
-|           |           |           |           |     node  |           |
-|           |           |           | -   Day   |           |           |
-|           |           |           |     of    |           |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     week  |           |           |
-|           |           |           |     must  |           |           |
-|           |           |           |     be    |           |           |
-|           |           |           |     inclu |           |           |
-|           |           |           | ded       |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Success   | 4.7       | Summary   | -   The   | -   getEx | -   The   |
-|           |           | of        |     avg.  | press.Loo |     Resor |
-|           |           | Charges   |     night | kup       | t         |
-|           |           |           | ly        |           |     Fee   |
-|           |           |           |     rate  | -   Avg.  |     is    |
-|           |           |           |     is    |     night |     requi |
-|           |           |           |     displ | ly        | red       |
-|           |           |           | ayed      |     rate  |     by    |
-|           |           |           |     for   |     is    |     law,  |
-|           |           |           |     the   |     retur |     as    |
-|           |           |           |     selec | ned       |     per   |
-|           |           |           | ted       |     under |     Legal |
-|           |           |           |     rate  |     the   | .         |
-|           |           |           |           |     \"dis |           |
-|           |           |           | -   The   | play\_pri | -   Taxes |
-|           |           |           |     numbe | ce\"      |     &     |
-|           |           |           | r         |     node  |     Fees  |
-|           |           |           |     of    |           |     legal |
-|           |           |           |     night | -   Numbe | ese       |
-|           |           |           | s         | r         |     is    |
-|           |           |           |     is    |     of    |     requi |
-|           |           |           |     displ |     night | red       |
-|           |           |           | ayed      | s         |     by    |
-|           |           |           |           |     is    |     law,  |
-|           |           |           | -   The   |     retur |     as    |
-|           |           |           |     numbe | ned       |     per   |
-|           |           |           | r         |     under |     Legal |
-|           |           |           |     of    |     the   | .         |
-|           |           |           |     rooms |     \"num |           |
-|           |           |           |     is    | \_nights\ |           |
-|           |           |           |     displ | "         |           |
-|           |           |           | ayed      |     node  |           |
-|           |           |           |           |           |           |
-|           |           |           | -   The   | -   Numbe |           |
-|           |           |           |     Taxes | r         |           |
-|           |           |           |     and   |     of    |           |
-|           |           |           |     Fees  |     rooms |           |
-|           |           |           |     are   |     is    |           |
-|           |           |           |     displ |     displ |           |
-|           |           |           | ayed      | ayed      |           |
-|           |           |           |           |     under |           |
-|           |           |           |     -   \ |     the   |           |
-|           |           |           | "Taxes    |     \"num |           |
-|           |           |           |         a | \_rooms\" |           |
-|           |           |           | nd        |     node  |           |
-|           |           |           |         F |           |           |
-|           |           |           | ees\"     | -   Taxes |           |
-|           |           |           |         i |     &     |           |
-|           |           |           | s         |     Fees  |           |
-|           |           |           |         h |     are   |           |
-|           |           |           | yperlinke |     displ |           |
-|           |           |           | d         | ayed      |           |
-|           |           |           |         t |     under |           |
-|           |           |           | o         |     the   |           |
-|           |           |           |         a |     \"dis |           |
-|           |           |           |         l | play\_tax |           |
-|           |           |           | ight      | es\"      |           |
-|           |           |           |         b |     node  |           |
-|           |           |           | ox        |           |           |
-|           |           |           |         t |     -   \ |           |
-|           |           |           | hat       | "Taxes    |           |
-|           |           |           |         d |         & |           |
-|           |           |           | isplays   |         F |           |
-|           |           |           |         a | ees\"     |           |
-|           |           |           | dditional |         m |           |
-|           |           |           |         v | ust       |           |
-|           |           |           | erbiage   |         b |           |
-|           |           |           |           | e         |           |
-|           |           |           | -   The   |         a |           |
-|           |           |           |     Resor |         l |           |
-|           |           |           | t         | ink       |           |
-|           |           |           |     Fee   |         t |           |
-|           |           |           |     is    | o         |           |
-|           |           |           |     displ |         d |           |
-|           |           |           | ayed,     | isplay    |           |
-|           |           |           |     if    |         a |           |
-|           |           |           |     appli | dditional |           |
-|           |           |           | cable     |         v |           |
-|           |           |           |           | erbiage   |           |
-|           |           |           | -   The   |         t |           |
-|           |           |           |     room  | hat       |           |
-|           |           |           |     subto |         i |           |
-|           |           |           | tal       | s         |           |
-|           |           |           |     is    |         r |           |
-|           |           |           |     displ | eturned   |           |
-|           |           |           | ayed      |         u |           |
-|           |           |           |           | nder      |           |
-|           |           |           | -   The   |         t |           |
-|           |           |           |     total | he        |           |
-|           |           |           |     price |         \ |           |
-|           |           |           |     is    | "taxes\_a |           |
-|           |           |           |     displ | nd\_fees\ |           |
-|           |           |           | ayed      | _policy\" |           |
-|           |           |           |           |         n |           |
-|           |           |           | -   The c | ode       |           |
-|           |           |           | orrect    |           |           |
-|           |           |           |     curre | -   Resor |           |
-|           |           |           | ncy,      | t         |           |
-|           |           |           |     curre |     Fee   |           |
-|           |           |           | ncy       |     is    |           |
-|           |           |           |     code, |     displ |           |
-|           |           |           |     &     | ayed      |           |
-|           |           |           |     curre |     under |           |
-|           |           |           | ncy       |     the   |           |
-|           |           |           |     symbo |     \"dis |           |
-|           |           |           | l         | play\_pro |           |
-|           |           |           |     are   | perty\_fe |           |
-|           |           |           |     displ | e\"       |           |
-|           |           |           | ayed      |     node  |           |
-|           |           |           |           |           |           |
-|           |           |           |           | -   Room  |           |
-|           |           |           |           |     subto |           |
-|           |           |           |           | tal       |           |
-|           |           |           |           |     is    |           |
-|           |           |           |           |     displ |           |
-|           |           |           |           | ayed      |           |
-|           |           |           |           |     under |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"dis |           |
-|           |           |           |           | play\_sub |           |
-|           |           |           |           | total\"   |           |
-|           |           |           |           |     node  |           |
-|           |           |           |           |           |           |
-|           |           |           |           | -   Total |           |
-|           |           |           |           |     price |           |
-|           |           |           |           |     is    |           |
-|           |           |           |           |     displ |           |
-|           |           |           |           | ayed      |           |
-|           |           |           |           |     under |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"dis |           |
-|           |           |           |           | play\_tot |           |
-|           |           |           |           | al\"      |           |
-|           |           |           |           |     node  |           |
-|           |           |           |           |           |           |
-|           |           |           |           | -   The   |           |
-|           |           |           |           |     curre |           |
-|           |           |           |           | ncy       |           |
-|           |           |           |           |     infor |           |
-|           |           |           |           | mation    |           |
-|           |           |           |           |     is    |           |
-|           |           |           |           |     retur |           |
-|           |           |           |           | ned       |           |
-|           |           |           |           |     under |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"dis |           |
-|           |           |           |           | play\_cur |           |
-|           |           |           |           | rency\"   |           |
-|           |           |           |           |     &     |           |
-|           |           |           |           |     \"dis |           |
-|           |           |           |           | play\_sym |           |
-|           |           |           |           | bol\"     |           |
-|           |           |           |           |     nodes |           |
-|           |           |           |           |           |           |
-|           |           |           |           | -   If a  |           |
-|           |           |           |           |     value |           |
-|           |           |           |           |     is    |           |
-|           |           |           |           |     retur |           |
-|           |           |           |           | ned       |           |
-|           |           |           |           |     that  |           |
-|           |           |           |           |     has   |           |
-|           |           |           |           |     trunc |           |
-|           |           |           |           | ated      |           |
-|           |           |           |           |     a     |           |
-|           |           |           |           |     trail |           |
-|           |           |           |           | ing       |           |
-|           |           |           |           |     zero, |           |
-|           |           |           |           |     that  |           |
-|           |           |           |           |     must  |           |
-|           |           |           |           |     be    |           |
-|           |           |           |           |     displ |           |
-|           |           |           |           | ayed      |           |
-|           |           |           |           |     in    |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     prope |           |
-|           |           |           |           | r         |           |
-|           |           |           |           |     monet |           |
-|           |           |           |           | ary       |           |
-|           |           |           |           |     forma |           |
-|           |           |           |           | t         |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Success   | 4.8       | Important | -   The   | -   getEx | -   Must  |
-|           |           | Informati |     Impor | press.Loo |     be    |
-|           |           | on        | tant      | kup       |     displ |
-|           |           |           |     Infor |           | ayed      |
-|           |           |           | mation    | -   Retur |     as is |
-|           |           |           |     must  | ned       |     if    |
-|           |           |           |     be    |     under |     Price |
-|           |           |           |     displ |     the   | line      |
-|           |           |           | ayed      |     \"imp |     is    |
-|           |           |           |     for   | ortant\_i |     MOR,  |
-|           |           |           |     the   | nformatio |     as    |
-|           |           |           |     selec | n\"       |     per   |
-|           |           |           | ted       |     node  |     Legal |
-|           |           |           |     rate  |           | /CS.      |
-|           |           |           |           | -   All   |           |
-|           |           |           | -   Each  |     title |           |
-|           |           |           |     inven | s         |           |
-|           |           |           | tory      |     &     |           |
-|           |           |           |     type  |     parag |           |
-|           |           |           |     has a | raphs     |           |
-|           |           |           |     diffe |     must  |           |
-|           |           |           | rent      |     be    |           |
-|           |           |           |     set   |     displ |           |
-|           |           |           |     of    | ayed      |           |
-|           |           |           |     verbi |     as    |           |
-|           |           |           | age       |     recei |           |
-|           |           |           |           | ved       |           |
-|           |           |           | -   Verbi |           |           |
-|           |           |           | age       |           |           |
-|           |           |           |     also  |           |           |
-|           |           |           |     diffe |           |           |
-|           |           |           | rs        |           |           |
-|           |           |           |     by    |           |           |
-|           |           |           |     cance |           |           |
-|           |           |           | llation   |           |           |
-|           |           |           |     polic |           |           |
-|           |           |           | y         |           |           |
-|           |           |           |           |           |           |
-|           |           |           | -   The   |           |           |
-|           |           |           |     \"Cus |           |           |
-|           |           |           | tomer     |           |           |
-|           |           |           |     Servi |           |           |
-|           |           |           | ce\"      |           |           |
-|           |           |           |     bulle |           |           |
-|           |           |           | t         |           |           |
-|           |           |           |     must  |           |           |
-|           |           |           |     be    |           |           |
-|           |           |           |     displ |           |           |
-|           |           |           | ayed      |           |           |
-|           |           |           |           |           |           |
-|           |           |           |     -   T |           |           |
-|           |           |           | he        |           |           |
-|           |           |           |         c |           |           |
-|           |           |           | orrect    |           |           |
-|           |           |           |         p |           |           |
-|           |           |           | hone      |           |           |
-|           |           |           |         n |           |           |
-|           |           |           | umber     |           |           |
-|           |           |           |         i |           |           |
-|           |           |           | s         |           |           |
-|           |           |           |         d |           |           |
-|           |           |           | isplayed  |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Success   | 4.9       | Trip Id   | The Trip  | -   getEx | -   Must  |
-|           |           |           | Id that   | press.Loo |     be    |
-|           |           |           | is        | kup       |     displ |
-|           |           |           | returned  |           | ayed      |
-|           |           |           | must be   | -   Retur |     as    |
-|           |           |           | displayed | ned       |     this  |
-|           |           |           |           |     under |     is    |
-|           |           |           |           |     the   |     the   |
-|           |           |           |           |     \"id\ |     numbe |
-|           |           |           |           | "         | r         |
-|           |           |           |           |     node  |     the   |
-|           |           |           |           |           |     custo |
-|           |           |           |           |           | mer       |
-|           |           |           |           |           |     will  |
-|           |           |           |           |           |     requi |
-|           |           |           |           |           | re        |
-|           |           |           |           |           |     to    |
-|           |           |           |           |           |     look  |
-|           |           |           |           |           |     up    |
-|           |           |           |           |           |     their |
-|           |           |           |           |           |     reser |
-|           |           |           |           |           | vation.   |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Success   | 4.1.1     | Booking   | The       | -   getEx |           |
-|           |           | status    | status of | press.Loo |           |
-|           |           |           | the       | kup       |           |
-|           |           |           | reservati |           |           |
-|           |           |           | on        | -   Retur |           |
-|           |           |           | is        | ned       |           |
-|           |           |           | displayed |     under |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"sta |           |
-|           |           |           |           | tus\"     |           |
-|           |           |           |           |     node  |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Success   | 4.1.2     | Hotel     | The hotel | -   getEx | -   Must  |
-|           |           | confirmat | confirmat | press.Loo |     be    |
-|           |           | ion       | ion       | kup       |     displ |
-|           |           | number    | number    |           | ayed      |
-|           |           |           | that is   | -   Retur |     as    |
-|           |           |           | returned  | ned       |     this  |
-|           |           |           | must be   |     under |     is    |
-|           |           |           | displayed |     the   |     the   |
-|           |           |           |           |     \"con |     numbe |
-|           |           |           |           | firmation | r         |
-|           |           |           |           | \_code\"  |     the   |
-|           |           |           |           |     node  |     custo |
-|           |           |           |           |           | mer       |
-|           |           |           |           |           |     will  |
-|           |           |           |           |           |     requi |
-|           |           |           |           |           | re        |
-|           |           |           |           |           |     to    |
-|           |           |           |           |           |     check |
-|           |           |           |           |           |     into  |
-|           |           |           |           |           |     their |
-|           |           |           |           |           |     room( |
-|           |           |           |           |           | s).       |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Success   | 4.1.3     | Hotel     | The hotel | -   getEx |           |
-|           |           | phone     | phone     | press.Loo |           |
-|           |           | number    | number    | kup       |           |
-|           |           |           | must be   |           |           |
-|           |           |           | displayed | -   Retur |           |
-|           |           |           |           | ned       |           |
-|           |           |           |           |     under |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"pho |           |
-|           |           |           |           | ne\"      |           |
-|           |           |           |           |     node  |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Success   | 4.1.4     | Customer  | The       | -   getEx | -   Must  |
-|           |           | Service   | correct   | press.Loo |     be    |
-|           |           | phone     | Customer  | kup       |     displ |
-|           |           | number    | Service   |           | ayed      |
-|           |           |           | number is | -   Retur |     clear |
-|           |           |           | displayed | ned       | ly        |
-|           |           |           |           |     under |     for   |
-|           |           |           |           |     the   |     the   |
-|           |           |           |           |     \"Pol |     user, |
-|           |           |           |           | icy       |     as    |
-|           |           |           |           |     0\"   |     per   |
-|           |           |           |           |     node  |     CS.   |
-|           |           |           |           |     withi |           |
-|           |           |           |           | n         |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"Imp |           |
-|           |           |           |           | ortant    |           |
-|           |           |           |           |     Infor |           |
-|           |           |           |           | mation\"  |           |
-|           |           |           |           |     node  |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Success   | 4.1.5     | Billing   | The       | -   getEx |           |
-|           |           | name      | billing   | press.Loo |           |
-|           |           |           | name      | kup       |           |
-|           |           |           | entered   |           |           |
-|           |           |           | on the    | -   Retur |           |
-|           |           |           | Contract  | ned       |           |
-|           |           |           | page must |     under |           |
-|           |           |           | be        |     the   |           |
-|           |           |           | displayed |     \"nam |           |
-|           |           |           |           | e\"       |           |
-|           |           |           |           |     node  |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Success   | 4.1.6     | Credit    | The       | -   getEx |           |
-|           |           | card type | credit    | press.Loo |           |
-|           |           |           | card type | kup       |           |
-|           |           |           | must be   |           |           |
-|           |           |           | displayed | -   Retur |           |
-|           |           |           |           | ned       |           |
-|           |           |           |           |     under |           |
-|           |           |           |           |     the   |           |
-|           |           |           |           |     \"car |           |
-|           |           |           |           | d\_type\" |           |
-|           |           |           |           |     node  |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Success   | 4.1.7     | Cancellat | -   For   | -   For   |           |
-|           |           | ion       |     cance |     non-c |           |
-|           |           | link      | llable    | ancellabl |           |
-|           |           |           |     rates | e         |           |
-|           |           |           | ,         |     rates |           |
-|           |           |           |     a     | ,         |           |
-|           |           |           |     link  |     the   |           |
-|           |           |           |     must  |     Impor |           |
-|           |           |           |     be    | tant      |           |
-|           |           |           |     displ |     Infor |           |
-|           |           |           | ayed      | mation    |           |
-|           |           |           |     to    |     state |           |
-|           |           |           |     cance | s         |           |
-|           |           |           | l         |     the   |           |
-|           |           |           |     the   |     cance |           |
-|           |           |           |     booki | llation   |           |
-|           |           |           | ng        |     polic |           |
-|           |           |           |     direc | y         |           |
-|           |           |           | tly       |     and   |           |
-|           |           |           |     or to |     will  |           |
-|           |           |           |     look  |     suffi |           |
-|           |           |           |     up    | ce.       |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     reser |           |           |
-|           |           |           | vation    |           |           |
-|           |           |           |     detai |           |           |
-|           |           |           | ls        |           |           |
-|           |           |           |     and   |           |           |
-|           |           |           |     cance |           |           |
-|           |           |           | l         |           |           |
-|           |           |           |     it on |           |           |
-|           |           |           |     this  |           |           |
-|           |           |           |     revie |           |           |
-|           |           |           | w         |           |           |
-|           |           |           |     page. |           |           |
-|           |           |           |           |           |           |
-|           |           |           | -   For   |           |           |
-|           |           |           |     non-c |           |           |
-|           |           |           | ancellabl |           |           |
-|           |           |           | e         |           |           |
-|           |           |           |     rates |           |           |
-|           |           |           | ,         |           |           |
-|           |           |           |     it    |           |           |
-|           |           |           |     must  |           |           |
-|           |           |           |     be    |           |           |
-|           |           |           |     made  |           |           |
-|           |           |           |     clear |           |           |
-|           |           |           |     to    |           |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     user  |           |           |
-|           |           |           |     that  |           |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     booki |           |           |
-|           |           |           | ng        |           |           |
-|           |           |           |     canno |           |           |
-|           |           |           | t         |           |           |
-|           |           |           |     be    |           |           |
-|           |           |           |     cance |           |           |
-|           |           |           | lled      |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Conf.     | 5.1       | Full      | The full  |           |           |
-| Email     |           | property  | property  |           |           |
-|           |           | name      | name is   |           |           |
-|           |           |           | displayed |           |           |
-|           |           |           | for the   |           |           |
-|           |           |           | selected  |           |           |
-|           |           |           | property  |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Conf.     | 5.2       | Full      | -   For   |           |           |
-| Email     |           | property  |     US/CA |           |           |
-|           |           | address   |     prope |           |           |
-|           |           |           | rties,    |           |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     Provi |           |           |
-|           |           |           | nce/State |           |           |
-|           |           |           |     code  |           |           |
-|           |           |           |     are   |           |           |
-|           |           |           |     requi |           |           |
-|           |           |           | red       |           |           |
-|           |           |           |           |           |           |
-|           |           |           | -   For   |           |           |
-|           |           |           |     prope |           |           |
-|           |           |           | rties     |           |           |
-|           |           |           |     anywh |           |           |
-|           |           |           | ere       |           |           |
-|           |           |           |     else  |           |           |
-|           |           |           |     in    |           |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     world |           |           |
-|           |           |           | ,         |           |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     Count |           |           |
-|           |           |           | ry        |           |           |
-|           |           |           |     code  |           |           |
-|           |           |           |     is    |           |           |
-|           |           |           |     requi |           |           |
-|           |           |           | red       |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Conf.     | 5.3       | Room/Rate | The       |           |           |
-| Email     |           | descripti | descripti |           |           |
-|           |           | on        | on        |           |           |
-|           |           |           | that is   |           |           |
-|           |           |           | returned  |           |           |
-|           |           |           | for the   |           |           |
-|           |           |           | selected  |           |           |
-|           |           |           | rate is   |           |           |
-|           |           |           | displayed |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Conf.     | 5.4       | Check-In  | -   The   |           |           |
-| Email     |           | date      |     selec |           |           |
-|           |           |           | ted       |           |           |
-|           |           |           |     check |           |           |
-|           |           |           | -in       |           |           |
-|           |           |           |     date  |           |           |
-|           |           |           |     must  |           |           |
-|           |           |           |     be    |           |           |
-|           |           |           |     displ |           |           |
-|           |           |           | ayed      |           |           |
-|           |           |           |           |           |           |
-|           |           |           | -   Day   |           |           |
-|           |           |           |     of    |           |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     week  |           |           |
-|           |           |           |     must  |           |           |
-|           |           |           |     be    |           |           |
-|           |           |           |     inclu |           |           |
-|           |           |           | ded       |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Conf.     | 5.5       | Check-Out | -   The   |           |           |
-| Email     |           | date      |     selec |           |           |
-|           |           |           | ted       |           |           |
-|           |           |           |     check |           |           |
-|           |           |           | -out      |           |           |
-|           |           |           |     date  |           |           |
-|           |           |           |     must  |           |           |
-|           |           |           |     be    |           |           |
-|           |           |           |     displ |           |           |
-|           |           |           | ayed      |           |           |
-|           |           |           |           |           |           |
-|           |           |           | -   Day   |           |           |
-|           |           |           |     of    |           |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     week  |           |           |
-|           |           |           |     must  |           |           |
-|           |           |           |     be    |           |           |
-|           |           |           |     inclu |           |           |
-|           |           |           | ded       |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Conf.     | 5.6       | Summary   | -   The   |           |           |
-| Email     |           | of        |     avg.  |           |           |
-|           |           | Charges   |     night |           |           |
-|           |           |           | ly        |           |           |
-|           |           |           |     rate  |           |           |
-|           |           |           |     is    |           |           |
-|           |           |           |     displ |           |           |
-|           |           |           | ayed      |           |           |
-|           |           |           |     for   |           |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     selec |           |           |
-|           |           |           | ted       |           |           |
-|           |           |           |     rate  |           |           |
-|           |           |           |           |           |           |
-|           |           |           | -   The   |           |           |
-|           |           |           |     numbe |           |           |
-|           |           |           | r         |           |           |
-|           |           |           |     of    |           |           |
-|           |           |           |     night |           |           |
-|           |           |           | s         |           |           |
-|           |           |           |     is    |           |           |
-|           |           |           |     displ |           |           |
-|           |           |           | ayed      |           |           |
-|           |           |           |           |           |           |
-|           |           |           | -   The   |           |           |
-|           |           |           |     numbe |           |           |
-|           |           |           | r         |           |           |
-|           |           |           |     of    |           |           |
-|           |           |           |     rooms |           |           |
-|           |           |           |     is    |           |           |
-|           |           |           |     displ |           |           |
-|           |           |           | ayed      |           |           |
-|           |           |           |           |           |           |
-|           |           |           | -   The   |           |           |
-|           |           |           |     Taxes |           |           |
-|           |           |           |     and   |           |           |
-|           |           |           |     Fees  |           |           |
-|           |           |           |     are   |           |           |
-|           |           |           |     displ |           |           |
-|           |           |           | ayed      |           |           |
-|           |           |           |           |           |           |
-|           |           |           | -   The   |           |           |
-|           |           |           |     Resor |           |           |
-|           |           |           | t         |           |           |
-|           |           |           |     Fee   |           |           |
-|           |           |           |     is    |           |           |
-|           |           |           |     displ |           |           |
-|           |           |           | ayed,     |           |           |
-|           |           |           |     if    |           |           |
-|           |           |           |     appli |           |           |
-|           |           |           | cable     |           |           |
-|           |           |           |           |           |           |
-|           |           |           | -   The   |           |           |
-|           |           |           |     room  |           |           |
-|           |           |           |     subto |           |           |
-|           |           |           | tal       |           |           |
-|           |           |           |     is    |           |           |
-|           |           |           |     displ |           |           |
-|           |           |           | ayed      |           |           |
-|           |           |           |           |           |           |
-|           |           |           | -   The   |           |           |
-|           |           |           |     total |           |           |
-|           |           |           |     price |           |           |
-|           |           |           |     is    |           |           |
-|           |           |           |     displ |           |           |
-|           |           |           | ayed      |           |           |
-|           |           |           |           |           |           |
-|           |           |           | -   The c |           |           |
-|           |           |           | orrect    |           |           |
-|           |           |           |     curre |           |           |
-|           |           |           | ncy,      |           |           |
-|           |           |           |     curre |           |           |
-|           |           |           | ncy       |           |           |
-|           |           |           |     code, |           |           |
-|           |           |           |     &     |           |           |
-|           |           |           |     curre |           |           |
-|           |           |           | ncy       |           |           |
-|           |           |           |     symbo |           |           |
-|           |           |           | l         |           |           |
-|           |           |           |     are   |           |           |
-|           |           |           |     displ |           |           |
-|           |           |           | ayed      |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Conf.     | 5.7       | Trip Id   | The Trip  |           | -   Must  |
-| Email     |           |           | Id that   |           |     be    |
-|           |           |           | is        |           |     displ |
-|           |           |           | returned  |           | ayed      |
-|           |           |           | must be   |           |     as    |
-|           |           |           | displayed |           |     this  |
-|           |           |           |           |           |     is    |
-|           |           |           |           |           |     the   |
-|           |           |           |           |           |     numbe |
-|           |           |           |           |           | r         |
-|           |           |           |           |           |     the   |
-|           |           |           |           |           |     custo |
-|           |           |           |           |           | mer       |
-|           |           |           |           |           |     will  |
-|           |           |           |           |           |     requi |
-|           |           |           |           |           | re        |
-|           |           |           |           |           |     to    |
-|           |           |           |           |           |     look  |
-|           |           |           |           |           |     up    |
-|           |           |           |           |           |     their |
-|           |           |           |           |           |     reser |
-|           |           |           |           |           | vation.   |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Conf.     | 5.8       | Booking   | The       |           |           |
-| Email     |           | status    | status of |           |           |
-|           |           |           | the       |           |           |
-|           |           |           | reservati |           |           |
-|           |           |           | on        |           |           |
-|           |           |           | is        |           |           |
-|           |           |           | displayed |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Conf.     | 5.9       | Hotel     | The hotel |           | -   Must  |
-| Email     |           | confirmat | confirmat |           |     be    |
-|           |           | ion       | ion       |           |     displ |
-|           |           | number    | number    |           | ayed      |
-|           |           |           | that is   |           |     as    |
-|           |           |           | returned  |           |     this  |
-|           |           |           | must be   |           |     is    |
-|           |           |           | displayed |           |     the   |
-|           |           |           |           |           |     numbe |
-|           |           |           |           |           | r         |
-|           |           |           |           |           |     the   |
-|           |           |           |           |           |     custo |
-|           |           |           |           |           | mer       |
-|           |           |           |           |           |     will  |
-|           |           |           |           |           |     requi |
-|           |           |           |           |           | re        |
-|           |           |           |           |           |     to    |
-|           |           |           |           |           |     check |
-|           |           |           |           |           |     into  |
-|           |           |           |           |           |     their |
-|           |           |           |           |           |     room( |
-|           |           |           |           |           | s).       |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Conf.     | 5.1.1     | Hotel     | The hotel |           |           |
-| Email     |           | phone     | phone     |           |           |
-|           |           | number    | number    |           |           |
-|           |           |           | must be   |           |           |
-|           |           |           | displayed |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Conf.     | 5.1.2     | Customer  | The       |           | -   Must  |
-| Email     |           | Service   | correct   |           |     be    |
-|           |           | phone     | Customer  |           |     displ |
-|           |           | number    | Service   |           | ayed      |
-|           |           |           | number is |           |     clear |
-|           |           |           | displayed |           | ly        |
-|           |           |           |           |           |     for   |
-|           |           |           |           |           |     the   |
-|           |           |           |           |           |     user, |
-|           |           |           |           |           |     as    |
-|           |           |           |           |           |     per   |
-|           |           |           |           |           |     CS.   |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Cancel.   | 6.1       | Booking   | The       |           |           |
-| Email     |           | status    | status of |           |           |
-|           |           |           | the       |           |           |
-|           |           |           | reservati |           |           |
-|           |           |           | on        |           |           |
-|           |           |           | is        |           |           |
-|           |           |           | displayed |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Cancel.   | 6.2       | Trip Id   | The Trip  |           | -   Must  |
-| Email     |           |           | Id that   |           |     be    |
-|           |           |           | is        |           |     displ |
-|           |           |           | returned  |           | ayed      |
-|           |           |           | must be   |           |     as    |
-|           |           |           | displayed |           |     this  |
-|           |           |           |           |           |     is    |
-|           |           |           |           |           |     the   |
-|           |           |           |           |           |     numbe |
-|           |           |           |           |           | r         |
-|           |           |           |           |           |     the   |
-|           |           |           |           |           |     custo |
-|           |           |           |           |           | mer       |
-|           |           |           |           |           |     will  |
-|           |           |           |           |           |     requi |
-|           |           |           |           |           | re        |
-|           |           |           |           |           |     to    |
-|           |           |           |           |           |     look  |
-|           |           |           |           |           |     up    |
-|           |           |           |           |           |     their |
-|           |           |           |           |           |     reser |
-|           |           |           |           |           | vation.   |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Cancel.   | 6.3       | Full      | The full  |           |           |
-| Email     |           | property  | property  |           |           |
-|           |           | name      | name is   |           |           |
-|           |           |           | displayed |           |           |
-|           |           |           | for the   |           |           |
-|           |           |           | selected  |           |           |
-|           |           |           | property  |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Cancel.   | 6.4       | Full      | -   For   |           |           |
-| Email     |           | property  |     US/CA |           |           |
-|           |           | address   |     prope |           |           |
-|           |           |           | rties,    |           |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     Provi |           |           |
-|           |           |           | nce/State |           |           |
-|           |           |           |     code  |           |           |
-|           |           |           |     are   |           |           |
-|           |           |           |     requi |           |           |
-|           |           |           | red       |           |           |
-|           |           |           |           |           |           |
-|           |           |           | -   For   |           |           |
-|           |           |           |     prope |           |           |
-|           |           |           | rties     |           |           |
-|           |           |           |     anywh |           |           |
-|           |           |           | ere       |           |           |
-|           |           |           |     else  |           |           |
-|           |           |           |     in    |           |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     world |           |           |
-|           |           |           | ,         |           |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     Count |           |           |
-|           |           |           | ry        |           |           |
-|           |           |           |     code  |           |           |
-|           |           |           |     is    |           |           |
-|           |           |           |     requi |           |           |
-|           |           |           | red       |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Cancel.   | 6.5       | Hotel     | The hotel |           |           |
-| Email     |           | phone     | phone     |           |           |
-|           |           | number    | number    |           |           |
-|           |           |           | must be   |           |           |
-|           |           |           | displayed |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Cancel.   | 6.6       | Room/Rate | The       |           |           |
-| Email     |           | descripti | descripti |           |           |
-|           |           | on        | on        |           |           |
-|           |           |           | that is   |           |           |
-|           |           |           | returned  |           |           |
-|           |           |           | for the   |           |           |
-|           |           |           | selected  |           |           |
-|           |           |           | rate is   |           |           |
-|           |           |           | displayed |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Cancel.   | 6.7       | Check-In  | -   The   |           |           |
-| Email     |           | date      |     selec |           |           |
-|           |           |           | ted       |           |           |
-|           |           |           |     check |           |           |
-|           |           |           | -in       |           |           |
-|           |           |           |     date  |           |           |
-|           |           |           |     must  |           |           |
-|           |           |           |     be    |           |           |
-|           |           |           |     displ |           |           |
-|           |           |           | ayed      |           |           |
-|           |           |           |           |           |           |
-|           |           |           | -   Day   |           |           |
-|           |           |           |     of    |           |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     week  |           |           |
-|           |           |           |     must  |           |           |
-|           |           |           |     be    |           |           |
-|           |           |           |     inclu |           |           |
-|           |           |           | ded       |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
-| Cancel.   | 6.8       | Check-Out | -   The   |           |           |
-| Email     |           | date      |     selec |           |           |
-|           |           |           | ted       |           |           |
-|           |           |           |     check |           |           |
-|           |           |           | -out      |           |           |
-|           |           |           |     date  |           |           |
-|           |           |           |     must  |           |           |
-|           |           |           |     be    |           |           |
-|           |           |           |     displ |           |           |
-|           |           |           | ayed      |           |           |
-|           |           |           |           |           |           |
-|           |           |           | -   Day   |           |           |
-|           |           |           |     of    |           |           |
-|           |           |           |     the   |           |           |
-|           |           |           |     week  |           |           |
-|           |           |           |     must  |           |           |
-|           |           |           |     be    |           |           |
-|           |           |           |     inclu |           |           |
-|           |           |           | ded       |           |           |
-+-----------+-----------+-----------+-----------+-----------+-----------+
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <p>
+                    <strong>Page</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <strong>Requirement #</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <strong>Requirement</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <strong>Expected Result</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <strong>Additional Information</strong>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <strong>Reasoning for Requirements</strong>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Results
+                </p>
+            </td>
+            <td>
+                <p>
+                    1.1
+                </p>
+            </td>
+            <td>
+                <p>
+                    Average Nightly Rate
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        The Avg. Nightly Rate is displayed for each properly
+                    </li>
+                    <li>
+                        The rate is not multiplied by the number of nights or
+                        rooms
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.Results
+                    </li>
+                    <li>
+                        Returned under the "source_night_price" node within the
+                        "night_price_data" cluster for each property
+                    </li>
+                    <li>
+                        If a value is returned that has truncated a trailing
+                        zero, that must be displayed in the proper monetary
+                        format (two decimal places or whole dollar)
+                    </li>
+                    <li>
+                        If using a different currency than the source currency,
+                        the "display_night_price" node can be used
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Results
+                </p>
+            </td>
+            <td>
+                <p>
+                    1.2
+                </p>
+            </td>
+            <td>
+                <p>
+                    Currency
+                </p>
+            </td>
+            <td>
+                <p>
+                    The correct currency, currency code, &amp; currency symbol
+                    are displayed
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.Results
+                    </li>
+                    <li>
+                        Returned under the "source_currency" &amp;
+                        "source_symbol" nodes within the "price_details"
+                        cluster for each property
+                    </li>
+                    <li>
+                        If using a different currency than the source currency,
+                        the "display_currency" &amp; "display_symbol" nodes can
+                        be used
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Results
+                </p>
+            </td>
+            <td>
+                <p>
+                    1.3
+                </p>
+            </td>
+            <td>
+                <p>
+                    Full property name
+                </p>
+            </td>
+            <td>
+                <p>
+                    The full property name must be displayed for each property
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.Results
+                    </li>
+                    <li>
+                        Returned under the "name" node within the "rate_data"
+                        cluster for each property
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Results
+                </p>
+            </td>
+            <td>
+                <p>
+                    1.4
+                </p>
+            </td>
+            <td>
+                <p>
+                    Full property address
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        For US/CA properties, the Province/State code are
+                        required
+                    </li>
+                    <li>
+                        For properties anywhere else in the world, the Country
+                        code is required
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.Results
+                    </li>
+                    <li>
+                        Returned under the "address" cluster within the
+                        "rate_data" node for each property
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Results
+                </p>
+            </td>
+            <td>
+                <p>
+                    1.5
+                </p>
+            </td>
+            <td>
+                <p>
+                    Star rating
+                </p>
+            </td>
+            <td>
+                <p>
+                    The correct star rating must be displayed for each property
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.Results
+                    </li>
+                    <li>
+                        Returned under the "star_rating" node within the
+                        "rate_data" node for each property
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Results
+                </p>
+            </td>
+            <td>
+                <p>
+                    1.6
+                </p>
+            </td>
+            <td>
+                <p>
+                    Search box
+                </p>
+            </td>
+            <td>
+                <p>
+                    A search box must be accessible on the Results page
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        Can be a slimmed down version of the Hotel search box
+                    </li>
+                    <li>
+                        getAutoSuggestV2
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Details
+                </p>
+            </td>
+            <td>
+                <p>
+                    2.1
+                </p>
+            </td>
+            <td>
+                <p>
+                    Full property name
+                </p>
+            </td>
+            <td>
+                <p>
+                    The full property name must be displayed for the selected
+                    property
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getHotelDetails
+                    </li>
+                    <li>
+                        Download option available
+                    </li>
+                    <li>
+                        Returned under the "name" node within the "hotel_data"
+                        cluster for each property
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Details
+                </p>
+            </td>
+            <td>
+                <p>
+                    2.2
+                </p>
+            </td>
+            <td>
+                <p>
+                    Full property address
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        For US/CA properties, the Province/State code are
+                        required
+                    </li>
+                    <li>
+                        For properties anywhere else in the world, the Country
+                        code is required
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getHotelDetails
+                    </li>
+                    <li>
+                        Download option available
+                    </li>
+                    <li>
+                        Returned under the "address" node within the
+                        "hotel_data" cluster for each property
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Details
+                </p>
+            </td>
+            <td>
+                <p>
+                    2.3
+                </p>
+            </td>
+            <td>
+                <p>
+                    Star rating
+                </p>
+            </td>
+            <td>
+                <p>
+                    The correct star rating must be displayed for each property
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getHotelDetails
+                    </li>
+                    <li>
+                        Download option available
+                    </li>
+                    <li>
+                        Returned under the "star_rating" node within the
+                        "hotel_data" cluster for each property returned
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Details
+                </p>
+            </td>
+            <td>
+                <p>
+                    2.4
+                </p>
+            </td>
+            <td>
+                <p>
+                    Hotel description
+                </p>
+            </td>
+            <td>
+                <p>
+                    The hotel description must be displayed, it can be
+                    partially collapsed, but must be visible and accessible
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getHotelDetails
+                    </li>
+                    <li>
+                        Download option available
+                    </li>
+                    <li>
+                        Returned under the "hotel_description" node
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Details
+                </p>
+            </td>
+            <td>
+                <p>
+                    2.5
+                </p>
+            </td>
+            <td>
+                <p>
+                    Amenities
+                </p>
+            </td>
+            <td>
+                <p>
+                    The amenities that are returned for the property must be
+                    displayed
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getHotelDetails
+                    </li>
+                    <li>
+                        Download option available
+                    </li>
+                    <li>
+                        Returned under the "amenity_data" nodes
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Details
+                </p>
+            </td>
+            <td>
+                <p>
+                    2.6
+                </p>
+            </td>
+            <td>
+                <p>
+                    Reviews
+                </p>
+            </td>
+            <td>
+                <p>
+                    The review data returned must be displayed; they can be
+                    hidden behind a click
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getHotelReviews
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Details
+                </p>
+            </td>
+            <td>
+                <p>
+                    2.7
+                </p>
+            </td>
+            <td>
+                <p>
+                    Average Nightly Rate
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        The Avg. Nightly Rate is displayed for each properly
+                    </li>
+                    <li>
+                        The correct currency, currency code, &amp; currency
+                        symbol are displayed
+                    </li>
+                    <li>
+                        The rate is not multiplied by the number of nights or
+                        rooms
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getHotelDetails
+                    </li>
+                    <li>
+                        Download option available
+                    </li>
+                    <li>
+                        Returned under the "source_price" node within the
+                        "static_low_rate" cluster for each property returned
+                    </li>
+                    <li>
+                        If a value is returned that has truncated a trailing
+                        zero, that must be displayed in the proper monetary
+                        format
+                    </li>
+                    <li>
+                        If using a different currency than the source currency,
+                        the "display_price" node can be used
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Details
+                </p>
+            </td>
+            <td>
+                <p>
+                    2.8
+                </p>
+            </td>
+            <td>
+                <p>
+                    Currency
+                </p>
+            </td>
+            <td>
+                <p>
+                    The correct currency, currency code, &amp; currency symbol
+                    are displayed
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getHotelDetails
+                    </li>
+                    <li>
+                        Download option available
+                    </li>
+                    <li>
+                        Returned under the "source_currency" &amp;
+                        "source_symbol" nodes within the "static_low_rate"
+                        cluster for each property returned
+                    </li>
+                    <li>
+                        If using a different currency than the source currency,
+                        the "display_currency" &amp; "display_symbol" nodes can
+                        be used
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Details
+                </p>
+            </td>
+            <td>
+                <p>
+                    2.9
+                </p>
+            </td>
+            <td>
+                <p>
+                    Room/Rate description
+                </p>
+            </td>
+            <td>
+                <p>
+                    The description that is returned for each rate must be
+                    displayed
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.MultiContract
+                    </li>
+                    <li>
+                        Returned under the "title" &amp; "description" nodes
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Details
+                </p>
+            </td>
+            <td>
+                <p>
+                    2.1.1
+                </p>
+            </td>
+            <td>
+                <p>
+                    Cancellation policy
+                </p>
+            </td>
+            <td>
+                <p>
+                    The cancellation policy must be displayed for each rate
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.MultiContract
+                    </li>
+                    <li>
+                        Returned under the "is_cancellable" &amp;
+                        "free_cancellation" nodes.
+                    </li>
+                    <ul type="circle">
+                        <li>
+                            0 = cancellable, free
+                        </li>
+                        <li>
+                            1 = not cancellable, not free
+                        </li>
+                    </ul>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Details
+                </p>
+            </td>
+            <td>
+                <p>
+                    2.1.2
+                </p>
+            </td>
+            <td>
+                <p>
+                    Promo data
+                </p>
+            </td>
+            <td>
+                <p>
+                    Promo data must be displayed for each rate, if returned
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.MultiContract
+                    </li>
+                    <li>
+                        Returned under the "promo" node within the
+                        "details_summary" cluster for each rate returned
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Contract
+                </p>
+            </td>
+            <td>
+                <p>
+                    3.1
+                </p>
+            </td>
+            <td>
+                <p>
+                    Full property name
+                </p>
+            </td>
+            <td>
+                <p>
+                    The full property name must be displayed for the selected
+                    property
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getContractRequest
+                    </li>
+                    <li>
+                        Returned under the "hotel_name" node
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Contract
+                </p>
+            </td>
+            <td>
+                <p>
+                    3.2
+                </p>
+            </td>
+            <td>
+                <p>
+                    Full property address
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        For US/CA properties, the Province/State code are
+                        required
+                    </li>
+                    <li>
+                        For properties anywhere else in the world, the Country
+                        code is required
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getContractRequest
+                    </li>
+                    <li>
+                        Returned under the "address" node
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Contract
+                </p>
+            </td>
+            <td>
+                <p>
+                    3.3
+                </p>
+            </td>
+            <td>
+                <p>
+                    Room/Rate description
+                </p>
+            </td>
+            <td>
+                <p>
+                    The description that is returned for the selected rate must
+                    be displayed
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getContractRequest
+                    </li>
+                    <li>
+                        Returned under the "title" &amp; "description" nodes
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Contract
+                </p>
+            </td>
+            <td>
+                <p>
+                    3.4
+                </p>
+            </td>
+            <td>
+                <p>
+                    Promo data
+                </p>
+            </td>
+            <td>
+                <p>
+                    Promo data must be displayed for the selected rate, if
+                    returned
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getContractRequest
+                    </li>
+                    <li>
+                        Returned under the "promo" node
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Contract
+                </p>
+            </td>
+            <td>
+                <p>
+                    3.5
+                </p>
+            </td>
+            <td>
+                <p>
+                    Check-In date
+                </p>
+            </td>
+            <td>
+                <p>
+                    The selected check-in date must be displayed
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getContractRequest
+                    </li>
+                    <li>
+                        Returned under the "check_in" node
+                    </li>
+                    <li>
+                        Day of the week is recommended, but not required
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Contract
+                </p>
+            </td>
+            <td>
+                <p>
+                    3.6
+                </p>
+            </td>
+            <td>
+                <p>
+                    Check-Out date
+                </p>
+            </td>
+            <td>
+                <p>
+                    The selected check-out date must be displayed
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getContractRequest
+                    </li>
+                    <li>
+                        Returned under the "check_out" node
+                    </li>
+                    <li>
+                        Day of the week is recommended, but not required
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Contract
+                </p>
+            </td>
+            <td>
+                <p>
+                    3.7
+                </p>
+            </td>
+            <td>
+                <p>
+                    Summary of Charges
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        The avg. nightly rate is displayed for the selected
+                        rate
+                    </li>
+                    <li>
+                        The number of nights is displayed
+                    </li>
+                    <li>
+                        The number of rooms is displayed
+                    </li>
+                    <li>
+                        The Taxes and Fees are displayed
+                    </li>
+                    <ul type="circle">
+                        <li>
+                            "Taxes and Fees" is hyperlinked to a light box that
+                            displays additional verbiage
+                        </li>
+                    </ul>
+                    <li>
+                        The Resort Fee is displayed, if applicable
+                    </li>
+                    <li>
+                        The room subtotal is displayed
+                    </li>
+                    <li>
+                        The total price is displayed
+                    </li>
+                    <li>
+                        The correct currency, currency code, &amp; currency
+                        symbol are displayed
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getContractRequest
+                    </li>
+                    <li>
+                        Avg. nightly rate is returned under the "display_price"
+                        node
+                    </li>
+                    <li>
+                        Number of nights is returned under the "num_nights"
+                        node
+                    </li>
+                    <li>
+                        Number of rooms is displayed under the "num_rooms" node
+                    </li>
+                    <li>
+                        Taxes &amp; Fees are displayed under the
+                        "display_taxes" node
+                    </li>
+                    <ul type="circle">
+                        <li>
+                            "Taxes &amp; Fees" must be a link to display
+                            additional verbiage that is returned under the
+                            "taxes_and_fees_policy" node
+                        </li>
+                    </ul>
+                    <li>
+                        Resort Fee is displayed under the
+                        "display_property_fee" node
+                    </li>
+                    <li>
+                        Room subtotal is displayed under the "display_subtotal"
+                        node
+                    </li>
+                    <li>
+                        Total price is displayed under the "display_total" node
+                    </li>
+                    <li>
+                        The currency information is returned under the
+                        "display_currency" &amp; "display_symbol" nodes
+                    </li>
+                    <li>
+                        If a value is returned that has truncated a trailing
+                        zero, that must be displayed in the proper monetary
+                        format
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        The Resort Fee is required by law, as per Legal.
+                    </li>
+                    <li>
+                        Taxes &amp; Fees legalese is required by law, as per
+                        Legal.
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Contract
+                </p>
+            </td>
+            <td>
+                <p>
+                    3.8
+                </p>
+            </td>
+            <td>
+                <p>
+                    Important Information
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        The Important Information must be displayed for the
+                        selected rate
+                    </li>
+                    <li>
+                        Each inventory type has a different set of verbiage
+                    </li>
+                    <li>
+                        Verbiage also differs by cancellation policy
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getContractRequest
+                    </li>
+                    <li>
+                        Returned under the "important_information" node
+                    </li>
+                    <li>
+                        All titles &amp; paragraphs must be displayed as
+                        received
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        Must be displayed as is if Priceline is MOR, as per
+                        Legal/CS.
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Contract
+                </p>
+            </td>
+            <td>
+                <p>
+                    3.9
+                </p>
+            </td>
+            <td>
+                <p>
+                    Terms and Conditions
+                </p>
+            </td>
+            <td>
+                <p>
+                    The Terms and Conditions must be displayed; they can be
+                    hidden behind a click
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getPolicy.Hotel
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Contract
+                </p>
+            </td>
+            <td>
+                <p>
+                    3.1.1
+                </p>
+            </td>
+            <td>
+                <p>
+                    Privacy Policy
+                </p>
+            </td>
+            <td>
+                <p>
+                    The Privacy Policy must be displayed; it can be hidden
+                    behind a click
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getPolicy.Hotel
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Contract
+                </p>
+            </td>
+            <td>
+                <p>
+                    3.1.2
+                </p>
+            </td>
+            <td>
+                <p>
+                    Customer agreement
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        The customer must agree to the price and all terms in
+                        order to book, this can be:
+                    </li>
+                    <ul type="circle">
+                        <li>
+                            Initials input box
+                        </li>
+                        <li>
+                            Check box
+                        </li>
+                        <li>
+                            etc.
+                        </li>
+                    </ul>
+                </ul>
+            </td>
+            <td>
+                <p>
+                    Front end change for the partner
+                </p>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Success
+                </p>
+            </td>
+            <td>
+                <p>
+                    4.1
+                </p>
+            </td>
+            <td>
+                <p>
+                    Full property name
+                </p>
+            </td>
+            <td>
+                <p>
+                    The full property name must be displayed for the selected
+                    property
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.Lookup
+                    </li>
+                    <li>
+                        Returned under the "hotel_name" node
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Success
+                </p>
+            </td>
+            <td>
+                <p>
+                    4.2
+                </p>
+            </td>
+            <td>
+                <p>
+                    Full property address
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        For US/CA properties, the Province/State code are
+                        required
+                    </li>
+                    <li>
+                        For properties anywhere else in the world, the Country
+                        code is required
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.Lookup
+                    </li>
+                    <li>
+                        Returned under the "address" node
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Success
+                </p>
+            </td>
+            <td>
+                <p>
+                    4.3
+                </p>
+            </td>
+            <td>
+                <p>
+                    Room/Rate description
+                </p>
+            </td>
+            <td>
+                <p>
+                    The description that is returned for the selected rate must
+                    be displayed
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.Lookup
+                    </li>
+                    <li>
+                        Returned under the "room_type" node
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Success
+                </p>
+            </td>
+            <td>
+                <p>
+                    4.4
+                </p>
+            </td>
+            <td>
+                <p>
+                    Promo data
+                </p>
+            </td>
+            <td>
+                <p>
+                    Promo data must be displayed for the selected rate, if
+                    returned
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.Lookup
+                    </li>
+                    <li>
+                        Returned under the "promo_data" node
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Success
+                </p>
+            </td>
+            <td>
+                <p>
+                    4.5
+                </p>
+            </td>
+            <td>
+                <p>
+                    Check-In date
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        The selected check-in date must be displayed
+                    </li>
+                    <li>
+                        Day of the week must be included
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.Lookup
+                    </li>
+                    <li>
+                        Returned under the "check_in" node
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Success
+                </p>
+            </td>
+            <td>
+                <p>
+                    4.6
+                </p>
+            </td>
+            <td>
+                <p>
+                    Check-Out date
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        The selected check-out date must be displayed
+                    </li>
+                    <li>
+                        Day of the week must be included
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.Lookup
+                    </li>
+                    <li>
+                        Returned under the "check_out" node
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Success
+                </p>
+            </td>
+            <td>
+                <p>
+                    4.7
+                </p>
+            </td>
+            <td>
+                <p>
+                    Summary of Charges
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        The avg. nightly rate is displayed for the selected
+                        rate
+                    </li>
+                    <li>
+                        The number of nights is displayed
+                    </li>
+                    <li>
+                        The number of rooms is displayed
+                    </li>
+                    <li>
+                        The Taxes and Fees are displayed
+                    </li>
+                    <ul type="circle">
+                        <li>
+                            "Taxes and Fees" is hyperlinked to a light box that
+                            displays additional verbiage
+                        </li>
+                    </ul>
+                    <li>
+                        The Resort Fee is displayed, if applicable
+                    </li>
+                    <li>
+                        The room subtotal is displayed
+                    </li>
+                    <li>
+                        The total price is displayed
+                    </li>
+                    <li>
+                        The correct currency, currency code, &amp; currency
+                        symbol are displayed
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.Lookup
+                    </li>
+                    <li>
+                        Avg. nightly rate is returned under the "display_price"
+                        node
+                    </li>
+                    <li>
+                        Number of nights is returned under the "num_nights"
+                        node
+                    </li>
+                    <li>
+                        Number of rooms is displayed under the "num_rooms" node
+                    </li>
+                    <li>
+                        Taxes &amp; Fees are displayed under the
+                        "display_taxes" node
+                    </li>
+                    <ul type="circle">
+                        <li>
+                            "Taxes &amp; Fees" must be a link to display
+                            additional verbiage that is returned under the
+                            "taxes_and_fees_policy" node
+                        </li>
+                    </ul>
+                    <li>
+                        Resort Fee is displayed under the
+                        "display_property_fee" node
+                    </li>
+                    <li>
+                        Room subtotal is displayed under the "display_subtotal"
+                        node
+                    </li>
+                    <li>
+                        Total price is displayed under the "display_total" node
+                    </li>
+                    <li>
+                        The currency information is returned under the
+                        "display_currency" &amp; "display_symbol" nodes
+                    </li>
+                    <li>
+                        If a value is returned that has truncated a trailing
+                        zero, that must be displayed in the proper monetary
+                        format
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        The Resort Fee is required by law, as per Legal.
+                    </li>
+                    <li>
+                        Taxes &amp; Fees legalese is required by law, as per
+                        Legal.
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Success
+                </p>
+            </td>
+            <td>
+                <p>
+                    4.8
+                </p>
+            </td>
+            <td>
+                <p>
+                    Important Information
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        The Important Information must be displayed for the
+                        selected rate
+                    </li>
+                    <li>
+                        Each inventory type has a different set of verbiage
+                    </li>
+                    <li>
+                        Verbiage also differs by cancellation policy
+                    </li>
+                    <li>
+                        The "Customer Service" bullet must be displayed
+                    </li>
+                    <ul type="circle">
+                        <li>
+                            The correct phone number is displayed
+                        </li>
+                    </ul>
+                </ul>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.Lookup
+                    </li>
+                    <li>
+                        Returned under the "important_information" node
+                    </li>
+                    <li>
+                        All titles &amp; paragraphs must be displayed as
+                        received
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        Must be displayed as is if Priceline is MOR, as per
+                        Legal/CS.
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Success
+                </p>
+            </td>
+            <td>
+                <p>
+                    4.9
+                </p>
+            </td>
+            <td>
+                <p>
+                    Trip Id
+                </p>
+            </td>
+            <td>
+                <p>
+                    The Trip Id that is returned must be displayed
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.Lookup
+                    </li>
+                    <li>
+                        Returned under the "id" node
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        Must be displayed as this is the number the customer
+                        will require to look up their reservation.
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Success
+                </p>
+            </td>
+            <td>
+                <p>
+                    4.1.1
+                </p>
+            </td>
+            <td>
+                <p>
+                    Booking status
+                </p>
+            </td>
+            <td>
+                <p>
+                    The status of the reservation is displayed
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.Lookup
+                    </li>
+                    <li>
+                        Returned under the "status" node
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Success
+                </p>
+            </td>
+            <td>
+                <p>
+                    4.1.2
+                </p>
+            </td>
+            <td>
+                <p>
+                    Hotel confirmation number
+                </p>
+            </td>
+            <td>
+                <p>
+                    The hotel confirmation number that is returned must be
+                    displayed
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.Lookup
+                    </li>
+                    <li>
+                        Returned under the "confirmation_code" node
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        Must be displayed as this is the number the customer
+                        will require to check into their room(s).
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Success
+                </p>
+            </td>
+            <td>
+                <p>
+                    4.1.3
+                </p>
+            </td>
+            <td>
+                <p>
+                    Hotel phone number
+                </p>
+            </td>
+            <td>
+                <p>
+                    The hotel phone number must be displayed
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.Lookup
+                    </li>
+                    <li>
+                        Returned under the "phone" node
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Success
+                </p>
+            </td>
+            <td>
+                <p>
+                    4.1.4
+                </p>
+            </td>
+            <td>
+                <p>
+                    Customer Service phone number
+                </p>
+            </td>
+            <td>
+                <p>
+                    The correct Customer Service number is displayed
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.Lookup
+                    </li>
+                    <li>
+                        Returned under the "Policy 0" node within the
+                        "Important Information" node
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        Must be displayed clearly for the user, as per CS.
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Success
+                </p>
+            </td>
+            <td>
+                <p>
+                    4.1.5
+                </p>
+            </td>
+            <td>
+                <p>
+                    Billing name
+                </p>
+            </td>
+            <td>
+                <p>
+                    The billing name entered on the Contract page must be
+                    displayed
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.Lookup
+                    </li>
+                    <li>
+                        Returned under the "name" node
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Success
+                </p>
+            </td>
+            <td>
+                <p>
+                    4.1.6
+                </p>
+            </td>
+            <td>
+                <p>
+                    Credit card type
+                </p>
+            </td>
+            <td>
+                <p>
+                    The credit card type must be displayed
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        getExpress.Lookup
+                    </li>
+                    <li>
+                        Returned under the "card_type" node
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Success
+                </p>
+            </td>
+            <td>
+                <p>
+                    4.1.7
+                </p>
+            </td>
+            <td>
+                <p>
+                    Cancellation link
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        For cancellable rates, a link must be displayed to
+                        cancel the booking directly or to look up the
+                        reservation details and cancel it on this review page.
+                    </li>
+                    <li>
+                        For non-cancellable rates, it must be made clear to the
+                        user that the booking cannot be cancelled
+                    </li>
+                </ul>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        For non-cancellable rates, the Important Information
+                        states the cancellation policy and will suffice.
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Conf. Email
+                </p>
+            </td>
+            <td>
+                <p>
+                    5.1
+                </p>
+            </td>
+            <td>
+                <p>
+                    Full property name
+                </p>
+            </td>
+            <td>
+                <p>
+                    The full property name is displayed for the selected
+                    property
+                </p>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Conf. Email
+                </p>
+            </td>
+            <td>
+                <p>
+                    5.2
+                </p>
+            </td>
+            <td>
+                <p>
+                    Full property address
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        For US/CA properties, the Province/State code are
+                        required
+                    </li>
+                    <li>
+                        For properties anywhere else in the world, the Country
+                        code is required
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Conf. Email
+                </p>
+            </td>
+            <td>
+                <p>
+                    5.3
+                </p>
+            </td>
+            <td>
+                <p>
+                    Room/Rate description
+                </p>
+            </td>
+            <td>
+                <p>
+                    The description that is returned for the selected rate is
+                    displayed
+                </p>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Conf. Email
+                </p>
+            </td>
+            <td>
+                <p>
+                    5.4
+                </p>
+            </td>
+            <td>
+                <p>
+                    Check-In date
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        The selected check-in date must be displayed
+                    </li>
+                    <li>
+                        Day of the week must be included
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Conf. Email
+                </p>
+            </td>
+            <td>
+                <p>
+                    5.5
+                </p>
+            </td>
+            <td>
+                <p>
+                    Check-Out date
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        The selected check-out date must be displayed
+                    </li>
+                    <li>
+                        Day of the week must be included
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Conf. Email
+                </p>
+            </td>
+            <td>
+                <p>
+                    5.6
+                </p>
+            </td>
+            <td>
+                <p>
+                    Summary of Charges
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        The avg. nightly rate is displayed for the selected
+                        rate
+                    </li>
+                    <li>
+                        The number of nights is displayed
+                    </li>
+                    <li>
+                        The number of rooms is displayed
+                    </li>
+                    <li>
+                        The Taxes and Fees are displayed
+                    </li>
+                    <li>
+                        The Resort Fee is displayed, if applicable
+                    </li>
+                    <li>
+                        The room subtotal is displayed
+                    </li>
+                    <li>
+                        The total price is displayed
+                    </li>
+                    <li>
+                        The correct currency, currency code, &amp; currency
+                        symbol are displayed
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Conf. Email
+                </p>
+            </td>
+            <td>
+                <p>
+                    5.7
+                </p>
+            </td>
+            <td>
+                <p>
+                    Trip Id
+                </p>
+            </td>
+            <td>
+                <p>
+                    The Trip Id that is returned must be displayed
+                </p>
+            </td>
+            <td>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        Must be displayed as this is the number the customer
+                        will require to look up their reservation.
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Conf. Email
+                </p>
+            </td>
+            <td>
+                <p>
+                    5.8
+                </p>
+            </td>
+            <td>
+                <p>
+                    Booking status
+                </p>
+            </td>
+            <td>
+                <p>
+                    The status of the reservation is displayed
+                </p>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Conf. Email
+                </p>
+            </td>
+            <td>
+                <p>
+                    5.9
+                </p>
+            </td>
+            <td>
+                <p>
+                    Hotel confirmation number
+                </p>
+            </td>
+            <td>
+                <p>
+                    The hotel confirmation number that is returned must be
+                    displayed
+                </p>
+            </td>
+            <td>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        Must be displayed as this is the number the customer
+                        will require to check into their room(s).
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Conf. Email
+                </p>
+            </td>
+            <td>
+                <p>
+                    5.1.1
+                </p>
+            </td>
+            <td>
+                <p>
+                    Hotel phone number
+                </p>
+            </td>
+            <td>
+                <p>
+                    The hotel phone number must be displayed
+                </p>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Conf. Email
+                </p>
+            </td>
+            <td>
+                <p>
+                    5.1.2
+                </p>
+            </td>
+            <td>
+                <p>
+                    Customer Service phone number
+                </p>
+            </td>
+            <td>
+                <p>
+                    The correct Customer Service number is displayed
+                </p>
+            </td>
+            <td>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        Must be displayed clearly for the user, as per CS.
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Cancel. Email
+                </p>
+            </td>
+            <td>
+                <p>
+                    6.1
+                </p>
+            </td>
+            <td>
+                <p>
+                    Booking status
+                </p>
+            </td>
+            <td>
+                <p>
+                    The status of the reservation is displayed
+                </p>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Cancel. Email
+                </p>
+            </td>
+            <td>
+                <p>
+                    6.2
+                </p>
+            </td>
+            <td>
+                <p>
+                    Trip Id
+                </p>
+            </td>
+            <td>
+                <p>
+                    The Trip Id that is returned must be displayed
+                </p>
+            </td>
+            <td>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        Must be displayed as this is the number the customer
+                        will require to look up their reservation.
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Cancel. Email
+                </p>
+            </td>
+            <td>
+                <p>
+                    6.3
+                </p>
+            </td>
+            <td>
+                <p>
+                    Full property name
+                </p>
+            </td>
+            <td>
+                <p>
+                    The full property name is displayed for the selected
+                    property
+                </p>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Cancel. Email
+                </p>
+            </td>
+            <td>
+                <p>
+                    6.4
+                </p>
+            </td>
+            <td>
+                <p>
+                    Full property address
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        For US/CA properties, the Province/State code are
+                        required
+                    </li>
+                    <li>
+                        For properties anywhere else in the world, the Country
+                        code is required
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Cancel. Email
+                </p>
+            </td>
+            <td>
+                <p>
+                    6.5
+                </p>
+            </td>
+            <td>
+                <p>
+                    Hotel phone number
+                </p>
+            </td>
+            <td>
+                <p>
+                    The hotel phone number must be displayed
+                </p>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Cancel. Email
+                </p>
+            </td>
+            <td>
+                <p>
+                    6.6
+                </p>
+            </td>
+            <td>
+                <p>
+                    Room/Rate description
+                </p>
+            </td>
+            <td>
+                <p>
+                    The description that is returned for the selected rate is
+                    displayed
+                </p>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Cancel. Email
+                </p>
+            </td>
+            <td>
+                <p>
+                    6.7
+                </p>
+            </td>
+            <td>
+                <p>
+                    Check-In date
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        The selected check-in date must be displayed
+                    </li>
+                    <li>
+                        Day of the week must be included
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Cancel. Email
+                </p>
+            </td>
+            <td>
+                <p>
+                    6.8
+                </p>
+            </td>
+            <td>
+                <p>
+                    Check-Out date
+                </p>
+            </td>
+            <td>
+                <ul type="disc">
+                    <li>
+                        The selected check-out date must be displayed
+                    </li>
+                    <li>
+                        Day of the week must be included
+                    </li>
+                </ul>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </tbody>
+</table>
