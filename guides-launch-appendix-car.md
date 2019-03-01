@@ -13,7 +13,7 @@ will find:
 
 -   Reasoning behind each requirement
 
-<table border="1" cellspacing="0" cellpadding="0" max-width="900px">
+<table border="1" cellspacing="0" cellpadding="0" width="100%" max-width="900px">
  	<tbody>
  		<tr>
  			<td border="1px">
