@@ -13,57 +13,57 @@ will find:
 
 -   Reasoning behind each requirement
 
-<table border="1" cellspacing="0" cellpadding="0" style="width:100%;max-width:740px;">
+<table>
  	<tbody>
  		<tr>
- 			<td border="1px">
- 				<p align="center">
+ 			<td>
+ 				<p>
  					<strong>Page</strong>
  				</p>
  			</td>
- 			<td border="1px">
- 				<p align="center">
+ 			<td>
+ 				<p>
  					<strong>Requirement #</strong>
  				</p>
  			</td>
- 			<td border="1px">
- 				<p align="center">
+ 			<td>
+ 				<p>
  					<strong>Requirement</strong>
  				</p>
  			</td>
- 			<td border="1px">
- 				<p align="center">
+ 			<td>
+ 				<p>
  					<strong>Expected Result</strong>
  				</p>
  			</td>
- 			<td border="1px">
- 				<p align="center">
+ 			<td>
+ 				<p>
  					<strong>Additional Information</strong>
  				</p>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Results
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					1.1
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Base rate
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The base rate (daily or weekly) is displayed for each rate
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getResultsV3
@@ -76,27 +76,27 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Results
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					1.2
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Total price
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The total price is displayed for each rate
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getResultsV3
@@ -109,28 +109,28 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Results
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					1.3
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Currency
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The correct currency, currency code, &amp; currency symbol
  					are displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getResultsV3
@@ -143,28 +143,28 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Results
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					1.4
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Rental Company
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The rental company name/logo must be displayed for each
  					rate
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getResultsV3
@@ -180,24 +180,24 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Results
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					1.5
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Pickup/Dropoff information
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getResultsV3
@@ -214,27 +214,27 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Results
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					1.6
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Car type
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The car type must be displayed for each rate
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getResultsV3
@@ -247,27 +247,27 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Results
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					1.7
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Car amenities
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The amenities must be displayed for each rate
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getResultsV3
@@ -320,27 +320,27 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Results
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					1.8
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Search box
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					A search box is accessible on the Results page
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getCarAutoComplete
@@ -349,22 +349,22 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Contract
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					2.1
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Policy information
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						Credit card disclaimer
@@ -383,7 +383,7 @@ will find:
  					</li>
  				</ul>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getPolicy.Car
@@ -400,22 +400,22 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Contract
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					2.2
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Pickup location
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						The selected pickup location must be displayed
@@ -431,7 +431,7 @@ will find:
  					</li>
  				</ul>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getContractRequest
@@ -448,22 +448,22 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Contract
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					2.3
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Dropoff location (if different from pickup)
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						The selected dropoff location must be displayed
@@ -479,7 +479,7 @@ will find:
  					</li>
  				</ul>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getContractRequest
@@ -497,28 +497,28 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Contract
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					2.4
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Counter directions/airport terminal information
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The data returned must be displayed; it can be hidden
  					behind a click
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getContractRequest
@@ -530,27 +530,27 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Contract
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					2.5
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Hours of operation
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The rental company's hours of operations are displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getContractRequest
@@ -568,27 +568,27 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Contract
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					2.6
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Rental company
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The rental company name/logo is displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getContractRequest
@@ -604,27 +604,27 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Contract
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					2.7
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Car type
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The car type is displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getContractRequest
@@ -637,27 +637,27 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Contract
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					2.8
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Car amenities
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The amenities are displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getContractRequest
@@ -698,27 +698,27 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Contract
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					2.9
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Mileage
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The mileage is displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getContractRequest
@@ -739,49 +739,49 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Contract
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					2.1.0
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Free cancellation verbiage for post-paid rates
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Verbiage or banner is displayed for post paid rates
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Front end change for the partner
  				</p>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Contract
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					2.1.1
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Summary of Charges
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						The base rate is displayed
@@ -820,7 +820,7 @@ will find:
  					</li>
  				</ul>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getContractRequest
@@ -887,22 +887,22 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Contract
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					2.1.2
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Important Information
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						The Important Information must be displayed for the
@@ -913,7 +913,7 @@ will find:
  					</li>
  				</ul>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getContractRequest
@@ -984,27 +984,27 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Success
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					3.1
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Booking status
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The status of the reservation is displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getCarLookUp
@@ -1016,27 +1016,27 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Success
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					3.2
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Trip Id
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The Trip Id that is returned is displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getCarLookUp
@@ -1048,28 +1048,28 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Success
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					3.3
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Rental company confirmation number
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The rental company confirmation number that is returned is
  					displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getCarLookUp
@@ -1081,27 +1081,27 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Success
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					3.4
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Map to pickup location
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Link to map showing the pickup location is displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getCarLookUp
@@ -1110,29 +1110,29 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Success
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					3.5
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Link to change/cancel reservation
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The link can perform the look up or it can lead to a page
  					where the user can look up and make amendments to their
  					reservation
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getCancelRequest
@@ -1141,27 +1141,27 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Success
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					3.6
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Links to print or email itinerary
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The links are displayed clearly
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getResendItinerary
@@ -1170,22 +1170,22 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Success
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					3.7
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Pickup location
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						The selected pickup location must be displayed
@@ -1201,7 +1201,7 @@ will find:
  					</li>
  				</ul>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getCarLookUp
@@ -1214,22 +1214,22 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Success
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					3.8
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Dropoff location (if different from pickup)
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						The selected dropoff location must be displayed
@@ -1245,7 +1245,7 @@ will find:
  					</li>
  				</ul>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getCarLookUp
@@ -1258,28 +1258,28 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Success
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					3.9
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Counter directions/airport terminal information
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The data returned is displayed; it can be hidden behind a
  					click
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getCarLookUp
@@ -1291,27 +1291,27 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Success
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					3.1.0
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Hours of operation
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The rental company's hours of operations are displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getCarLookUp
@@ -1329,27 +1329,27 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Success
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					3.1.1
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Rental company
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The rental company name/logo is displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getCarLookUp
@@ -1365,27 +1365,27 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Success
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					3.1.2
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Car type
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The car type is displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getCarLookUp
@@ -1398,22 +1398,22 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Success
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					3.1.3
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Summary of Charges
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						The base rate is displayed
@@ -1452,7 +1452,7 @@ will find:
  					</li>
  				</ul>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getCarLookUp
@@ -1526,22 +1526,22 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Success
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					3.1.4
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Important Information
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						The Important Information must be displayed for the
@@ -1552,7 +1552,7 @@ will find:
  					</li>
  				</ul>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getCarLookUp
@@ -1623,22 +1623,22 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Success
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					3.1.5
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Customer Service phone number
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						The correct Customer Service number is displayed
@@ -1648,7 +1648,7 @@ will find:
  					</li>
  				</ul>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getCarLookUp
@@ -1657,27 +1657,27 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Success
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					3.1.6
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Driver name
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The driver name entered on the Contract page is displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						getCarLookUp
@@ -1686,119 +1686,119 @@ will find:
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Conf. Email
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					4.1
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Booking status
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The status of the reservation is displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Conf. Email
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					4.2
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Trip Id
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The Trip Id that is returned is displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Conf. Email
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					4.3
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Rental company confirmation number
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The rental company confirmation number that is returned is
  					displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Conf. Email
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					4.4
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Driver name
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The driver name entered on the Contract page is displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Conf. Email
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					4.5
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Summary of Charges
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						The base rate is displayed
@@ -1837,98 +1837,98 @@ will find:
  					</li>
  				</ul>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Conf. Email
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					4.6
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Rental company
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The rental company name/logo is displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Conf. Email
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					4.7
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Car type
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The car type is displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Conf. Email
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					4.8
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Car amenities
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The amenities are displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Conf. Email
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					4.9
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Pickup location
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						The selected pickup location must be displayed
@@ -1944,26 +1944,26 @@ will find:
  					</li>
  				</ul>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Conf. Email
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					4.1.0
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Dropoff location (if different from pickup)
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						The selected dropoff location must be displayed
@@ -1979,50 +1979,50 @@ will find:
  					</li>
  				</ul>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Conf. Email
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					4.1.1
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Counter directions/airport terminal information
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The data returned is displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Conf. Email
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					4.1.2
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Customer Service phone number
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						The correct Customer Service number is displayed
@@ -2032,146 +2032,146 @@ will find:
  					</li>
  				</ul>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Cancel Email
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					5.1
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Booking status
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The status of the reservation is displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Cancel Email
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					5.2
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Trip Id
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The Trip Id that is returned is displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Cancel Email
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					5.3
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Driver name
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The driver name entered on the Contract page is displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Cancel Email
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					5.4
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Rental company
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The rental company name/logo is displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Cancel Email
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					5.5
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Car type
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					The amenities are displayed
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Cancel Email
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					5.6
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Pickup location
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						The selected pickup location must be displayed
@@ -2187,26 +2187,26 @@ will find:
  					</li>
  				</ul>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Cancel Email
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					5.7
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Dropoff location (if different from pickup)
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						The selected dropoff location must be displayed
@@ -2222,26 +2222,26 @@ will find:
  					</li>
  				</ul>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
  		</tr>
  		<tr>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Cancel Email
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					5.8
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<p>
  					Customer Service phone number
  				</p>
  			</td>
- 			<td border="1px">
+ 			<td>
  				<ul type="disc">
  					<li>
  						The correct Customer Service number is displayed
@@ -2251,7 +2251,7 @@ will find:
  					</li>
  				</ul>
  			</td>
- 			<td border="1px">
+ 			<td>
  			</td>
  		</tr>
  	</tbody>
