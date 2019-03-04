@@ -13,14 +13,12 @@ will find:
 
 -   Reasoning behind each requirement
 
+![Flight Depart](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/FlightPathDeparting.png)
+
+
 <table border="1" cellspacing="0" cellpadding="0" width="100%">
     <tbody>
         <tr>
-            <td>
-                <p align="center">
-                    <strong>Page</strong>
-                </p>
-            </td>
             <td>
                 <p align="center">
                     <strong>Requirement #</strong>
@@ -43,11 +41,6 @@ will find:
             </td>
         </tr>
         <tr>
-            <td>
-                <p>
-                    Results
-                </p>
-            </td>
             <td>
                 <p>
                     1.1
@@ -89,11 +82,6 @@ will find:
         <tr>
             <td>
                 <p>
-                    Results
-                </p>
-            </td>
-            <td>
-                <p>
                     1.2
                 </p>
             </td>
@@ -126,11 +114,6 @@ will find:
             </td>
         </tr>
         <tr>
-            <td>
-                <p>
-                    Results
-                </p>
-            </td>
             <td>
                 <p>
                     1.3
@@ -175,11 +158,6 @@ will find:
         <tr>
             <td>
                 <p>
-                    Results
-                </p>
-            </td>
-            <td>
-                <p>
                     1.4
                 </p>
             </td>
@@ -222,11 +200,6 @@ will find:
         <tr>
             <td>
                 <p>
-                    Results
-                </p>
-            </td>
-            <td>
-                <p>
                     1.5
                 </p>
             </td>
@@ -259,11 +232,6 @@ will find:
             </td>
         </tr>
         <tr>
-            <td>
-                <p>
-                    Results
-                </p>
-            </td>
             <td>
                 <p>
                     1.6
@@ -300,11 +268,6 @@ will find:
         <tr>
             <td>
                 <p>
-                    Results
-                </p>
-            </td>
-            <td>
-                <p>
                     1.7
                 </p>
             </td>
@@ -339,11 +302,6 @@ will find:
         <tr>
             <td>
                 <p>
-                    Results
-                </p>
-            </td>
-            <td>
-                <p>
                     1.8
                 </p>
             </td>
@@ -376,11 +334,6 @@ will find:
             </td>
         </tr>
         <tr>
-            <td>
-                <p>
-                    Results
-                </p>
-            </td>
             <td>
                 <p>
                     1.9
@@ -424,11 +377,6 @@ will find:
             </td>
         </tr>
         <tr>
-            <td>
-                <p>
-                    Results
-                </p>
-            </td>
             <td>
                 <p>
                     1.1.0
@@ -478,11 +426,6 @@ will find:
         <tr>
             <td>
                 <p>
-                    Results
-                </p>
-            </td>
-            <td>
-                <p>
                     1.1.1
                 </p>
             </td>
@@ -518,11 +461,6 @@ will find:
         <tr>
             <td>
                 <p>
-                    Results
-                </p>
-            </td>
-            <td>
-                <p>
                     1.1.2
                 </p>
             </td>
@@ -555,11 +493,6 @@ will find:
             </td>
         </tr>
         <tr>
-            <td>
-                <p>
-                    Results
-                </p>
-            </td>
             <td>
                 <p>
                     1.1.3
@@ -597,11 +530,6 @@ will find:
         <tr>
             <td>
                 <p>
-                    Results
-                </p>
-            </td>
-            <td>
-                <p>
                     1.1.4
                 </p>
             </td>
@@ -636,11 +564,6 @@ will find:
         <tr>
             <td>
                 <p>
-                    Results
-                </p>
-            </td>
-            <td>
-                <p>
                     1.1.5
                 </p>
             </td>
@@ -661,11 +584,6 @@ will find:
             </td>
         </tr>
         <tr>
-            <td>
-                <p>
-                    Results
-                </p>
-            </td>
             <td>
                 <p>
                     1.1.6
@@ -718,11 +636,6 @@ will find:
         <tr>
             <td>
                 <p>
-                    Results
-                </p>
-            </td>
-            <td>
-                <p>
                     1.1.7
                 </p>
             </td>
@@ -744,6 +657,12 @@ will find:
                 </ul>
             </td>
         </tr>
+        </tbody>
+        </table>
+        
+        ![Flight Depart](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/FlightPathDeparting.png)
+
+        
         <tr>
             <td>
                 <p>
