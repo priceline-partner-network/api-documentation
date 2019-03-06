@@ -16,12 +16,12 @@ will find:
 
  ### 1.1 -  Total price per traveler
   
-##### Expected Result:
+#### Expected Result:
  - The total price per traveler is displayed,
 
 - The rate is not multiple by the number of travelers
    
- ##### Additional Information: 
+ #### Additional Information: 
  - The rate is not multiple by the number of travelers
                 
     -   getFlightReturns is used for the return leg of a roundtrip search
@@ -31,10 +31,10 @@ will find:
                   
 
  ### 1.2 -     Baggage Fees
- ##### Expected Result:
+ #### Expected Result:
  - A link to the baggage fees is displayed
  
- ##### Additional Information: 
+ #### Additional Information: 
 
  - getFlightDepartures
     - getFlightReturns is used for the return leg of a
@@ -45,14 +45,14 @@ will find:
                 
 ### 1.3 - Origin city &amp; airport
 
-##### Expected Result:
+#### Expected Result:
    - The origin city is displayed
 
    - The origin airport is displayed
 
    - The origin airport code is displayed
 
- #####  Additional Information: 
+ ####  Additional Information: 
 
   - getFlightDepartures
 
@@ -64,12 +64,14 @@ will find:
                   
 ### 1.4 - 	Destination city & airport	
 
-#####Expected Result: 
+####Expected Result: 
+
 - The destination city is displayed
 - The destination airport is displayed
 - The destination airport code is displayed
 
-#####Additional Information: 
+####Additional Information:
+ 
  - getFlightDepartures
     - getFlightReturns is used for the return leg of a roundtrip search
  - Returned under the "city", "name", & "code" nodes within the "arrival" node of the "slice_data" cluster
@@ -77,123 +79,169 @@ will find:
  
  ### 1.5  - Flight number(s)
  
- #####Expected Result:
+ ####Expected Result:
+ 
  All flight numbers are displayed
  
- #####Additional Information:
+ ####Additional Information:
+ 
  - getFlightDepartures
     - getFlightReturns is used for the return leg of a roundtrip search
  - Returned under the "flight_number" node within the "flight_data" clusters
  
   ### 1.6 - Number of stops	
   
-  #####Expected Result:
+  ####Expected Result:
+  
   The amount of stops is displayed
   
-  #####Additional Information:
+  ####Additional Information:
+  
    - getFlightDepartures
         - getFlightReturns is used for the return leg of a roundtrip search
   - Returned under the "stop_count" node within the "flight_data" clusters
   
    ### 1.7 - Departure date(s) & time(s)
    
-   #####Expected Result:
+   ####Expected Result:
+   
    All departure dates and times are displayed for each slice
-   #####Additional Information:
+   ####Additional Information:
+   
    - getFlightDepartures
         - getFlightReturns is used for the return leg of a roundtrip search
    - Returned under the "datetime" nodes within the "departure" node of the "flight_data" clusters
+   
 ### 1.8 - Arrival date(s) & time(s)
 
-#####Expected Result:
+####Expected Result:
+
 All arrival dates and times are displayed for each slice	
 
-#####Additional Information:
+####Additional Information:
+
 - getFlightDepartures
   - getFlightReturns is used for the return leg of a roundtrip search
  - Returned under the "datetime" nodes within the "arrival" node of the "flight_data" clusters
 
  ### 1.9 - Trip duration	
- #####Expected Result:
+ 
+ ####Expected Result:
+ 
 - The total trip duration is displayed
 - The duration for each slice is displayed
 
- #####Additional Information:
+ ####Additional Information:
+ 
 - getFlightDepartures
     - getFlightReturns is used for the return leg of a roundtrip search
 - Total trip duration is returned under the "duration" node within the "slice_data" cluster
 - Slice duration is returned under the "duration" node within the "flight_data" clusters
 
  ### 1.10 - Layover information	
- #####Expected Result:
+ 
+ ####Expected Result:
+ 
 - Layover duration is displayed
 - The airport name(s) is displayed
 - The airport code(s) is displayed
 
- #####Additional Information:
+ ####Additional Information:
+ 
  - getFlightDepartures
     - getFlightReturns is used for the return leg of a roundtrip search
  - Layover duration is returned under the "duration" node within the "notes" node of the "flight_data" clusters
  - Airport name & code are returned under the "value" node within the "notes" node of the "flight_data" clusters
+ 
   ### 1.11 - Carrier(s)	
   
-  #####Expected Result:
+  ####Expected Result:
+  
   The name/logo for the carrier(s) is displayed for each slice
-  #####Additional Information:
+  ####Additional Information:
+  
   - getFlightDepartures
     - getFlightReturns is used for the return leg of a roundtrip search
   - Returned under the "name" & "logo" nodes within the "slice_data" cluster
+  
    ### 1.12 - Codeshare (if applicable)
-   #####Expected Result:
+   
+   ####Expected Result:
+   
    The codeshare verbiage is displayed 
-   #####Additional Information:
+   
+   ####Additional Information:
+   
    - getFlightDepartures
         - getFlightReturns is used for the return leg of a roundtrip search
    - Returned under the "operating_airline" node within the "flight" clusters
-### 1.13 - Aircraft type	
-#####Expected Result:
+   
+### 1.13 - Aircraft type
+	
+####Expected Result:
+
 The aircraft type(s) & model(s) are displayed for each slice	
-#####Additional Information:
+####Additional Information:
+
 - getFlightDepartures
     - getFlightReturns is used for the return leg of a roundtrip search
 - Returned under the "aircraft" & "aircraft_type" nodes within the "flight_data" clusters
 
  ### 1.14 - Cabin class	
- #####Expected Result:
+ 
+ ####Expected Result:
+ 
  The cabin class is displayed for each slice
- #####Additional Information:
+ 
+ ####Additional Information:
+ 
  - getFlightDepartures
     - getFlightReturns is used for the return leg of a roundtrip search
  - Returned under the "cabin_name" node within the "flight_data" clusters
+ 
   ### 1.15 - 24hr free cancellation banner 
-  #####Expected Result:
+  
+  ####Expected Result:
+  
 The banner (or verbiage) is displayed on the page  
-  #####Additional Information:
+
+  ####Additional Information:
+  
   Front end change for the partner
 
 ### 1.16 - Flight warnings & highlights
-#####Expected Result:
+
+####Expected Result:
+
 - Any flight warnings or highlights are displayed
     - Overnight connection
     - Flight arrives the next day
     - Flight arrives 2 days after departure
     - Open jaw
-#####Additional Information:
+    
+####Additional Information:
+
  - getFlightDepartures
     - getFlightReturns is used for the return leg of a roundtrip search
  - Returned under the "notes" node(s) within the "flight_data" clusters
  
  ### 1.17 - Search box
- #####Expected Result:
+ 
+ ####Expected Result:
+ 
  A search box is accessible on the Results page
- #####Additional Information:
+ 
+ ####Additional Information:
+ 
  - getAutoComplete
 
 ![Flight Contract](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/FlightContract.png)
 
 
 ### 2.1 - 	Summary of Charges
-#####Expected Result:
+
+####Expected Result:
+
 - Ticket price is displayed
     - Not multiplied by the amount of travelers/tickets
 - Taxes and Fees are displayed
@@ -204,7 +252,9 @@ The banner (or verbiage) is displayed on the page
 - Number of tickets is displayed
 - The total price is displayed
 - The price disclaimer is displayed
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightContract
 - Ticket prices is returned under the "source_base_fare" node within the "price_details" cluster.
 - Taxes and Fees are returned under the "source_taxes" node within the "price_details" cluster.
@@ -216,145 +266,238 @@ The banner (or verbiage) is displayed on the page
 - Total price is returned under the "source_total_fare" node within the "price_details" cluster.
 - The price disclaimer is a front end change for the partner.
     - "Baggage Fees" pulls the "baggage_fees" node within the "popup_data" cluster.
+    
 ### 2.2 - Baggage Fees	
-#####Expected Result:
+
+####Expected Result:
+
 A link to the baggage fees is displayed 
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightContract
 - Returned under the "popup_url" node within the "baggage_carrier" cluster
+
 ### 2.3 - Origin city & airport	
-#####Expected Result:
+
+####Expected Result:
+
 - The origin city is displayed
 - The origin airport is displayed
 - The origin airport code is displayed
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightContract
  - Returned under the "city", "name", & "code" nodes within the "departure" node of the "slice_data" cluster
+ 
 ### 2.4 - Destination city & airport
-#####Expected Result:
+
+####Expected Result:
+
 - The destination city is displayed
 - The destination airport is displayed
 - The destination airport code is displayed
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightContract
 - Returned under the "city", "name", & "code" nodes within the "arrival" node of the "slice_data" cluster
+
 ### 2.5 - Flight number(s)	
-#####Expected Result:
-All flight numbers are displayed	
-#####Additional Information:
+
+####Expected Result:
+
+All flight numbers are displayed
+	
+####Additional Information:
+
 - getFlightContract
 -  Returned under the "flight_number" node within the "flight_data" clusters
 
 ### 2.6 - Number of stops	
-#####Expected Result:
-The amount of stops is displayed	
-#####Additional Information:
+
+####Expected Result:
+
+The amount of stops is displayed
+	
+####Additional Information:
+
 - getFlightContract
  - Returned under the "stop_count" node within the "flight_data" clusters
+ 
 ### 2.7 - Departure date(s) & time(s)	
-#####Expected Result:
+
+####Expected Result:
+
 All departure dates and times are displayed for each slice
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightContract
 -  Returned under the "datetime" nodes within the "departure" node of the "flight_data" clusters
+
 ### 2.8 - Arrival date(s) & time(s)
-#####Expected Result:
+
+####Expected Result:
+
 All arrival dates and times are displayed for each slice
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightContract
  - Returned under the "datetime" nodes within the "arrival" node of the "flight_data" clusters
+ 
 ### 2.9 - Trip duration	
-#####Expected Result:
+
+####Expected Result:
+
  - The total trip duration is displayed
   - The duration for each slice is displayed
 
-#####Additional Information:
+####Additional Information:
+
 - getFlightContract
 - Total trip duration is returned under the "duration" node within the "slice_data" cluster
 - Slice duration is returned under the "duration" node within the "flight_data" clusters
 
 ### 2.1.0 - Layover information
-#####Expected Result:
+
+####Expected Result:
+
 - Layover duration is displayed
 - The airport name(s) is displayed
 - The airport code(s) is displayed
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightContract
 - Returned under the "duration" node within the "notes" node of the "flight_data" clusters
 - Airport name & code are returned under the "value" node within the "notes" node of the "flight_data" clusters
+
 ### 2.1.1 - Carrier(s)	
-#####Expected Result:
+
+####Expected Result:
+
 The name/logo for the carrier(s) is displayed for each slice
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightContract
 -  Returned under the "name" & "logo" nodes within the "slice_data" cluster
+
 ### 2.1.2 - Codeshare (if applicable)
-#####Expected Result:
+
+####Expected Result:
+
 The codeshare verbiage is displayed
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightContract
-- Returned under the "operating_airline" node within the "flight" clusters                                                        
+- Returned under the "operating_airline" node within the "flight" clusters     
+                                                   
 ### 2.1.3 - Aircraft type	
-#####Expected Result:
+
+####Expected Result:
+
 The aircraft type(s) is displayed for each slice
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightContract
-- Returned under the "aircraft" & "aircraft_type" nodes within the "flight_data" clusters                               
+- Returned under the "aircraft" & "aircraft_type" nodes within the "flight_data" clusters  
+                             
 ### 2.1.4 - Cabin class	
-#####Expected Result:
+
+####Expected Result:
+
 The cabin class is displayed for each slice
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightContract
-- Returned under the "cabin_name" node within the "flight_data" clusters                               
+- Returned under the "cabin_name" node within the "flight_data" clusters       
+                        
 ### 2.1.5 - Flight warnings & highlights
-#####Expected Result:
+
+####Expected Result:
+
 - Any flight warnings or highlights are displayed
     - Overnight connection
     - Flight arrives the next day
     - Flight arrives 2 days after departure
     - Open jaw
-#####Additional Information:
+    
+####Additional Information:
+
 - getFlightContract
-- Returned under the "notes" node(s) within the "flight_data" clusters                               
+- Returned under the "notes" node(s) within the "flight_data" clusters  
+                             
 ### 2.1.7 - Terms & Conditions	
-#####Additional Information:
+
+####Additional Information:
+
 - getPolicy.Flight
 
 ### 2.1.8 - Privacy Policy	
-#####Additional Information:
+
+####Additional Information:
+
 getPolicy.Flight
                                
 ### 2.1.9 - Customer agreement	
-#####Expected Result:
+
+####Expected Result:
+
 The customer must agree to the price and all terms in order to book, this can be:
 - Initials input box
 - Check box
 - etc.
-#####Additional Information:
+
+####Additional Information:
+
 Front end change for the partner
 
 ![Flight Success](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/Guides%20-%20Flight%20Appendix%20-%20Success.png)
 
 ### 3.1 - Trip Id	
-#####Expected Result:
+
+####Expected Result:
+
 The Trip Id that is returned must be displayed
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightLookUp
 - Returned under the "booking_id" node within the "results" cluster
+
 ### 3.2 - Airline confirmation number
-#####Expected Result:
+
+####Expected Result:
+
 The airline confirmation number that is returned must be displayed
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightLookUp
 - Returned under the "CarrierLocator" node(s) within the "airline_data" cluster(s).
+
 ### 3.3 - Booking status	
-#####Expected Result:
+
+####Expected Result:
+
 The status of the reservation is displayed
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightLookUp
  - Returned under the "book_status" node within the "results" cluster.
+ 
 ### 3.4 - 	Summary of Charges
-#####Expected Result:
+
+####Expected Result:
+
 - Ticket price is displayed
     - Not multiplied by the amount of travelers/tickets
 - Taxes and Fees are displayed
@@ -363,7 +506,9 @@ The status of the reservation is displayed
 - Number of tickets is displayed
 - The total price is displayed
 - The price disclaimer is displayed
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightLookUp
 - Ticket prices is returned under the "source_base_fare" node within the "price_details" cluster.
 - Taxes and Fees are returned under the "source_taxes_and_fees" node within the "price_details" cluster.
@@ -373,118 +518,194 @@ The status of the reservation is displayed
 - Total price is returned under the "source_total_fare" node within the "price_details" cluster.
 - The price disclaimer is a front end change for the partner.
     - "Baggage Fees" pulls the "baggage_fees" node within the "popup_data" cluster.
+    
 ### 3.5 - Ticket number(s)
-#####Expected Result:
+
+####Expected Result:
+
 All ticket numbers are displayed
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightLookUp
 - Returned under the "ticket_number" node(s) within the "passengers" cluster
+
 ### 3.6 - Baggage fees	
-#####Expected Result:
+
+####Expected Result:
+
 A link to the baggage fees is displayed
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightLookUp
 - Returned under the "popup_url" node within the "baggage_carrier" cluster
+
 ### 3.7 - Origin city & airport
-#####Expected Result:
+
+####Expected Result:
+
 - The origin city is displayed
 - The origin airport is displayed
 - The origin airport code is displayed
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightLookUp
 - Returned under the "city", "name", & "code" nodes within the "departure" node of the "slice_data" cluster
+
 ### 3.8 - Destination city & airport
-#####Expected Result:
+
+####Expected Result:
+
 - The destination city is displayed
 - The destination airport is displayed
 - The destination airport code is displayed
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightLookUp
 - Returned under the "city", "name", & "code" nodes within the "arrival" node of the "slice_data" cluster
+
 ### 3.9 - Flight number(s)	
-#####Expected Result:
+
+####Expected Result:
+
 All flight numbers are displayed	
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightLookUp
  - Returned under the "flight_number" node within the "flight_data" clusters
+ 
 ### 3.1.0 - Number of stops	
-#####Expected Result:
+
+####Expected Result:
+
 The amount of stops is displayed	
 
-#####Additional Information:
+####Additional Information:
+
 - getFlightLookUp
 - Returned under the "stop_count" node within the "flight_data" clusters
+
 ### 3.1.1 - Departure date(s) & time(s)
-#####Expected Result:
+
+####Expected Result:
+
 All departure dates and times are displayed for each slice
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightLookUp
 - Returned under the "datetime" nodes within the "departure" node of the "flight_data" clusters
 
 ### 3.1.2 - Arrival date(s) & time(s)
-#####Expected Result:      
+
+####Expected Result:      
+
 All arrival dates and times are displayed for each slice        
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightLookUp
  - Returned under the "datetime" nodes within the "arrival" node of the "flight_data" clusters
+ 
 ### 3.1.3 - Trip duration	
-#####Expected Result:     
+
+####Expected Result:     
+
 - The total trip duration is displayed
 - The duration for each slice is displayed         
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightLookUp
 - Total trip duration is returned under the "duration" node within the "slice_data" cluster
 - Slice duration is returned under the "duration" node within the "flight_data" clusters
+
 ### 3.1.4 - Layover information	
-#####Expected Result:    
+
+####Expected Result:    
+
 - Layover duration is displayed
 - The airport name(s) is displayed
-- The airport code(s) is displayed          
-#####Additional Information:
+- The airport code(s) is displayed        
+  
+####Additional Information:
+
 - getFlightLookUp
 - Returned under the "duration" node within the "notes" node of the "flight_data" clusters
 - Airport name & code are returned under the "value" node within the "notes" node of the "flight_data" clusters
+
 ### 3.1.5 - Carrier(s)	
-#####Expected Result:              
+
+####Expected Result:       
+       
 The name/logo for the carrier(s) is displayed for each slice	
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightLookUp
 - Returned under the "name" & "logo" nodes within the "slice_data" cluster
+
 ### 3.1.6 - Codeshare (if applicable)
-#####Expected Result:          
+
+####Expected Result:          
+
 The codeshare verbiage is displayed    
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightLookUp
 - Returned under the "operating_airline" node within the "flight" clusters
+
 ### 3.1.7 - Aircraft type	
-#####Expected Result: 
-The aircraft type(s) is displayed for each slice             
-#####Additional Information:
+
+####Expected Result: 
+
+The aircraft type(s) is displayed for each slice  
+           
+####Additional Information:
+
 - getFlightLookUp
 - Returned under the "aircraft" & "aircraft_type" nodes within the "flight_data" clusters
+
 ### 3.1.8 - Cabin class	
-#####Expected Result:            
+
+####Expected Result:         
+   
 The cabin class is displayed for each slice  
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightLookUp
 - Returned under the "cabin_name" node within the "flight_data" clusters
+
 ### 3.1.9 - 	Flight warnings & highlights	
-#####Expected Result: 
+
+####Expected Result: 
+
 - Any flight warnings or highlights are displayed
     -  Overnight connection
     - Flight arrives the next day
     - Flight arrives 2 days after departure
     - Open jaw
              
-#####Additional Information:
+####Additional Information:
+
 - getFlightLookUp
 - Returned under the "notes" node(s) within the "flight_data" clusters
 
 ### 3.2.0 - Important Information
-#####Expected Result:        
+
+####Expected Result:        
+
 - The Important Information must be displayed for the selected rate
-    - The "Disinsection" node is displayed when applicable      
-#####Additional Information:
+    - The "Disinsection" node is displayed when applicable    
+      
+####Additional Information:
+
 - getFlightLookUp
 -   Returned under the "important_info_data" node.
  -  \#flight_schedule_START\#Flight Schedule\#flight_schedule_END\# pulls the "flight_schedule" node within the "popup_data" cluster.
@@ -504,45 +725,68 @@ The cabin class is displayed for each slice
   - \#valid_passport_START\#valid passport\#valid_passport_END\# pulls the "valid_passport" node within the "popup_data" cluster.
     - "valid passport" is a hyperlink
   - \#disinsection_START\#disinsection.\#disinsection_END\# pulls the "disinsection" node within the "popup_data" cluster.
-    - "disinsection" is a hyperlink         
+    - "disinsection" is a hyperlink       
+      
 ### 3.2.1 - Airline(s) contact information
-#####Expected Result:         
+
+####Expected Result:      
+   
 - The airline(s) is displayed
 - The airline(s) phone number is displayed
 - The airline(s) website is displayed
 - The airline(s) confirmation number is displayed     
-#####Additional Information:
+
+####Additional Information:
+
 - getFlightLookUp
 - Returned under the "airline" nodes within the "airline_data" cluster(s).
+
 ### 3.2.2 - Customer Service phone number
-#####Expected Result:    
-The correct Customer Service number is displayed          
-#####Additional Information:
+
+####Expected Result:    
+
+The correct Customer Service number is displayed     
+     
+####Additional Information:
+
 - getFlightLookUp
 - Returned under the "customer_service" node
+
 ### 3.2.3 - Link to cancel reservation
-#####Expected Result:    
-A link to cancel or to look up the reservation (and cancel there) must be displayed          
-#####Additional Information:
+
+####Expected Result:    
+
+A link to cancel or to look up the reservation (and cancel there) must be displayed      
+    
+####Additional Information:
+
 getFlightVoidRequest 
 
 ![Flight Confirmation Email](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/Guides%20-%20Flight%20Appendix%20-%20ConfEmail.png)
 
 
 ### 4.1 - Trip Id	
-#####Expected Result:   
+
+####Expected Result:   
+
 The Trip Id is displayed	           
 
 ### 4.2 - 	Airline confirmation number
-#####Expected Result:       
+
+####Expected Result:       
+
 The airline confirmation number(s) is displayed       
 
 ### 4.3 - Booking status	
-#####Expected Result:        
+
+####Expected Result:     
+   
 The booking status is displayed	      
 
 ### 4.4 - Summary of Charges	
-#####Expected Result:    
+
+####Expected Result:    
+
 - Ticket price is displayed
     - Not multiplied by the amount of travelers/tickets
 - Taxes and Fees are displayed
@@ -553,86 +797,124 @@ The booking status is displayed
 - The price disclaimer is displayed
           
 ### 4.5 - Ticket number(s)	
-#####Expected Result:              
+
+####Expected Result:          
+    
 The ticket number(s) is displayed
+
 ### 4.6 - Origin city & airport
-#####Expected Result:              
+
+####Expected Result:           
+   
 - The origin city is displayed
  - The origin airport is displayed
  - The origin airport code is displayed
+ 
 ### 4.7 - Destination city & airport
-#####Expected Result:              
+
+####Expected Result:              
+
 - The destination city is displayed
  - The destination airport is displayed
  - The destination airport code is displayed
+ 
 ### 4.8 - Flight number(s)	
-#####Expected Result:              
+
+####Expected Result:             
+ 
 The flight number(s) is displayed	
 
 ### 4.9 - Number of stops	
-#####Expected Result:              
+
+####Expected Result:     
+         
 The number of stops is displayed	
 
 ### 4.1.0 - Departure date(s) & time(s)
-#####Expected Result:      
+
+####Expected Result:      
+
 All departure dates and times are displayed for each slice        
 
 ### 4.1.1 - Arrival date(s) & time(s)    
-#####Expected Result:
-All arrival dates and times are displayed for each slice          
-#####Additional Information:              
+
+####Expected Result:
+
+All arrival dates and times are displayed for each slice      
+    
+####Additional Information:              
 
 ### 4.1.2 - Trip duration	
-#####Expected Result:        
+
+####Expected Result:       
+ 
 - The total trip duration is displayed
 -  The duration for each slice is displayed      
-
-### 3.2.0 - 
-#####Expected Result:              
-#####Additional Information:    
+ 
 
 ### 4.1.3 - Layover information	
-#####Expected Result:              
+
+####Expected Result:      
+        
 - Layover duration is displayed
  - The airport name(s) is displayed
 -  The airport code(s) is displayed
 
 ### 4.1.4 - Carrier(s)	
-#####Expected Result:              
+
+####Expected Result:   
+           
 The name/logo for the carrier(s) is displayed for each slice	
+
 ### 4.1.5 - Codeshare, if applicable	
-#####Expected Result:              
+
+####Expected Result:         
+     
 The codeshare verbiage is displayed	
 
 ### 4.1.6 - Aircraft type	
-#####Expected Result:              
+
+####Expected Result:         
+     
 The aircraft type(s) is displayed for each slice	
 
 ### 4.1.7 - Cabin class	
-#####Expected Result:              
+
+####Expected Result:     
+         
 The cabin class is displayed for each slice	
 
 ### 4.1.8 - Airline(s) contact information	
-#####Expected Result:              
+
+####Expected Result:          
+    
 - The airline(s) is displayed
 -  The airline(s) phone number is displayed
  - The airline(s) website is displayed
  - The airline(s) confirmation number is displayed
  
 ### 4.1.9 - Customer Service phone number	
-#####Expected Result:              
+
+####Expected Result:              
+
 The correct Customer Service number is displayed	
 
 ### 5.1 - Trip Id	
-#####Expected Result:              
+
+####Expected Result:         
+     
 The Trip Id is displayed	
 
 ### 5.2 - Booking status	
-#####Expected Result:              
+
+####Expected Result:    
+          
 The booking status is displayed	
 
 ### 5.3 - Summary of Charges	
-#####Expected Result:              
+
+####Expected Result:       
+       
 - Ticket price is displayed
     - Not multiplied by the amount of travelers/tickets
 - Taxes and Fees are displayed
@@ -644,43 +926,61 @@ The booking status is displayed
 - All values show zero
 
 ### 5.4 - Ticket number(s)	
-#####Expected Result:              
+
+####Expected Result:      
+        
 The ticket number(s) is displayed	
 
 ### 5.5 - Origin city & airport	
-#####Expected Result:              
+
+####Expected Result:          
+    
 - The origin city is displayed
 - The origin airport is displayed
 - The origin airport code is displayed
 
-### 5.6 - Destination city & airport	
-#####Expected Result:              
+### 5.6 - Destination city & airport
+	
+####Expected Result:              
+
 - The destination city is displayed
 - The destination airport is displayed
 - The destination airport code is displayed
 
 ### 5.7 - Departure date(s) & time(s)	
-#####Expected Result:              
+
+####Expected Result:            
+  
 All departure dates and times are displayed for each slice	
 
 ### 5.8 - Arrival date(s) & time(s)	
-#####Expected Result:              
+
+####Expected Result:            
+  
 All arrival dates and times are displayed for each slice	
 
 ### 5.9 - Flight number(s)	
-#####Expected Result:         
+
+####Expected Result:         
+
 The flight number(s) is displayed	
 
 ### 5.1.0 - Carrier(s)	
-#####Expected Result:              
+
+####Expected Result:         
+     
 The name/logo for the carrier(s) is displayed for each slice	
 
 ### 5.1.1 - Codeshare, if applicable	
-#####Expected Result:              
+
+####Expected Result:              
+
 The codeshare verbiage is displayed	
 
-### 5.1.2 - Airline(s) contact information	
-#####Expected Result:              
+### 5.1.2 - Airline(s) contact information
+	
+####Expected Result:          
+    
 - The airline(s) is displayed
 - The airline(s) phone number is displayed
 - The airline(s) website is displayed
