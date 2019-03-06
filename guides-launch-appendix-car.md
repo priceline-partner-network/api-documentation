@@ -13,7 +13,7 @@ will find:
 
 -   Reasoning behind each requirement
 
-![Car Results](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/Guides%20-%20Car%20Appendix%20-%20ConfEmail.png)
+![Car Results](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/Guides%20-%20Car%20Appendix%20-%20CResults.png)
 
 
  ### 1.1 - Base rate	
