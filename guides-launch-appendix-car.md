@@ -18,44 +18,44 @@ will find:
 
  ### 1.1 - Base rate	
  
- #####Expected Result:
+#### Expected Result:
  
 The base rate (daily or weekly) is displayed for each rate
 
- #####Additional Information:
+#### Additional Information:
  
  - getResultsV3
   - Returned under the "base_rate" & "base_type" nodes under the "price_details" node
  
 ### 1.2 - Total price	
 
-#####Expected Result:
+#### Expected Result:
 
 The total price is displayed for each rate
 
-#####Additional Information:
+#### Additional Information:
 
 - getResultsV3
  - Returned under the "total_price" node within the "price_details" node
 
 ### 1.3 - Currency
 
-#####Expected Result:
+#### Expected Result:
 
 The correct currency, currency code, & currency symbol are displayed
 
-#####Additional Information:
+#### Additional Information:
 
 - getResultsV3
 - Returned under the "display_currency" & "display_symbol" nodes within the "price_details" node
   
 ### 1.4 - Rental Company
 
-#####Expected Result:
+#### Expected Result:
 
 The rental company name/logo must be displayed for each rate
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getResultsV3
  - The rental company is returned under the "name" node within the "partner" node
@@ -63,7 +63,7 @@ The rental company name/logo must be displayed for each rate
 
 ### 1.5 - Pickup/Dropoff information
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getResultsV3
  - The pickup location is returned under the "location" node within the "pickup" node
@@ -71,22 +71,22 @@ The rental company name/logo must be displayed for each rate
 
 ### 1.6 - Car type
 
-#####Expected Result:
+#### Expected Result:
 
 The car type must be displayed for each rate
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getResultsV3
 -  Returned under the "description" node under the "car" node
 
 ### 1.7 - Car amenities
 
-#####Expected Result:
+#### Expected Result:
 
 The amenities must be displayed for each rate
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getResultsV3
  - The amount of passengers is returned under the "passengers" node within the "car" node
@@ -103,11 +103,11 @@ The amenities must be displayed for each rate
 
 ### 1.8 - Search box	
 
-#####Expected Result:
+#### Expected Result:
 
 A search box is accessible on the Results page
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getCarAutoComplete
 
@@ -116,7 +116,7 @@ A search box is accessible on the Results page
 
 ### 2.1 - Policy information
 
-#####Expected Result:
+#### Expected Result:
 
 - Credit card disclaimer
  - Acceptable forms of payment link
@@ -124,7 +124,7 @@ A search box is accessible on the Results page
  - Terms & Conditions
  - Privacy Policy
  
-#####Additional Information:  
+#### Additional Information:  
 
 - getPolicy.Car
 - getContractRequest
@@ -132,14 +132,14 @@ A search box is accessible on the Results page
 
 ### 2.2 - Pickup location
 
-#####Expected Result:
+#### Expected Result:
 
 - The selected pickup location must be displayed
 -  Day of the week must be included
 -  Time of day must be included
  - The full address must be displayed
  
-#####Additional Information:  
+#### Additional Information:  
 
 - getContractRequest
 - Returned under the "pickup_airport_name" and subsequent address/location nodes for airport locations
@@ -147,14 +147,14 @@ A search box is accessible on the Results page
 
 ### 2.3 - Dropoff location (if different from pickup)
 
-#####Expected Result:
+#### Expected Result:
 
 - The selected dropoff location must be displayed
 - Day of the week must be included
 - Time of day must be included
 - The full address must be displayed
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getContractRequest
 - Returned under the "dropoff_airport_name" and subsequent address/location nodes for airport locations
@@ -162,22 +162,22 @@ A search box is accessible on the Results page
 
 ### 2.4 - Counter directions/airport terminal information	
 
-#####Expected Result:
+#### Expected Result:
 
 The data returned must be displayed; it can be hidden behind a click
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getContractRequest
 -  Returned under the "shuttle_text" node.
 
 ### 2.5 - Hours of operation
 
-#####Expected Result:
+#### Expected Result:
 
 The rental company's hours of operations are displayed
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getContractRequest
 -  Returned under the "open" & "close" nodes within the "pickup_hours_data" node for pickup locations.
@@ -185,11 +185,11 @@ The rental company's hours of operations are displayed
 
 ### 2.6 - Rental company	
 
-#####Expected Result:
+#### Expected Result:
 
 The rental company name/logo is displayed
 
-#####Additional Information: 
+#### Additional Information: 
 
 - getContractRequest
 - The rental company is returned under the "partner_name" node 
@@ -197,22 +197,22 @@ The rental company name/logo is displayed
 
 ### 2.7 - Car type
 
-#####Expected Result:
+#### Expected Result:
 
 The car type is displayed
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getContractRequest
 - Returned under the "description" node within the "car_info" node
 
 ### 2.8 - Car amenities
 
-#####Expected Result:
+#### Expected Result:
 
 The amenities are displayed
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getContractRequest
 - The amount of passengers is returned under the "passengers" node within the "car_info" node
@@ -226,11 +226,11 @@ The amenities are displayed
 
 ### 2.9 - Mileage	
 
-#####Expected Result:
+#### Expected Result:
 
 The mileage is displayed
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getContractRequest
 - The mileage information is returned under the "mileage" node within the "price_details" node
@@ -239,17 +239,17 @@ The mileage is displayed
 
 ### 2.1.0 - Free cancellation verbiage for post-paid rates	
 
-#####Expected Result:
+#### Expected Result:
 
 Verbiage or banner is displayed for post paid rates
 
-#####Additional Information:  
+#### Additional Information:  
 
 Front end change for the partner
 
 ### 2.1.1 - Summary of Charges	
 
-#####Expected Result:
+#### Expected Result:
 
 - The base rate is displayed
 - The number of days/weeks is displayed
@@ -262,7 +262,7 @@ Front end change for the partner
     - Prepaid rates display the amount due now
 - The price disclaimer is displayed
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getContractRequest
 -  The base rate is returned under the "display_price" node within the "pricing" node.
@@ -280,12 +280,12 @@ Front end change for the partner
 
 ### 2.1.2 - Important Information	
 
-#####Expected Result:
+#### Expected Result:
 
 - The Important Information must be displayed for the selected rate
  - Each inventory type has a different set of verbiage
  
-#####Additional Information:  
+#### Additional Information:  
 
 - getContractRequest
 - Returned under the "important_information" node, each cluster that returns "mandatory" within the "display" node must be displayed
@@ -307,113 +307,113 @@ Front end change for the partner
 
 ### 3.1 - Booking status
 
-#####Expected Result:
+#### Expected Result:
 
 The status of the reservation is displayed
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getCarLookUp
 -  Returned under the "status" node
 
 ### 3.2 - Trip Id
 
-#####Expected Result:
+#### Expected Result:
 
 The Trip Id that is returned is displayed
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getCarLookUp
 - Returned under the "booking_id" node
 
 ### 3.3 - Rental company confirmation number	
 
-#####Expected Result:
+#### Expected Result:
 
 The rental company confirmation number that is returned is displayed
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getCarLookUp
 - Returned under the "partner_confirmation_number" node
 
 ### 3.4 - Map to pickup location	
 
-#####Expected Result:
+#### Expected Result:
 
 Link to map showing the pickup location is displayed
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getCarLookUp
 
 ### 3.5 - Link to change/cancel reservation	
 
-#####Expected Result:
+#### Expected Result:
 
 The link can perform the look up or it can lead to a page where the user can look up and make amendments to their reservation
 
-#####Additional Information: 
+#### Additional Information: 
  
 - getCancelRequest
 
 ### 3.6 - Links to print or email itinerary	
 
-#####Expected Result:
+#### Expected Result:
 
 The links are displayed clearly
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getResendItinerary
 
 ### 3.7 - Pickup location	
 
-#####Expected Result:
+#### Expected Result:
 
 - The selected pickup location must be displayed
 - Day of the week must be included
 - Time of day must be included
 - The full address must be displayed
 
-#####Additional Information: 
+#### Additional Information: 
 
 - getCarLookUp
 - Returned under the "pickup_name" and subsequent address/location nodes 
 
 ### 3.8 - Dropoff location (if different from pickup)	
 
-#####Expected Result:
+#### Expected Result:
 
 - The selected dropoff location must be displayed
 - Day of the week must be included
 - Time of day must be included
 - The full address must be displayed
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getCarLookUp
 -  Returned under the "dropoff_name" and subsequent address/location nodes
 
 ### 3.9 - Counter directions/airport terminal information
 
-#####Expected Result:
+#### Expected Result:
 
 The data returned is displayed; it can be hidden behind a click
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getCarLookUp
  - Returned under the "shuttle_text" node.
 
 ### 3.1.0 - Hours of operation
 
-#####Expected Result:
+#### Expected Result:
 
 The rental company's hours of operations are displayed
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getCarLookUp
 -  Returned under the "open" & "close" nodes within the "pickup_hours_data" node for pickup locations.
@@ -421,11 +421,11 @@ The rental company's hours of operations are displayed
 
 ### 3.1.1 - Rental company
 
-#####Expected Result:
+#### Expected Result:
 
 The rental company name/logo is displayed
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getCarLookUp
 -  The rental company is returned under the "partner_name" node 
@@ -433,18 +433,18 @@ The rental company name/logo is displayed
 
 ### 3.1.2 - Car type	
 
-#####Expected Result:
+#### Expected Result:
 
 The car type is displayed
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getCarLookUp
  - Returned under the "description" node within the "car_info" node
 
 ### 3.1.3 - Summary of Charges	
 
-#####Expected Result:
+#### Expected Result:
 
 - The base rate is displayed
 - The number of days/weeks is displayed
@@ -457,7 +457,7 @@ The car type is displayed
     - Prepaid rates display the amount due now
 - The price disclaimer is displayed
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getCarLookUp
  - The base rate is returned under the "display_price" node within the "pricing" node.
@@ -475,12 +475,12 @@ The car type is displayed
 
 ### 3.1.4 - Important Information
 	
-#####Expected Result:
+#### Expected Result:
 
 - The Important Information must be displayed for the selected rate
  - Each inventory type has a different set of verbiage
  
- #####Additional Information:  
+ #### Additional Information:  
  
 -  getCarLookUp
 - Returned under the "important_information" node, each cluster that returns "mandatory" within the "display" node must be displayed
@@ -499,22 +499,22 @@ The car type is displayed
 
 ### 3.1.5 - Customer Service phone number 	
 
-#####Expected Result:
+#### Expected Result:
 
 - The correct Customer Service number is displayed
 -  The rental company's phone number is displayed
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getCarLookUp
 
 ### 3.1.6 - Driver name
 
-#####Expected Result:
+#### Expected Result:
 
 The driver name entered on the Contract page is displayed
 
-#####Additional Information:  
+#### Additional Information:  
 
 - getCarLookUp 
 
@@ -522,31 +522,31 @@ The driver name entered on the Contract page is displayed
 
 ### 4.1 - Booking status
 
-#####Expected Result:
+#### Expected Result:
 
 The status of the reservation is displayed
 
 ### 4.2 - Trip Id
 
-#####Expected Result:
+#### Expected Result:
 
 The Trip Id that is returned is displayed
 
 ### 4.3 - Rental company confirmation number
 
-#####Expected Result:
+#### Expected Result:
 
 The rental company confirmation number that is returned is displayed
 
 ### 4.4 - 	Driver name
 
-#####Expected Result:
+#### Expected Result:
 
 The driver name entered on the Contract page is displayed
 
 ### 4.5 - Summary of Charges
 
-#####Expected Result:
+#### Expected Result:
 
 - The base rate is displayed
 - The number of days/weeks is displayed
@@ -561,25 +561,25 @@ The driver name entered on the Contract page is displayed
     
 ### 4.6 - Rental company	
 
-#####Expected Result:
+#### Expected Result:
 
 The rental company name/logo is displayed
 
 ### 4.7 - 	Car type
 
-#####Expected Result:
+#### Expected Result:
 
 The car type is displayed
 
 ### 4.8 - 	Car amenities
 
-#####Expected Result:
+#### Expected Result:
 
 The amenities are displayed
 
 ### 4.9 - Pickup location	
 
-#####Expected Result:
+#### Expected Result:
 
 - The selected pickup location must be displayed
 - Day of the week must be included
@@ -588,7 +588,7 @@ The amenities are displayed
 
 ### 4.1.0 - Dropoff location (if different from pickup) 
 	
-#####Expected Result:
+#### Expected Result:
 
 - The selected dropoff location must be displayed
 - Day of the week must be included
@@ -597,13 +597,13 @@ The amenities are displayed
 
 ### 4.1.1 - Counter directions/airport terminal information	
 
-#####Expected Result:
+#### Expected Result:
 
 The data returned is displayed
 
 ### 4.1.2 - Customer Service phone number	
 
-#####Expected Result:
+#### Expected Result:
 
 - The correct Customer Service number is displayed
  - The rental company's phone number is displayed
@@ -611,37 +611,37 @@ The data returned is displayed
  
 ### 5.1 - 	Booking status
 
-#####Expected Result:
+#### Expected Result:
 
 The status of the reservation is displayed
 
 ### 5.2 - Trip Id 	
 
-#####Expected Result:
+#### Expected Result:
 
 The Trip Id that is returned is displayed
 
 ### 5.3 - Driver name	
 
-#####Expected Result:
+#### Expected Result:
 
 The driver name entered on the Contract page is displayed
 
 ### 5.4 - Rental company
 	
-#####Expected Result:
+#### Expected Result:
 
 The rental company name/logo is displayed
 
 ### 5.5 - Car type	
 
-#####Expected Result:
+#### Expected Result:
 
 The amenities are displayed
 
 ### 5.6 - Pickup location	
 
-#####Expected Result:
+#### Expected Result:
 
 - The selected pickup location must be displayed
 -  Day of the week must be included
@@ -650,7 +650,7 @@ The amenities are displayed
 
 ### 5.7 - Dropoff location (if different from pickup)	
 
-#####Expected Result:
+#### Expected Result:
 
 - The selected dropoff location must be displayed
  - Day of the week must be included
@@ -659,7 +659,7 @@ The amenities are displayed
  
 ### 5.8 - Customer Service phone number	
 
-#####Expected Result:
+#### Expected Result:
 
 - The correct Customer Service number is displayed
  - The rental company's phone number is displayed
