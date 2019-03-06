@@ -17,9 +17,11 @@ will find:
 
 
 ### 1.1 - 	Average Nightly Rate 
+
 #####Expected Result:
 - The Avg. Nightly Rate is displayed for each properly
 - The rate is not multiplied by the number of nights or rooms
+
 #####Additional Information:  
 - getExpress.Results
 - Returned under the "source_night_price" node within the "night_price_data" cluster for each property 
@@ -28,7 +30,9 @@ will find:
 
 ### 1.2 - Currency	
 #####Expected Result:
+
 The correct currency, currency code, & currency symbol are displayed
+
 #####Additional Information: 
 - getExpress.Results
  - Returned under the "source_currency" & "source_symbol" nodes within the "price_details" cluster for each property
