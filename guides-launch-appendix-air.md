@@ -235,7 +235,7 @@ The banner (or verbiage) is displayed on the page
  
  - getAutoComplete
 
-![Flight Contract](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/FlightContract.png)
+![Flight Contract](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/Guides%20-%20Flight%20Appendix%20-%Contract.png)
 
 
 ### 2.1 - 	Summary of Charges
