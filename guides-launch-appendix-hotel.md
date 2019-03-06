@@ -67,10 +67,15 @@ A search box must be accessible on the Results page
 - Can be a slimmed down version of the Hotel search box
 - getAutoSuggestV2
 
+![Hotel Details](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/Guides%20-%20Hotel%20Appendix%20-%20Details.png)
+
+
 ### 2.1 - Full property name
 #####Expected Result:
+
 The full property name must be displayed for the selected property
 #####Additional Information: 
+
 - getHotelDetails
  - Download option available
  - Returned under the "name" node within the "hotel_data" cluster for each property 
@@ -156,7 +161,10 @@ The cancellation policy must be displayed for each rate
 Promo data must be displayed for each rate, if returned
 #####Additional Information: 
 - getExpress.MultiContract
-- Returned under the "promo" node within the "details_s
+- Returned under the "promo" node within the "details_summary" cluster for each rate returned
+
+![Hotel Contract](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/Guides%20-%20Hotel%20Appendix%20-%20Contract1.png)
+
 
 ### 3.1 - Full property name
 #####Expected Result:
@@ -203,6 +211,7 @@ The selected check-out date must be displayed
 - Returned under the "check_out" node
 - Day of the week is recommended, but not required
 
+
 ### 3.7 - Summary of Charges
 #####Expected Result:
 - The avg. nightly rate is displayed for the selected rate
@@ -242,6 +251,9 @@ The selected check-out date must be displayed
 ##### Reasoning for Requirements
 - Must be displayed as is if Priceline is MOR, as per Legal/CS.
 
+![Hotel Contract2](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/Guides%20-%20Hotel%20Appendix%20-%20Contract2.png)
+
+
 ### 3.9 - Terms and Conditions	
 #####Expected Result:
 The Terms and Conditions must be displayed; they can be hidden behind a click
@@ -262,6 +274,9 @@ The Privacy Policy must be displayed; it can be hidden behind a click
     - etc. 
 #####Additional Information: 
 Front end change for the partner
+
+![Hotel Success](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/Guides%20-%20Hotel%20Appendix%20-%20Success.png)
+
 
 ### 4.1 - Full property name	
 #####Expected Result:
@@ -411,6 +426,8 @@ The credit card type must be displayed
 #####Additional Information: 
 - For non-cancellable rates, the Important Information states the cancellation policy and will suffice.
 
+![Hotel ConfEmail](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/Guides%20-%20Hotel%20Appendix%20-%20ConfEmail.png)
+
 ### 5.1 -	Full property name
 #####Expected Result:
 The full property name is displayed for the selected property
@@ -470,6 +487,9 @@ The hotel phone number must be displayed
 The correct Customer Service number is displayed
 ##### Reasoning for Requirements
 Must be displayed clearly for the user, as per CS.  
+
+![Hotel Details](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/Guides%20-%20Hotel%20Appendix%20-%20Details.png)
+
 
 ### 6.1 -	Booking status
 #####Expected Result:
