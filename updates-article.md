@@ -1,4 +1,4 @@
-[Home](home.md) | [Getting Started](getting-started.md) | [Documentation](docs-air.md) | [Guides](guides-air.md) | [Updates](updates.md) | [Support](support.md)
+[Home](../home.md) | [Getting Started](../getting-started.md) | [Documentation](docs-air.md) | [Guides](guides-air.md) | [Updates](updates.md) | [Support](../Support/support.md)
 
 # Title of recent update Heading 1
 *Fri Jan 11 2018*  

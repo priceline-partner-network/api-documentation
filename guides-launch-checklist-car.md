@@ -1,9 +1,9 @@
 API Partner Car Requirements - Manual Testing Script
 ====================================================
 
-Who is the Merchant of Record?
+Who is Merchant of Record?
 
-- [ ] Priceline
+- [ ]   Priceline
 -  [ ] Partner
 
 The following items must be displayed on the Results page:
