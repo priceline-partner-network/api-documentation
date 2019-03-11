@@ -1,5 +1,3 @@
-[Home](../home.md) | [Getting Started](../getting-started.md) | [Documentation](docs-air.md) | [Guides](guides-air.md) | [Updates](updates.md) | [Support](../Support/support.md)
-
 # Updates
 
 #### Title of recent update
