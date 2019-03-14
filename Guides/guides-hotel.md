@@ -4,7 +4,7 @@
 
 This API features two different types of rates, merchant and closed user group (CUG). The methods for implementing these are different.
 
-### [Booking Flows](guides-flow-hotel.md)
+### [Booking Flows](/guides/hotel/flow)
 
 Get familiar with the proper booking flow for your site and where to use our API data.
 
