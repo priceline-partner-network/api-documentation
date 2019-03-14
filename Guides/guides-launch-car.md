@@ -4,7 +4,7 @@ These documents contains screenshots for illustration purposes only. The actual 
 
 -----------
 
-#### <a class='anchor' name='tips'></a>Important Tips
+## Important Tips
 
 - Use the specific API key and RefID provided for QA vs Production
 - Leave NOTHING out. If a function returns it, display it.
@@ -16,7 +16,7 @@ These documents contains screenshots for illustration purposes only. The actual 
 
 -----------  
 
-### <a class='anchor' name='results'></a>Results Page
+## Results Page
 
 #### Display Requirements
 * Pickup/Dropoff information
@@ -29,7 +29,7 @@ These documents contains screenshots for illustration purposes only. The actual 
 
 -----------
 
-### <a class='anchor' name='contract'></a>Contract Page
+## Contract Page
 
 #### Display Requirements
 * Policy information (hidden behind a click)
@@ -54,7 +54,7 @@ These documents contains screenshots for illustration purposes only. The actual 
 
 -----------
 
-### <a class='anchor' name='success'></a>Success Page
+## Success Page
 
 #### Display Requirements
 * Booking status
@@ -82,7 +82,7 @@ These documents contains screenshots for illustration purposes only. The actual 
 
 -----------
 
-### <a class='anchor' name='email'></a>Confirmation Email
+## Confirmation Email
 
 #### Display Requirements
 * Trip Id
