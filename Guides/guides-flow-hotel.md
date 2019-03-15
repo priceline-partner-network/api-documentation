@@ -6,37 +6,37 @@ Get familiar with the proper booking flow for your site and where to use our API
 
 1. [AutoSuggestV2](/documentation/hotel#/paths/~1getAutoSuggestV2/get)  
 Provide a list of suggested cities or airports based on the user's search input
-2. [ResultsWithCacheV2](#docs)  
+2. [ResultsWithCacheV2](/documentation/hotel)  
 Retrieve cached rates and hotel IDs based on the user's search criteria
-3. [HotelDetails](/developer/documentation/hotel#/paths/~1getHotelDetails/get) (optional)  
+3. [HotelDetails](/documentation/hotel#/paths/~1getHotelDetails/get) (optional)  
 Retrieve all details about the property the user has selected
-4. [Rates.Live.Multi](/developer/documentation/hotel#/paths/~1getRates.Live.Multi/get)  
+4. [Rates.Live.Multi](/documentation/hotel#/paths/~1getRates.Live.Multi/get)  
 Displaying live property rates and availability for 1 or 2 hotel IDs
-5. [ContractRequest](/developer/documentation/hotel#/paths/~1getContractRequest/get)  
+5. [ContractRequest](/documentation/hotel#/paths/~1getContractRequest/get)  
 Confirms the rate that the user has selected
-6. [BookRequest](/developer/documentation/hotel#/paths/~1getBookRequest/post)  
+6. [BookRequest](/documentation/hotel#/paths/~1getBookRequest/post)  
 Sends customer and payment information to confirm their property booking
-7. [BookDetails](/developer/documentation/hotel#/paths/~1getBookDetailsRequest/get)  
+7. [BookDetails](/documentation/hotel#/paths/~1getBookDetailsRequest/get)  
 Retrieves the post-book details
 
 ##### Closed User Group (CUG)
 
-1. [AutoSuggestV2](#docs)  
+1. [AutoSuggestV2](/documentation/hotel)  
 Provide a list of suggested cities or airports based on the user's search input
-2. [Express.Results](#docs)  
+2. [Express.Results](/documentation/hotel)  
 Returns a list of up to 100 properties matching the search criteria.
-3. [Express.MultiContract](#docs) (optional)  
+3. [Express.MultiContract](/documentation/hotel) (optional)  
 Returns multiple applicable rates from the property selected.
-4. [Express.Book](#docs)  
+4. [Express.Book](/documentation/hotel)  
 Passes user and payment information and responds with a success or fail
 
 #### Cancel a Booking
 
 ##### Merchant
 
-1. [BookDetails](/developer/documentation/hotel#/paths/~1getExpress.LookUp/post)  
+1. [BookDetails](/documentation/hotel#/paths/~1getExpress.LookUp/post)  
 Gets the all details from the booking that was selected
-2. [CancelRequest](/developer/documentation/hotel#/paths/~1getExpress.Cancel/get)  
+2. [CancelRequest](/documentation/hotel#/paths/~1getExpress.Cancel/get)  
 Cancels a booking
 
 #### Important Tips
@@ -68,13 +68,13 @@ Cancels a booking
 
 This API feature separates the insurance from the product, and allows the purchase of insurance for an unknown hotel booking.
 
-- [Insurance Quote](#docs)  
+- [Insurance Quote](/documentation/hotel)  
 Response will return a block of HTML that can be placed within the front end code and offers insurance to the customer
-- [Insurance Purchase](#docs)  
+- [Insurance Purchase](/documentation/hotel)  
 If the customer selects "Yes" to buying insurance, *and the hotel reservation was successful*, you can then submit an insurance purchase.
-- [Insurance Note Decline](#docs)  
+- [Insurance Note Decline](/documentation/hotel)  
 If the customer selects "No" to buying insurance, *and the hotel reservation was successful*, it is required that you submit an insurance note decline request.
-- [Insurance Lookup](#docs)  
+- [Insurance Lookup](/documentation/hotel)  
 Along with the method to retrieve hotel reservation details, an API call can be made to get details on the insurance purchase.
 
 
