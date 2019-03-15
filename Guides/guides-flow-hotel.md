@@ -4,7 +4,7 @@ Get familiar with the proper booking flow for your site and where to use our API
 
 ##### Merchant 
 
-1. [AutoSuggestV2](/developer/documentation/hotel#/paths/~1getAutoSuggestV2/get)  
+1. [AutoSuggestV2](/documentation/hotel#/paths/~1getAutoSuggestV2/get)  
 Provide a list of suggested cities or airports based on the user's search input
 2. [ResultsWithCacheV2](#docs)  
 Retrieve cached rates and hotel IDs based on the user's search criteria
