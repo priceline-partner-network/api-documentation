@@ -1,6 +1,6 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const build = path.resolve(__dirname, 'build');
 
 module.exports = {
@@ -24,7 +24,8 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '[path][name].[hash].[ext]',
+                            name: '[name].[hash].[ext]',
+                            outputPath: (url, resourcePath, context) => path.relative(context, resourcePath).replace('src', '')
                         }
                     }
                 ]
@@ -32,6 +33,12 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new CopyWebpackPlugin([
+            {
+                from: path.resolve(__dirname, './src/assets'),
+                to: path.resolve(__dirname, 'build/assets')
+            }
+        ])
     ]
 };

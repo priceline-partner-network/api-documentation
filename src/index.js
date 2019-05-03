@@ -1,4 +1,4 @@
-import updates from './updates/config';
+import updates from './updates/herodotus.config';
 
 export default {
     updates
