@@ -1,6 +1,6 @@
 {
   "name": "ppn-api-documentation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Priceline Partner Network Documentation",
   "main": "build/index.js",
   "scripts": {
@@ -27,6 +27,7 @@
     "clean-webpack-plugin": "^2.0.1",
     "copy-webpack-plugin": "^5.0.3",
     "file-loader": "^3.0.1",
+    "raw-loader": "^2.0.0",
     "webpack": "^4.30.0",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.1"

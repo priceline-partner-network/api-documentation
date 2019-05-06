@@ -23,7 +23,12 @@ module.exports = {
                 loader: 'babel-loader'
             },
             {
-                test: /\.(png|svg|jpg|gif|xlsx|docx|pdf|md)$/,
+                test: /\.md/,
+                exclude: /node_modules/,
+                loader: 'raw-loader'
+            },
+            {
+                test: /\.(png|svg|jpg|gif|xlsx|docx|pdf)$/,
                 use: [
                     {
                         loader: 'file-loader',
