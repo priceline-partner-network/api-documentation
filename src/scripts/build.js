@@ -1,41 +1,59 @@
-import fs from 'fs';
-import path from 'path';
-import chalk from 'chalk';
+import configs from './getConfigs';
 import logger from './logger';
-import config from './../../webpack.config';
+import baseConfig from './../../webpack.config';
+import webpack from 'webpack';
+import fs from 'fs';
 
-const PROJECT_ROOT = `${process.env.PWD}/src`;
-const HERODOTUS_CONFIG_JS = 'herodotus.config.js';
-const HERODOTUS_CONFIG_JSON = 'herodotus.config.json';
-
-const HERODOTUS_CONFIG_NAMES = [
-    HERODOTUS_CONFIG_JS,
-    HERODOTUS_CONFIG_JSON
-];
+const BUILD_FOLDER_PATH = `${process.env.PWD}/build`;
 
 const build = () => {
-    const configPaths = getConfigs();
+    logger.logInfo('Starting Build of project');
 
-    console.log('configs', configPaths);
+    const config = {...baseConfig};
+
+    config.entry = {};
+
+    configs.forEach((configPath, index) => {
+        config.entry[index] = configPath;
+    });
+
+    webpack(config, handleBuild);
 };
 
-const getConfigs = (directory = PROJECT_ROOT) => {
-    let configs = [];
-    const files = fs.readdirSync(directory);
+const handleBuild = () => {
+    const processedIDs = {};
 
-    files.forEach(file => {
-        const filePath = `${directory}/${file}`;
-        const stats = fs.statSync(filePath);
+    configs.forEach((config, index) => {
+        const filePath = `${BUILD_FOLDER_PATH}/${index}.js`;
 
-        if(stats.isDirectory()) {
-            configs = configs.concat(getConfigs(filePath));
-        } else if(stats.isFile() && HERODOTUS_CONFIG_NAMES.includes(file)) {
-            configs.push(filePath);
+        if(fs.existsSync(filePath)) {
+            const module = require(filePath).default;
+
+            if(module.id && !processedIDs[module.id]) {
+                fs.renameSync(filePath, `${BUILD_FOLDER_PATH}/${module.id}.js`);
+                processedIDs[module.id] = true;
+                logger.logSuccess(`Successfully built ${module.id}`);
+            } else {
+                logger.logError(`Duplicate id ${module.id}`);
+            }
         }
     });
 
-    return configs;
+    createdMain(processedIDs);
+};
+
+const createdMain = (files) => {
+    let jsonString = '';
+
+    Object.keys(files).forEach((file) => {
+        jsonString += `"${file}": require('./${file}'),`;
+    });
+
+    fs.writeFileSync(`${BUILD_FOLDER_PATH}/index.js`, `
+        module.exports = {${jsonString}};
+    `);
+
+    logger.logSuccess('Build Main index file');
 };
 
 build();
-

@@ -4,8 +4,17 @@ import support from './support.md';
 import terms from './terms.md';
 
 export default {
-    contact,
-    faq,
-    support,
-    terms
+    id: "Support",
+    content: {
+        0: {
+            title: "Support",
+            created: "",
+            updated: "",
+            markdown: support,
+            author: "",
+            tags: [
+                "support"
+            ],
+        }
+    }
 };

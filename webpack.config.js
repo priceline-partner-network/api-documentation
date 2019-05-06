@@ -2,14 +2,18 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const build = path.resolve(__dirname, 'build');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
     mode: 'production',
+    target: 'node',
     entry: path.resolve(__dirname, './src/index.js'),
     output: {
-        filename: 'index.js',
+        filename: '[name].js',
         path: build,
         chunkFilename: '[name].[hash].bundle.js',
+        library: ["herodotus", "[name]"],
+        libraryTarget: "umd"
     },
     module: {
         rules: [

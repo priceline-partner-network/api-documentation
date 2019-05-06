@@ -6,11 +6,11 @@ import home from './index.md';
 
 const COMMON_TAGS = [
     "guides",
-    "air"
+    "hotel"
 ];
 
 export default {
-    id: "GuidesAir",
+    id: "GuidesHotel",
     content: {
         0: {
             title: "Home",

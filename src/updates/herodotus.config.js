@@ -1,13 +1,8 @@
 import updates from './updates.md';
 import sandbox from './sandbox.md';
 
-module.exports = {
-    title: "",
-    component: "",
-    pagination: {
-        limit: 10,
-        orderBy: "latest-created"
-    },
+export default {
+    id: "Updates",
     content: {
         0: {
             title: "Launch Documentation Version 2",
@@ -37,10 +32,6 @@ module.exports = {
                 "asdfasdfasdf",
                 "asdfasdfasdf"
             ]
-        },
-        3: {
-            title: "",
-
         }
     }
 };

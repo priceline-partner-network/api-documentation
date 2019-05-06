@@ -28,6 +28,7 @@
     "copy-webpack-plugin": "^5.0.3",
     "file-loader": "^3.0.1",
     "webpack": "^4.30.0",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.1"
   }
 }
