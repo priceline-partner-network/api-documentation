@@ -1,6 +1,10 @@
 import updates from './updates.md';
 import sandbox from './sandbox.md';
 
+const baseTags = [
+
+];
+
 export default {
     id: "Updates",
     content: {
@@ -8,29 +12,25 @@ export default {
             title: "Launch Documentation Version 2",
             created: "",
             updated: "",
-            markdown: updates,
-            author: "",
+            summary: "",
+            content: updates,
+            author: "Ryan Kim",
             tags: [
-                "documentation"
+                ...baseTags,
+                "documentation",
+                "launch"
             ],
         },
         1: {
             title: "API Sandbox Launch",
             created: "",
             updated: "",
-            markdown: sandbox,
+            summary: "",
+            content: sandbox,
+            author: "Ryan Kim",
             tags: [
+                ...baseTags,
                 "sandbox"
-            ]
-        },
-        2: {
-            title: "Hardcoded document new",
-            created: "",
-            updated: "",
-            markdown: "asdfasdfasdf",
-            tags: [
-                "asdfasdfasdf",
-                "asdfasdfasdf"
             ]
         }
     }
