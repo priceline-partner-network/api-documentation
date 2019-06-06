@@ -3,6 +3,7 @@ import checklist from './checklist.md';
 import flow from './flow.md';
 import launch from './launch.md';
 import home from './index.md';
+import hero from 'assets/guides/air-guides-hero.png';
 
 const COMMON_TAGS = [
     "guides",
@@ -13,8 +14,9 @@ export default {
     id: "GuidesAir",
     content: {
         0: {
-            title: "Home",
-            subtitle: "",
+            title: "Air Guides",
+            subtitle: "Everything you need to know",
+            image: hero,
             content: home,
             author: "Ryan Kim",
             tags: [
@@ -22,10 +24,11 @@ export default {
             ]
         },
         1: {
-            title: "Appendix",
+            title: "Air Appendix",
             subtitle: "",
             created: "",
             updated: "",
+            image: hero,
             content: appendix,
             author: "Ryan Kim",
             tags: [
@@ -38,6 +41,7 @@ export default {
             subtitle: "",
             created: "",
             updated: "",
+            image: hero,
             content: checklist,
             author: "Ryan Kim",
             tags: [
@@ -48,6 +52,7 @@ export default {
         3: {
             title: "Flow",
             subtitle: "",
+            image: hero,
             content: flow,
             author: "Ryan Kim",
             tags: [
@@ -58,6 +63,7 @@ export default {
         4: {
             title: "Launch Requirements",
             subtitle: "",
+            image: hero,
             content: launch,
             author: "Ryan Kim",
             tags: [

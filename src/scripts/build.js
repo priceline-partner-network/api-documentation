@@ -24,6 +24,8 @@ const handleBuild = () => {
     const processedIDs = {};
 
     configs.forEach((config, index) => {
+        logger.logInfo(`Renaming bundle <${config}>`);
+
         const filePath = `${BUILD_FOLDER_PATH}/${index}.js`;
 
         if(fs.existsSync(filePath)) {

@@ -26,6 +26,15 @@ module.exports = {
                 test: /\.md/,
                 exclude: /node_modules/,
                 loader: 'raw-loader'
+            },
+            {
+                test: /\.(png|svg|jpg|gif|xlsx|docx|pdf)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        outputPath: 'assets',
+                    }
+                }
             }
         ]
     },
