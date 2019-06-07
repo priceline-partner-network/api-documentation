@@ -3,6 +3,8 @@ import checklist from './checklist.md';
 import flow from './flow.md';
 import launch from './launch.md';
 import home from './index.md';
+import unified from './unified.md';
+import hero from 'assets/guides/hotel-guides-hero.png';
 
 const COMMON_TAGS = [
     "guides",
@@ -12,20 +14,22 @@ const COMMON_TAGS = [
 export default {
     id: "GuidesHotel",
     content: {
-        0: {
-            title: "Home",
-            subtitle: "",
+        home: {
+            title: "Hotel Guides",
+            subtitle: "Everything you need to know",
+            image: hero,
             content: home,
             author: "Ryan Kim",
             tags: [
                 ...COMMON_TAGS
-            ]
+            ],
         },
-        1: {
+        appendix: {
             title: "Appendix",
             subtitle: "",
             created: "",
             updated: "",
+            image: hero,
             content: appendix,
             author: "Ryan Kim",
             tags: [
@@ -33,38 +37,53 @@ export default {
                 "appendix"
             ],
         },
-        2: {
+        checklist: {
             title: "Checklist",
             subtitle: "",
             created: "",
             updated: "",
+            image: hero,
             content: checklist,
             author: "Ryan Kim",
             tags: [
                 ...COMMON_TAGS,
                 "checklist"
-            ]
+            ],
         },
-        3: {
+        flow: {
             title: "Flow",
             subtitle: "",
+            image: hero,
             content: flow,
             author: "Ryan Kim",
             tags: [
                 ...COMMON_TAGS,
                 "flow"
-            ]
+            ],
         },
-        4: {
+        launch: {
             title: "Launch Requirements",
             subtitle: "",
+            image: hero,
             content: launch,
             author: "Ryan Kim",
             tags: [
                 ...COMMON_TAGS,
                 "launch",
                 "requirements"
-            ]
+            ],
+        },
+        unified: {
+            title: "Unified Flow",
+            subtitle: "A new approach to booking",
+            image: hero,
+            content: unified,
+            author: "Dan Major",
+            tags: [
+                ...COMMON_TAGS,
+                "unified",
+                "launch"
+            ],
         }
     }
 };

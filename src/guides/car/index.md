@@ -1,16 +1,15 @@
 
 
-## Flows
+### [Booking Flows](/guides/car/flow.md)
 
-### [Booking Flows](guides-flow-car.md)
 Get familiar with the proper booking flow for your site and where to use our API data.
 
-## Checklist
+### [Checklist](/guides/car/launch.md)
 
-A [checklist](guides-launch-checklist-car.md) to follow to make sure you meet the launch requirements.
+A checklist to follow to make sure you meet the launch requirements.
 
-## Appendix
+### [Appendix](/guides/car/appendix.md)
 
 Explanation of the requirements that API
-partners are required to meet in order to go-live. View it [here](guides-launch-appendix-car.md).
+partners are required to meet in order to go-live.
 

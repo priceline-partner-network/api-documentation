@@ -13,7 +13,7 @@ const COMMON_TAGS = [
 export default {
     id: "GuidesAir",
     content: {
-        0: {
+        home: {
             title: "Air Guides",
             subtitle: "Everything you need to know",
             image: hero,
@@ -23,7 +23,7 @@ export default {
                 ...COMMON_TAGS
             ]
         },
-        1: {
+        appendix: {
             title: "Air Appendix",
             subtitle: "",
             created: "",
@@ -36,7 +36,7 @@ export default {
                 "appendix"
             ],
         },
-        2: {
+        checklist: {
             title: "Checklist",
             subtitle: "",
             created: "",
@@ -49,7 +49,7 @@ export default {
                 "checklist"
             ]
         },
-        3: {
+        flow: {
             title: "Flow",
             subtitle: "",
             image: hero,
@@ -60,7 +60,7 @@ export default {
                 "flow"
             ]
         },
-        4: {
+        launch: {
             title: "Launch Requirements",
             subtitle: "",
             image: hero,
