@@ -1,17 +1,15 @@
 
 
-### [Booking Flows](guides-flow-air.md)
+## Flows
 
+### [Booking Flows](guides-flow-air.md)
 Get familiar with the proper booking flow for your site and where to use our API data.
 
-### [Checklist](guides-launch-checklist-air.md)
+## Checklist
 
-A checklist to follow to make sure you meet the launch requirements.
+A [checklist](guides-launch-checklist-air.md) to follow to make sure you meet the launch requirements.
 
-### [Appendix](guides-launch-appendix-air.md)
+## Appendix
 
 Explanation of the requirements that API
-partners are required to meet in order to go-live.
-
-
-
+partners are required to meet in order to go-live. View it [here](guides-launch-appendix-air.md).
