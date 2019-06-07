@@ -253,7 +253,7 @@ Each rate has its own `ppn_bundle` that can be used to make a `Express.Contract`
 }
 ```
 
-## New Features in `Express.Contract` and `Express.MultiContract`
+## New Features in both `Express.Contract` and `Express.MultiContract`
 
 In the responses for `Express.Contract` and `Express.MultiContract`, new nodes are introduced to add additional information to some rates.
 
