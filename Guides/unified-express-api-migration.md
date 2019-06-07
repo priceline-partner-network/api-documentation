@@ -217,7 +217,7 @@ For example, [https://api.rezserver.com/api/hotel/getExpress.Results?refid={refi
 
 Use of this data can be considered optional, but may be useful in providing more purchasing options to your customer earlier in the path.
 
-Please see the section titled [Output Version](#T3V0cHV0IFZlcnNpb24K) for more information on the `output_version` parameter.
+Please see the section titled [Output Version](#Output-Version) for more information on the `output_version` parameter.
 
 In addition the increased number of rates, this allows us to efficiently expose multiple price points and purchasing options for the same underlying room. For example, the same King Bed room may be offered at $100 with no board, at $110 with breakfast, and at $120 with free cancellation.
 
@@ -330,7 +330,7 @@ Since new inventory that **does** support cancellation will now appear in the Un
   
 However, if you don't require a machine-readable version, a human-readable summary is provided in the `policy_data` node described above.
 
-Please see the section titled [Cancellation](#Q2FuY2VsbGF0aW9uCg==) below for more information on how to process cancellation requests.
+Please see the section titled [Cancellation](#Cancellation) below for more information on how to process cancellation requests.
 
 ```json
 "cancellation_details": {
@@ -368,7 +368,7 @@ For example, the same King Bed room may be offered at $100 with no board, at $11
 
 Use of this data can be considered optional, but may be useful in marketing purchasing options to the customer once they've chosen a room type without overwhelming them with choices.
 
-Please see the section titled [Output Version](#T3V0cHV0IFZlcnNpb24K) for more information on the `output_version` parameter.
+Please see the section titled [Output Version](#Output-Version) for more information on the `output_version` parameter.
 
 The hierarchy will move from results having a list of room/rate combinations:  
 `results` → `room_data ` → `room_{#}`  
