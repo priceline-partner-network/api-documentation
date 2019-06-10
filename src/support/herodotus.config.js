@@ -1,20 +1,28 @@
+import hero from 'assets/support/support-hero.png';
 import contact from './contact.md';
 import faq from './faq.md';
-import support from './support.md';
 import terms from './terms.md';
 
 export default {
     id: "Support",
     content: {
-        0: {
-            title: "Support",
-            created: "",
-            updated: "",
-            markdown: support,
-            author: "",
-            tags: [
-                "support"
-            ],
+        faq: {
+            title: "FAQ",
+            subtitle: "Frequently Asked Questions",
+            content: faq,
+            image: hero
+        },
+        terminology: {
+            title: "Terminology",
+            subtitle: "A list of terms used across documentation",
+            image: hero,
+            content: terms
+        },
+        contact: {
+            title: "Contact Us",
+            subtitle: "For any help!",
+            markdown: contact,
+            image: hero
         }
     }
 };
