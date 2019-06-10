@@ -1,33 +1,33 @@
-# Unified Hotel Express API Migration Guide
+# Unified Express Path Migration Guide
 
-Our new Unified Hotel Express API provides the most efficient way of distributing all available PPN inventory in a single API call.
+Our new Unified Express Path now offers all of our world class hotel inventories from a single API request.
 
-In addition, several major new features improve the ease of use of the API and expand the number of, variety of, and information on inventory we provide.
+Several new features improve usability and enhance the variety and detail of the data now supplied by our API endpoints.
 
-Some of this new functionality is optional, and some is required to recognize and accurately and effectively market and sell this new inventory.
+While some of this new functionality is optional, other elements are required in order to recognize and effectively market these amalgamated inventory types.
 
 We hope this migration guide will provide a good starting point to explain these new opportunities.
 
 ## Output Version
 
-This API update introduces a new output version (version 3) which can be used at the `Express.Results`, `Express.Contract` and `Express.MultiContract` calls.
+This API update introduces a new output version (version 3) which can be used with the `Express.Results`, `Express.Contract`, and `Express.MultiContract` requests by passing the parameter `output_version=3`.
 
-This output version brings two main improvements, both of which are breaking changes that will require development against.
+This output version brings two main improvements, both of which are breaking changes from the previous implementation of the Express path. It will require some minor development to realize these benefits.
 
 1. **Consistency**  
-   Object structures, data types, and hierarchies are now consistent between the calls.  
-   Calls increase levels of verbosity and "fill in blanks", rather than retooling the output entirely.
+   Object structures, data types, and hierarchies are now consistent between the `Express.Results`, `Express.Contract`, and `Express.MultiContract` requests.  
+   Increased verbosity as requests are chained along the path will "fill in the blanks" rather than changing the output entirely.
 2. **Better Organization**  
-   Across calls we now encourage a consistent hierarchy of hotels; a hotel having multiple rooms, and a room having multiple rates.  
-   Not only should this be simpler to process, and increase conversion by allowing more buying options earlier in the path, but it allows you to market the inventory more effectively -- allowing customers to visualize the room they're buying, and then decide on the details of the pricing/rate features in that room (cancellation policies, room and board options) that matter to them.
+   We now expose a consistent hierarchy of hotel and room data; a hotel possibly having multiple rooms, and a room possibly having multiple rates.  
+   Not only will this consistent hierarchy be simpler to process, it will increase conversion by exposing more buying options earlier in the path. It also allows you to market our inventory more effectively by allowing your customers to compare pricing and feature options available, such as different cancellation policies and board options.
    
 More details on these are provided further in this document.
-   
-Migrating into this updated structure is optional, but recommended.  
-As such, we will be defaulting all new partners (i.e. all new refids) into this structure.  
-Also, passing `output_version=3` to the `Express.Results` call will imply that output version for any future `Express.Contract` or `Express.MultiContract` call, if no other `output_version` parameter is explicitly supplied to those calls.
 
-To prevent any future regressions (for example, if your account manager provisions a new refid, it will be defaulted into the new output version and potentially not match your existing refids), it is recommended you start being explicit in your requests to `Express.Results`, `Express.Contract` and `Express.MultiContract` by sending a query parameter `output_version=1` to lock in the current response format.
+We highly recommend you migrate to our enhanced new output structure and enjoy all of the benefits it delivers.
+
+**Note:** Passing `output_version=3` to the `Express.Results` call will apply the new output structure to all further requests in the path. You do not need to explicitly use the `output_version=3` parameter in the follow-up `Express.Contract` or `Express.MultiContract` request. The output version will be determined by the bundle unless explicitly requested.
+
+To prevent any future regressions (for example, if your Account Manager provides you with a new refid, it will be defaulted into the new output version and potentially not match your existing refids), it is recommended you start being explicit in your requests to `Express.Results`, `Express.Contract`, and `Express.MultiContract` by sending the `output_version=1` parameter to lock in the legacy response format.
 
 From there, we've left the migration path completely in your control. You may start sending `output_version=3` to any of these calls at any time to test the new format and migrate at your leisure.
 
@@ -77,15 +77,15 @@ would appear as an array in `format=json2`:
 
 ## New Rate Information
 
-Calls that expose rates and rate information (`Express.Results`, `Express.Contract`, `Express.MultiContract`, `Express.Book`, and `Express.LookUp`) have been updated with several new pieces of information.
+Requests that expose rates and rate information (`Express.Results`, `Express.Contract`, `Express.MultiContract`, `Express.Book`, and `Express.LookUp`) have been updated with several new pieces of information.
 
-However, as multiple rate types are now available from a single endpoint, you may need to make business-level decisions based on some of the information below.
+As multiple rate types are now available from a single endpoint, you may need to make business-level decisions based on some of the information below.
 
 ### Commission, Distribution, Payment, and Inventory Type
 
-Calls that expose rates and rate information (`Express.Results`, `Express.Contract`, `Express.MultiContract`, `Express.Book`, and `Express.LookUp`) have been updated to indicate the `commission_type`, `distribution_type`, `payment_type`, and the `inventory_type` to inform you of the style of commission, the distribution gating rules, when payment is due, and the underlying inventory, respectively.
+Requests that expose rates and rate information (`Express.Results`, `Express.Contract`, `Express.MultiContract`, `Express.Book`, and `Express.LookUp`) have been updated to indicate the `commission_type`, `distribution_type`, `payment_type`, and the `inventory_type` to inform you of the style of commission, the distribution gating rules, when payment is due, and the underlying inventory, respectively.
 
-You should review your existing implementation and business rules for any assumptions that may have been made in the past about only a single type of inventory appearing through the Express path.
+You should review your existing implementation and business rules for any assumptions that may have been made in the past based on the single type of inventory returned through the legacy Express path.
 
 #### `commission_type`
 
@@ -217,7 +217,7 @@ For example, [https://api.rezserver.com/api/hotel/getExpress.Results?refid={refi
 
 Use of this data can be considered optional, but may be useful in providing more purchasing options to your customer earlier in the path.
 
-Please see the section titled [Output Version](#T3V0cHV0IFZlcnNpb24K) for more information on the `output_version` parameter.
+Please see the section titled [Output Version](#Output-Version) for more information on the `output_version` parameter.
 
 In addition the increased number of rates, this allows us to efficiently expose multiple price points and purchasing options for the same underlying room. For example, the same King Bed room may be offered at $100 with no board, at $110 with breakfast, and at $120 with free cancellation.
 
@@ -297,28 +297,40 @@ Use of this data can be considered optional, but may be useful in marketing the 
 }
 ```
 
-### Rate Important Information
+### Rate Policy Data
 
-The new `important_information` lists one or more paragraphs of important information about the hotel, room, or rate.
+The new `policy_data` node lists one or more paragraphs of important information about the rate.
 
-Use of this data to display this information to the customer is strongly encouraged.
+Use of this data to display this information to the customer is strongly encouraged and in some cases required. Please refer to the certification process documents provided or ask your Account Manager.
 
 ```json
-"important_information": {
-  "info_0": "This booking is Non-Refundable and cannot be amended or modified. If you fail to arrive or cancel the booking, no refund will be given.",
-  "info_1": "Free public parking is possible on site (reservation is needed)."
+"policy_data": {
+  "policy_0": {
+    "title": "Cancellation Policy",
+    "paragraph_data": {
+      "paragraph_0": "This booking is Non-Refundable and cannot be amended or modified. If you fail to arrive or cancel the booking, no refund will be given."
+    }
+  },
+  "policy_1": {
+    "title": "Hotel Parking Policy",
+    "paragraph_data": {
+      "paragraph_0": "Free public parking is possible on site (reservation is needed)."
+    }
+  }
 }
 ```
+
+**Note:** This is different from the `output_version=1` structure that had `policy_data` once at the `results` level, and `important_information` which no longer applies to all rates has been removed in `output_version=3`.
 
 ### Rate Cancellation Policies
 
 The new `cancellation_details` node provides machine-readable cancellation policy information for the rate.
 
-Since new inventory that **does** support cancellation will now appear in the Unified Hotel Express API, you are strongly encouraged to being parsing and displaying this information to the customer.
+Since new inventory that **does** support cancellation will now appear in the Unified Express Path, you are strongly encouraged to being parsing and displaying this information to the customer.
   
-However, if you don't require a machine-readable version, a human-readable summary is provided in the `important_information` node described above.
+However, if you don't require a machine-readable version, a human-readable summary is provided in the `policy_data` node described above.
 
-Please see the section titled [Cancellation](#Q2FuY2VsbGF0aW9uCg==) below for more information on how to process cancellation requests.
+Please see the section titled [Cancellation](#Cancellation) below for more information on how to process cancellation requests.
 
 ```json
 "cancellation_details": {
@@ -356,7 +368,7 @@ For example, the same King Bed room may be offered at $100 with no board, at $11
 
 Use of this data can be considered optional, but may be useful in marketing purchasing options to the customer once they've chosen a room type without overwhelming them with choices.
 
-Please see the section titled [Output Version](#T3V0cHV0IFZlcnNpb24K) for more information on the `output_version` parameter.
+Please see the section titled [Output Version](#Output-Version) for more information on the `output_version` parameter.
 
 The hierarchy will move from results having a list of room/rate combinations:  
 `results` → `room_data ` → `room_{#}`  
@@ -392,7 +404,7 @@ Each rate has its own `ppn_book_bundle` that can be used to make an `Express.Con
 
 ## Cancellation
 
-Since new inventory that **does** support cancellation will now appear in the Unified Hotel Express API, you are strongly encouraged to update your implementation to support cancellation when available.
+Since new inventory that **does** support cancellation will now appear in the Unified Express Path, you are strongly encouraged to update your implementation to support cancellation when available.
 
 ### Recognizing a Cancellable Rate from `Express.Contract` and `Express.MultiContract` 
 
@@ -461,7 +473,7 @@ The new call `Express.Cancel` is used to submit a cancel request.
 
 Before attempting to cancel, a reference to the `Express.LookUp` response should check to see that this element at `results` → `result` → `actions` → `cancel` is present.
 
-If not present, this reservation is non-cancellable (as should be reflected in the `important_information` and `cancellation_details` policy text).
+If not present, this reservation is non-cancellable (as should be reflected in the `policy_data` and `cancellation_details` policy text).
 
 If present, this encoded string should be passed into `Express.Cancel` as `ppn_bundle`.
 
@@ -477,8 +489,6 @@ curl -X POST \
 
 ## Mandatory Property Fees
 
-### Introduction
-
 Some hotel/resort properties charge guests an additional mandatory fee (or set of fees) that are separate from the total price of the stay. These fees are typically collected when the customer arrives at the hotel to check-in. There are also cases where payment for these fees is collected at the time of booking for specific rates.
 
 In the `Express.Results`, `Express.Contract`, and `Express.MultiContract` responses, a new node called `mandatory_fee_details` will provide a breakdown of these fees, if they are applicable to the rate:
@@ -487,53 +497,54 @@ In the `Express.Results`, `Express.Contract`, and `Express.MultiContract` respon
 {
   "mandatory_fee_details": {
     "source_currency": "USD",
-      "source_total": 50.00,
-      "display_currency": "USD",
-      "display_total": 50.00,
-      "breakdown": {
-        "prepaid": {
-          "source_currency": "USD",
-          "source_total": 10.00,
-          "display_currency": "USD",
-          "display_total": 10.00,
-          "breakdown": {
-            "fee_0": {
-              "type": "City Fee",
-              "description": "$5.00 USD per room per night city fee",
-              "source_currency": "USD",
-              "source_total": 10.00,
-              "display_currency": "USD",
-              "display_total": 10.00
-            }
-          }
-        },
-        "postpaid": {
-          "source_currency": "USD",
-          "source_total": 40.00,
-          "display_currency": "USD",
-          "display_total": 40.00,
-          "breakdown": {
-            "fee_0": {
-              "type": "Resort Fee",
-              "description": "$15.00 USD per room per night resort fee",
-              "source_currency": "USD",
-              "source_total": 30.00,
-              "display_currency": "USD",
-              "display_total": 30.00
-            },
-            "fee_1": {
-              "type": "Cleaning Fee",
-              "description": "$5.00 USD per room per night house service fee",
-              "source_currency": "USD",
-              "source_total": 10.00,
-              "display_currency": "USD",
-              "display_total": 10.00
-            }
+    "source_total": 50.00,
+    "display_currency": "USD",
+    "display_total": 50.00,
+    "breakdown": {
+      "prepaid": {
+        "source_currency": "USD",
+        "source_total": 10.00,
+        "display_currency": "USD",
+        "display_total": 10.00,
+        "breakdown": {
+          "fee_0": {
+            "type": "City Fee",
+            "description": "$5.00 USD per room per night city fee",
+            "source_currency": "USD",
+            "source_total": 10.00,
+            "display_currency": "USD",
+            "display_total": 10.00
           }
         }
-	}
+      },
+      "postpaid": {
+        "source_currency": "USD",
+        "source_total": 40.00,
+        "display_currency": "USD",
+        "display_total": 40.00,
+        "breakdown": {
+          "fee_0": {
+            "type": "Resort Fee",
+            "description": "$15.00 USD per room per night resort fee",
+            "source_currency": "USD",
+            "source_total": 30.00,
+            "display_currency": "USD",
+            "display_total": 30.00
+          },
+          "fee_1": {
+            "type": "Cleaning Fee",
+            "description": "$5.00 USD per room per night house service fee",
+            "source_currency": "USD",
+            "source_total": 10.00,
+            "display_currency": "USD",
+            "display_total": 10.00
+          }
+        }
+      }
+    }
   }
 }
+
 ```
 
 For mandatory fees that are to be paid when the customer checks in (`postpaid`), the total fee value will **not** be included in the total price (in `price_details`), so it would need to be communicated as a separate item outside of the total to inform the customer.

@@ -21,7 +21,7 @@ export default {
         contact: {
             title: "Contact Us",
             subtitle: "For any help!",
-            markdown: contact,
+            content: contact,
             image: hero
         }
     }

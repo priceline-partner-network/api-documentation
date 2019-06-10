@@ -13,3 +13,10 @@ should be an object that contains a unique ID found in the project.
 
 All the `herodotus.config.js` files will then be combined, transpiled, and bundled together as a library using webpack.
 The library modules are divided into files using the ID of the `herodotus.config.js` file as the filename.  
+
+Writing Documentation
+-------------------------
+
+Simply write an MD file and register it to a `herodotus.config.js` file. Every `herodotus.config.js` file acts
+as an entry point into compiling the documentation. Your project can then parse this information 
+however it wants to be display. 
