@@ -4,6 +4,7 @@ import flow from './flow.md';
 import launch from './launch.md';
 import home from './index.md';
 import unified from './unified.md';
+import cancellable from './cancellable-cug-rates.md';
 import hero from 'assets/guides/hotel-guides-hero.png';
 
 const COMMON_TAGS = [
@@ -84,6 +85,17 @@ export default {
                 "unified",
                 "launch"
             ],
+        },
+        "cancellable-cug-rates": {
+            title: "Cancellable Cug Rates",
+            image: hero,
+            content: cancellable,
+            author: "Wes Sayas",
+            tags: [
+                ...COMMON_TAGS,
+                "cancellable",
+                "rates"
+            ]
         }
     }
 };
