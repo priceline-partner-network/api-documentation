@@ -29,13 +29,13 @@ Use of this data to display this information to the customer is strongly encoura
 }
 ```
 
-**Note:** This is different from the `output_version=1` structure that had `policy_data` once at the `results` level, and `important_information` which no longer applies to all rates has been removed in `output_version=3`.
+**Note:** This is different from the `output_version=1` structure that had `policy_data` once at the `results` level, and `important_information`, which no longer applies to all rates, has been removed in `output_version=3`.
 
 ### Rate Cancellation Policies
 
 The new `cancellation_details` node provides machine-readable cancellation policy information for the rate.
 
-Since new inventory that **does** support cancellation will now appear in the Unified Express Path, you are strongly encouraged to being parsing and displaying this information to the customer.
+Since new inventory that **does** support cancellation will now appear in the Unified Express Path, you are strongly encouraged to begin parsing and displaying this information to the customer.
   
 However, if you don't require a machine-readable version, a human-readable summary is provided in the `policy_data` node described above.
 

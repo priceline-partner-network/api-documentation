@@ -10,7 +10,7 @@ Get familiar with the new unified booking path.
 ### [Booking Flows](/guides/hotel/checklist.md)
 Get familiar with the proper booking flow for your site and where to use our API data.
 
-### [Cancellation CUG Rates](/guides/hotel/cancellable-cug-rates.md)
+### [CUG Rates Cancellation](/guides/hotel/cancellable-cug-rates.md)
 PPN has closed user group rates that are cancellable. This guide will outline how to identify, display, and cancel these rates.
 
 ### [Checklist](/guides/hotel/checklist.md)

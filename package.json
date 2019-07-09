@@ -1,6 +1,6 @@
 {
   "name": "ppn-api-documentation",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Priceline Partner Network Documentation",
   "main": "build/index.js",
   "scripts": {
