@@ -4,7 +4,7 @@
 
 Get familiar with the proper booking flow for your site and where to use our API data.
 
-### [Checklist](/guides/car/launch.md)
+### [Checklist](/guides/car/checklist.md)
 
 A checklist to follow to make sure you meet the launch requirements.
 

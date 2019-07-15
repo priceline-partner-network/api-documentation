@@ -10,12 +10,12 @@ We hope this migration guide will provide a good starting point to explain these
 
 ## Output Version
 
-This API update introduces a new output version (version 3) which can be used with the `Express.Results`, `Express.Contract`, and `Express.MultiContract` requests by passing the parameter `output_version=3`.
+This API update introduces a new output version (version 3) which can be used with the `Express.Results`, `Express.Contract`, `Express.MultiContract`, and `Express.Book` requests by passing the parameter `output_version=3`.
 
 This output version brings two main improvements, both of which are breaking changes from the previous implementation of the Express path. It will require some minor development to realize these benefits.
 
 1. **Consistency**  
-   Object structures, data types, and hierarchies are now consistent between the `Express.Results`, `Express.Contract`, and `Express.MultiContract` requests.  
+   Object structures, data types, and hierarchies are now consistent between the `Express.Results`, `Express.Contract`, `Express.MultiContract`, and `Express.Book` requests.  
    Increased verbosity as requests are chained along the path will "fill in the blanks" rather than changing the output entirely.
 2. **Better Organization**  
    We now expose a consistent hierarchy of hotel and room data; a hotel possibly having multiple rooms, and a room possibly having multiple rates.  
@@ -25,9 +25,9 @@ More details on these are provided further in this document.
 
 We highly recommend you migrate to our enhanced new output structure and enjoy all of the benefits it delivers.
 
-**Note:** Passing `output_version=3` to the `Express.Results` call will apply the new output structure to all further requests in the path. You do not need to explicitly use the `output_version=3` parameter in the follow-up `Express.Contract` or `Express.MultiContract` request. The output version will be determined by the bundle unless explicitly requested.
+**Note:** Passing `output_version=3` to the `Express.Results` call will apply the new output structure to all further requests in the path. You do not need to explicitly use the `output_version=3` parameter in the follow-up `Express.Contract`, `Express.MultiContract`, or `Express.Book` request. The output version will be determined by the bundle unless explicitly requested.
 
-To prevent any future regressions (for example, if your Account Manager provides you with a new refid, it will be defaulted into the new output version and potentially not match your existing refids), it is recommended you start being explicit in your requests to `Express.Results`, `Express.Contract`, and `Express.MultiContract` by sending the `output_version=1` parameter to lock in the legacy response format.
+To prevent any future regressions (for example, if your Account Manager provides you with a new refid, it will be defaulted into the new output version and potentially not match your existing refids), it is recommended you start being explicit in your requests to `Express.Results`, `Express.Contract`, `Express.MultiContract`, and `Express.Book` by sending the `output_version=1` parameter to lock in the legacy response format.
 
 From there, we've left the migration path completely in your control. You may start sending `output_version=3` to any of these calls at any time to test the new format and migrate at your leisure.
 
@@ -253,7 +253,7 @@ Each rate has its own `ppn_bundle` that can be used to make a `Express.Contract`
 }
 ```
 
-## New Features in `Express.Contract` and `Express.MultiContract`
+## New Features in both `Express.Contract` and `Express.MultiContract`
 
 In the responses for `Express.Contract` and `Express.MultiContract`, new nodes are introduced to add additional information to some rates.
 

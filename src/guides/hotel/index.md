@@ -7,7 +7,7 @@ Use the guides below to learn how to utilize these!
 ### [Unified Flow](/guides/hotel/unified.md)
 Get familiar with the new unified booking path.
 
-### [Booking Flows](/guides/hotel/checklist.md)
+### [Booking Flows](/guides/hotel/flow.md)
 Get familiar with the proper booking flow for your site and where to use our API data.
 
 ### [CUG Rates Cancellation](/guides/hotel/cancellable-cug-rates.md)
