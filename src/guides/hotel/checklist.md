@@ -1,6 +1,6 @@
 Who is Merchant of Record?
 
-- [ ]   Priceline
+- [ ]  Priceline
 - [ ]  Partner
 
 The following items are required to be displayed on the Results page:
@@ -44,9 +44,9 @@ The following items are required to be displayed on the Contract page:
     - [ ]  Room Subtotal
     - [ ]  Total Price
  - [ ]  Important Information
-    - [ ]  MER rate info
+    - [ ]  Public rate info
     - [ ]  BKG rate info, if applicable
-    - [ ]  CUG rate info, if applicable
+    - [ ]  Private rate info, if applicable
     - [ ]  AGD rate info, if applicable
  - [ ]  Terms & Conditions
  - [ ]  Privacy Policy
@@ -73,9 +73,9 @@ The following items are required to be displayed on the Success page:
     - [ ]  Room Subtotal
     - [ ]  Total Price
 - [ ]  Important Information
-    - [ ]  MER rate info
+    - [ ]  Public rate info
     - [ ]  BKG rate info, if applicable
-    - [ ]  CUG rate info, if applicable
+    - [ ]  Private rate info, if applicable
     - [ ]  AGD rate info, if applicable
     - [ ]  The Customer Service information is included for each rate type
 - [ ]  Trip Id

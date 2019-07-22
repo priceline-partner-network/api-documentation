@@ -20,7 +20,7 @@ These documents contains screenshots for illustration purposes only. The actual 
 * The reservation holder must be 21 years of age or older.
 * There can be up to 4 rooms booked on the same reservation request (same room types only). If there aren’t enough rooms available at the time of booking, the reservation request will return an error. The card will not be charged.
 * Availability searches can be performed for 1 room type only. This is a GDS limitation, they cannot respond with how many rooms are left for a given room type. At booking time, the number of rooms will be validated. If there aren’t enough rooms, the reservation request will return an error. See Room Reservation section for more details.
-* Most major credit cards are accepted for merchant reservations. For Booking.com reservations, the hotel property sets the credit card policy and some properties may choose not to accept certain card types. The most commonly accepted credit cards are Visa, Mastercard, AMEX, Discover and Diners
+* Most major credit cards are accepted for public reservations. For Booking.com reservations, the hotel property sets the credit card policy and some properties may choose not to accept certain card types. The most commonly accepted credit cards are Visa, Mastercard, AMEX, Discover and Diners
 
 -----------
 
@@ -45,7 +45,7 @@ These documents contains screenshots for illustration purposes only. The actual 
     * There can be up to 4 rooms booked on the same reservation request (same room types only). If there aren’t enough rooms available at the time of booking, the reservation request will return an error. The card will not be charged.
 
 * Number of adults and children (guests)
-    * Merchant rates can be searched for single, double, triple or quad occupants (number of adults and number of children will be added up to determine max occupancy level). The room description must be read by the customer to determine if it fits their needs. Send the same number of occupants (adults plus children) in the booking request.
+    * Public rates can be searched for single, double, triple or quad occupants (number of adults and number of children will be added up to determine max occupancy level). The room description must be read by the customer to determine if it fits their needs. Send the same number of occupants (adults plus children) in the booking request.
 
 -----------
 
@@ -118,12 +118,12 @@ These documents contains screenshots for illustration purposes only. The actual 
 * Room Subtotal
 * Taxes and Fees
   * Must be a hyperlink which displays a pop-up or lightbox with specific legalese content about taxes and fees.
-  * For **Merchant rates**: 
+  * For **Public rates**: 
     * Display the tax and fee amounts as returned in the API. These values are determined at booking time since the customer is paying for the reservation up front. Note that there is a special “tax display logic” outlined in this document and in the technical document.
   * For **Agency rates**: 
     * To the right of the “Taxes and Fees” line the phrase “May Apply” should be displayed. Since the hotel is the merchant of record, they calculate the amount of Taxes and Fees charged at checkout time, i.e. the exact amount is not known at the time of booking. Therefore, use the phrase “May Apply”. 
 * Total Charges
-    * For **Merchant rates**: 
+    * For **Public rates**: 
         * Use the following label: “Total Charges”
     * For **Agency rates**:
         * Use the following label: “Total Estimated Hotel Charges”
@@ -172,7 +172,7 @@ These documents contains screenshots for illustration purposes only. The actual 
 
 #### Required Important Information 
 
-* All of the policies and disclosures below must be displayed to the customer on the contract page. Some items have special conditions, be sure to read each section carefully. Also, different rate types (e.g. merchant, retail, semi-opaque) have different content. Be sure to incorporate the correct logic in the code for displaying the correct content.
+* All of the policies and disclosures below must be displayed to the customer on the contract page. Some items have special conditions, be sure to read each section carefully. Also, different rate types (e.g. public, retail, semi-opaque) have different content. Be sure to incorporate the correct logic in the code for displaying the correct content.
 * Age Restriction Disclosure
   * Content for all rate types. (Example: The reservation holder must be 21 years of age or older.)
   * Note: This disclosure is absolutely required, no exceptions. It must be made obvious to the customer during the checkout process that an age requirement exists. The statement can be modified with approval from Priceline’s legal department. The age limit applies to the reservation holder, not the card holder.

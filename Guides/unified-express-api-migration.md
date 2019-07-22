@@ -119,8 +119,8 @@ This is provided as reference only, implementations should always respect the `d
 |------------------|-----------------------------------------|-----------------------------------------------|------------------------|--------------------------|
 | `AGD`            | Agoda.com supplied rates                | `PUBLIC`                                      | `COMMISSION`           | `PREPAID`                |
 | `BKG`            | Booking.com supplied rates              | `PUBLIC`                                      | `COMMISSION`           | `PREPAID` and `POSTPAID` |
-| `RCUG`           | Refundable CUG rates                    | `PRIVATE`                                     | `COMMISSION`           | `PREPAID`                |
-| `GCUG`           | Refundable and non-refundable CUG rates | `PRIVATE`                                     | `COMMISSION`           | `PREPAID` and `POSTPAID` |
+| `RCUG`           | Refundable Private rates                    | `PRIVATE`                                     | `COMMISSION`           | `PREPAID`                |
+| `GCUG`           | Refundable and non-refundable Private rates | `PRIVATE`                                     | `COMMISSION`           | `PREPAID` and `POSTPAID` |
 | `GMER`           | Additional retail rates                 | `PUBLIC`                                      | `COMMISSION`           | `PREPAID` and `POSTPAID` |
 | `PCLN`           | Priceline rates                         | `PUBLIC`, `PRIVATE`, and `FLEXBILE_BENCHMARK` | `COMMISSION` and `NET` | `PREPAID` and `POSTPAID` |
 

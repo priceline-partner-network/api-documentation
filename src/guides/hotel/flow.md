@@ -2,7 +2,7 @@ Get familiar with the proper booking flow for your site and where to use our API
 
 #### Booking a Hotel Flow
 
-##### Merchant 
+##### Public 
 
 1. [AutoSuggestV2](/documentation/hotel#/paths/~1getAutoSuggestV2/get)  
 Provide a list of suggested cities or airports based on the user's search input
@@ -19,7 +19,7 @@ Sends customer and payment information to confirm their property booking
 7. [BookDetails](/documentation/hotel#/paths/~1getBookDetailsRequest/get)  
 Retrieves the post-book details
 
-##### Closed User Group (CUG)
+##### Private
 
 1. [AutoSuggestV2](/documentation/hotel)  
 Provide a list of suggested cities or airports based on the user's search input
@@ -32,7 +32,7 @@ Passes user and payment information and responds with a success or fail
 
 #### Cancel a Booking
 
-##### Merchant
+##### Public
 
 1. [BookDetails](/documentation/hotel#/paths/~1getExpress.LookUp/post)  
 Gets the all details from the booking that was selected
@@ -41,7 +41,7 @@ Cancels a booking
 
 #### Important Tips
 
-##### Merchant
+##### Public
 
 - Rates.Live.Multi limited to 5,000 calls per hour.
 - Best practice is to leave nothing out. If a function returns it, display it.
@@ -52,7 +52,7 @@ Cancels a booking
     - Not more than 329 days in advance.
 - Always call run BookDetails after BookRequest so post-book page is displayed for the customer.
 
-##### Closed User Group (CUG)
+##### Private
 
 - Express.Results limited to 5,000 calls per hour
 - Full path *Look to Book* ratio limited to 2000:1.
@@ -62,7 +62,7 @@ Cancels a booking
     - Not more than 350 days in advance
 - ppn_bundle are not to be cached 
 - Clearly display all required information to the traveler such as: price, property_fee, taxes, Cancellation details, Important Information
-- If acting as the Merchant or Record, pass a static email address that will receive ALL correspondence related to the reservations.
+- If acting as the Merchant of Record, pass a static email address that will receive ALL correspondence related to the reservations.
 
 #### Hotel Insurance Flow - Standalone
 
