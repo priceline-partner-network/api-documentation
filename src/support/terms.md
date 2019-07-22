@@ -10,8 +10,8 @@ A flight is operated by more than one carrier.
 ## Connection
 A change of planes at an intermediate point between origin and destination with no stopover at the intermediate point. E.g. – outbound journey is from Pittsburgh to Santa Barbara. Flights operate -Pittsburgh to San Francisco - United flight 495. Connecting in San Francisco - to UA flight 6846 to Santa Barbara.
 
-## CUG
-Closed user group
+## Private Rates
+Private Rates
 
 ## Direct Flight
 A flight makes a stop at an intermediate point between origin and destination with no connection (change of planes). Typically, but not always, presented as the same flight number on all legs. E.g. - outbound journey is from Pittsburgh to Santa Barbara. Flights operate -Pittsburgh to San Francisco - United flight 495, continuing on using the same flight number and aircraft to Santa Barbara.
@@ -38,10 +38,10 @@ Many airlines enter into codeshare agreements where an airline will sell and mar
 ## Merchant of Record (MOR)    
 The company that executes the credit card transaction, ie charges the customer.
 
-## Merchant rates  
+## Public rates  
 Rates provided by the hotel that require payment at the time of purchase.
 - Agoda.com
-- Priceline.com (retail, cug/express)
+- Priceline.com (Public, Private/Express)
 
 ## Non-Stop Flight
 An itinerary with no stops between origin and destination.

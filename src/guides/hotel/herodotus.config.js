@@ -87,7 +87,7 @@ export default {
             ],
         },
         "cancellable-cug-rates": {
-            title: "Cancellable Cug Rates",
+            title: "Cancellable Private Rates",
             image: hero,
             content: cancellable,
             author: "Wes Sayas",

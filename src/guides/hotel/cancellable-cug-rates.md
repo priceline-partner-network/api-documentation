@@ -1,7 +1,7 @@
-# Guide for Cancellable CUG Rates
+# Guide for Cancellable Private Rates
 
 ### Introduction
-PPN has closed user group rates that are cancellable. This guide will outline how to identify, display, and cancel these rates.
+PPN has Private rates that are cancellable. This guide will outline how to identify, display, and cancel these rates.
 
 ### Displaying Rates
 When displaying rates to the customer, the API returns information to communicate cancel policies.
