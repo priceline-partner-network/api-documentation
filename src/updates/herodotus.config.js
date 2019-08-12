@@ -1,5 +1,6 @@
 import updates from './updates.md';
 import sandbox from './sandbox.md';
+import farefamilies from './farefamilies.md';
 
 const baseTags = [
 
@@ -31,6 +32,18 @@ export default {
             tags: [
                 ...baseTags,
                 "sandbox"
+            ]
+        },
+        2: {
+            title: "Fare Families Launch",
+            created: "",
+            updated: "",
+            summary: "",
+            content: farefamilies,
+            author: "",
+            tags: [
+                ...baseTags,
+                "Whitelabel"
             ]
         }
     }
