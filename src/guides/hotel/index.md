@@ -13,6 +13,9 @@ Get familiar with the proper booking flow for your site and where to use our API
 ### [Private Rates Cancellation](/guides/hotel/cancellable-cug-rates.md)
 PPN has Private rates that are cancellable. This guide will outline how to identify, display, and cancel these rates.
 
+### [Guest and Customer/Billing Names](/guides/hotel/guest-customer-billing-names.md)
+Get familiar with how guest names are handled by the API.
+
 ### [Checklist](/guides/hotel/checklist.md)
 A checklist to follow to make sure you meet the launch requirements.
 

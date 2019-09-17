@@ -148,6 +148,19 @@ This info may be useful in marketing the rate.
 | `MEMBER_DEALS`     | Rate is provided for customers logged in as members                                                             |
 | `GENIUS`           | Rate is provided for customers as a part of [Booking.com's Genius Program](https://www.booking.com/genius.html) |
 
+### Room IDs
+Calls that expose rates and rate information (`Express.Results`, `Express.Contract`, `Express.MultiContract`, `Express.Book`, and `Express.LookUp`)
+have been updated to indicate the `room_id` for the rate. This value represents a consistent identifier for this room type at this hotel.
+
+For example, the _king room with jacuzzi_ at a specific hotel will have a consistent `room_id` across itineraries. 
+
+**Please note**, it is __not__ to be confused with a:
+rate identifier – identifies a $120 cancellable rate for this room from Jan 1 to Jan 3.
+room type identifier – identifies _king rooms_ with _jacuzzi_ across all hotels.
+
+_* these will be provided when they become available in a future update_
+
+
 ## New Features in `Express.Results`
 
 The `Express.Results` endpoint has been updated with several new features.
@@ -406,7 +419,9 @@ Each rate has its own `ppn_book_bundle` that can be used to make an `Express.Con
 
 Since new inventory that **does** support cancellation will now appear in the Unified Express Path, you are strongly encouraged to update your implementation to support cancellation when available.
 
-### Recognizing a Cancellable Rate from `Express.Contract` and `Express.MultiContract` 
+### Recognizing a Cancellable Rate from `Express.Results`, `Express.Contract`, and `Express.MultiContract`
+
+The node `is_cancellable` is available to indicate whether a rate offers a cancellation option. This will be a boolean value.
 
 The new `cancellation_details` node provides machine-readable cancellation policy information for the rate.
 
@@ -434,6 +449,8 @@ The new `cancellation_details` node provides machine-readable cancellation polic
   }
 }
 ```
+
+When the `cancellation_details` node returns as null, it indicates that we do not have enough data to determine whether the rate is cancellable or not.
 
 ### Recognizing and Processing a Cancellation Request from `Express.Lookup`
 
