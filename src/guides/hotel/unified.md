@@ -10,12 +10,12 @@ We hope this migration guide will provide a good starting point to explain these
 
 ## Output Version
 
-This API update introduces a new output version (version 3) which can be used with the `Express.Results`, `Express.Contract`, `Express.MultiContract`, and `Express.Book` requests by passing the parameter `output_version=3`.
+This API update introduces a new output version (version 3) which can be used with the `Express.Results`, `Express.Contract`, and `Express.MultiContract` requests by passing the parameter `output_version=3`.
 
 This output version brings two main improvements, both of which are breaking changes from the previous implementation of the Express path. It will require some minor development to realize these benefits.
 
 1. **Consistency**  
-   Object structures, data types, and hierarchies are now consistent between the `Express.Results`, `Express.Contract`, `Express.MultiContract`, and `Express.Book` requests.  
+   Object structures, data types, and hierarchies are now consistent between the `Express.Results`, `Express.Contract`, and `Express.MultiContract` requests.  
    Increased verbosity as requests are chained along the path will "fill in the blanks" rather than changing the output entirely.
 2. **Better Organization**  
    We now expose a consistent hierarchy of hotel and room data; a hotel possibly having multiple rooms, and a room possibly having multiple rates.  
@@ -25,9 +25,9 @@ More details on these are provided further in this document.
 
 We highly recommend you migrate to our enhanced new output structure and enjoy all of the benefits it delivers.
 
-**Note:** Passing `output_version=3` to the `Express.Results` call will apply the new output structure to all further requests in the path. You do not need to explicitly use the `output_version=3` parameter in the follow-up `Express.Contract`, `Express.MultiContract`, or `Express.Book` request. The output version will be determined by the bundle unless explicitly requested.
+**Note:** Passing `output_version=3` to the `Express.Results` call will apply the new output structure to all further requests in the path. You do not need to explicitly use the `output_version=3` parameter in the follow-up `Express.Contract` or `Express.MultiContract` request. The output version will be determined by the bundle unless explicitly requested.
 
-To prevent any future regressions (for example, if your Account Manager provides you with a new refid, it will be defaulted into the new output version and potentially not match your existing refids), it is recommended you start being explicit in your requests to `Express.Results`, `Express.Contract`, `Express.MultiContract`, and `Express.Book` by sending the `output_version=1` parameter to lock in the legacy response format.
+To prevent any future regressions (for example, if your Account Manager provides you with a new refid, it will be defaulted into the new output version and potentially not match your existing refids), it is recommended you start being explicit in your requests to `Express.Results`, `Express.Contract`, and `Express.MultiContract` by sending the `output_version=1` parameter to lock in the legacy response format.
 
 From there, we've left the migration path completely in your control. You may start sending `output_version=3` to any of these calls at any time to test the new format and migrate at your leisure.
 
@@ -147,19 +147,6 @@ This info may be useful in marketing the rate.
 | `MOBILE_EXCLUSIVE` | Rate is provided at a discount for customers on a mobile device                                                 |
 | `MEMBER_DEALS`     | Rate is provided for customers logged in as members                                                             |
 | `GENIUS`           | Rate is provided for customers as a part of [Booking.com's Genius Program](https://www.booking.com/genius.html) |
-
-### Room IDs
-Calls that expose rates and rate information (`Express.Results`, `Express.Contract`, `Express.MultiContract`, `Express.Book`, and `Express.LookUp`)
-have been updated to indicate the `room_id` for the rate. This value represents a consistent identifier for this room type at this hotel.
-
-For example, the _king room with jacuzzi_ at a specific hotel will have a consistent `room_id` across itineraries. 
-
-**Please note**, it is __not__ to be confused with a:
-rate identifier – identifies a $120 cancellable rate for this room from Jan 1 to Jan 3.
-room type identifier – identifies _king rooms_ with _jacuzzi_ across all hotels.
-
-_* these will be provided when they become available in a future update_
-
 
 ## New Features in `Express.Results`
 
@@ -415,95 +402,6 @@ Each rate has its own `ppn_book_bundle` that can be used to make an `Express.Con
 }
 ```
 
-## Cancellation
-
-Since new inventory that **does** support cancellation will now appear in the Unified Express Path, you are strongly encouraged to update your implementation to support cancellation when available.
-
-### Recognizing a Cancellable Rate from `Express.Results`, `Express.Contract`, and `Express.MultiContract`
-
-The node `is_cancellable` is available to indicate whether a rate offers a cancellation option. This will be a boolean value.
-
-The new `cancellation_details` node provides machine-readable cancellation policy information for the rate.
-
-```json
-"cancellation_details": {
-  "cancellation_detail_0": {
-    "description": "This booking is Non-Refundable and cannot be amended or modified.",
-    "date_after": "2015-09-18T17:00:00-07:00",
-    "date_before": "2019-06-06T00:00:00-07:00",
-    "penalty_nights": 2,
-    "source_currency": "USD",
-    "source_amount": 356.28,
-    "source_tax": 0,
-    "source_processing_fee": 0,
-    "source_cancellation_fee": 0,
-    "source_refund": 0,
-    "source_total_charges": 356.28,
-    "display_currency": "USD",
-    "display_amount": 356.28,
-    "display_tax": 0,
-    "display_processing_fee": 0,
-    "display_cancellation_fee": 0,
-    "display_refund": 0,
-    "display_total_charges": 356.28
-  }
-}
-```
-
-When the `cancellation_details` node returns as null, it indicates that we do not have enough data to determine whether the rate is cancellable or not.
-
-### Recognizing and Processing a Cancellation Request from `Express.Lookup`
-
-The call `Express.LookUp` has been updated to include cancellation support.  
-
-The new element can be found at `results` → `result` → `actions` → `cancel`:
-
-```json
-{
-  "getHotelExpress.LookUp": {
-    "results": {
-      "result": {
-        ...
-        "actions": {
-          "cancel": "ABC123",
-          "resend_itinerary": "DEF456"
-        }
-      }
-    }
-  }
-}
-```
-
-When present, this node contains an encoded bundle string that can be used to submit a cancel request for that hotel reservation to the new `Express.Cancel` endpoint.
-
-Sample request:
-
-```bash
-curl -X POST \
-  https://api.rezserver.com/api/hotel/getExpress.LookUp?refid={refid}&api_key={api_key}&format=json \
-  -d 'booking_id=123&email=json@smith.com'
-```
-
-### Submitting a Cancellation to `Express.Cancel`
-
-The new call `Express.Cancel` is used to submit a cancel request.
-
-Before attempting to cancel, a reference to the `Express.LookUp` response should check to see that this element at `results` → `result` → `actions` → `cancel` is present.
-
-If not present, this reservation is non-cancellable (as should be reflected in the `policy_data` and `cancellation_details` policy text).
-
-If present, this encoded string should be passed into `Express.Cancel` as `ppn_bundle`.
-
-A successful cancellation is determined when the response contains the element `result` → `status` with the value `Cancelled`.
-
-Sample request:
-
-```bash
-curl -X POST \
-  https://api.rezserver.com/api/hotel/getExpress.Cancel?refid={refid}&api_key={api_key}&format=json \
-  -d 'ppn_bundle=ABC123'
-```
-
 ## Mandatory Property Fees
 
 Some hotel/resort properties charge guests an additional mandatory fee (or set of fees) that are separate from the total price of the stay. These fees are typically collected when the customer arrives at the hotel to check-in. There are also cases where payment for these fees is collected at the time of booking for specific rates.
@@ -581,3 +479,92 @@ In the example above, if the `price_details` reflected a subtotal of $210 with $
 | Due At Hotel      | $40      |
 
 Note that, as described above, the `prepaid` fees are calculated as a part of the total due at booking, and the `postpaid` fees are simply communicated that the hotel will collect at check-in.
+
+
+
+
+## Cancellation
+
+Since new inventory that **does** support cancellation will now appear in the Unified Express Path, you are strongly encouraged to update your implementation to support cancellation when available.
+
+### Recognizing a Cancellable Rate from `Express.Contract` and `Express.MultiContract` 
+
+The new `cancellation_details` node provides machine-readable cancellation policy information for the rate.
+
+```json
+"cancellation_details": {
+  "cancellation_detail_0": {
+    "description": "This booking is Non-Refundable and cannot be amended or modified.",
+    "date_after": "2015-09-18T17:00:00-07:00",
+    "date_before": "2019-06-06T00:00:00-07:00",
+    "penalty_nights": 2,
+    "source_currency": "USD",
+    "source_amount": 356.28,
+    "source_tax": 0,
+    "source_processing_fee": 0,
+    "source_cancellation_fee": 0,
+    "source_refund": 0,
+    "source_total_charges": 356.28,
+    "display_currency": "USD",
+    "display_amount": 356.28,
+    "display_tax": 0,
+    "display_processing_fee": 0,
+    "display_cancellation_fee": 0,
+    "display_refund": 0,
+    "display_total_charges": 356.28
+  }
+}
+```
+
+### Recognizing and Processing a Cancellation Request from `Express.Lookup`
+
+The call `Express.LookUp` has been updated to include cancellation support.  
+
+The new element can be found at `results` → `result` → `actions` → `cancel`:
+
+```json
+{
+  "getHotelExpress.LookUp": {
+    "results": {
+      "result": {
+        ...
+        "actions": {
+          "cancel": "ABC123",
+          "resend_itinerary": "DEF456"
+        }
+      }
+    }
+  }
+}
+```
+
+When present, this node contains an encoded bundle string that can be used to submit a cancel request for that hotel reservation to the new `Express.Cancel` endpoint.
+
+Sample request:
+
+```bash
+curl -X POST \
+  https://api.rezserver.com/api/hotel/getExpress.LookUp?refid={refid}&api_key={api_key}&format=json \
+  -d 'booking_id=123&email=json@smith.com'
+```
+
+### Submitting a Cancellation to `Express.Cancel`
+
+The new call `Express.Cancel` is used to submit a cancel request.
+
+Before attempting to cancel, a reference to the `Express.LookUp` response should check to see that this element at `results` → `result` → `actions` → `cancel` is present.
+
+If not present, this reservation is non-cancellable (as should be reflected in the `policy_data` and `cancellation_details` policy text).
+
+If present, this encoded string should be passed into `Express.Cancel` as `ppn_bundle`.
+
+A successful cancellation is determined when the response contains the element `result` → `status` with the value `Cancelled`.
+
+Sample request:
+
+```bash
+curl -X POST \
+  https://api.rezserver.com/api/hotel/getExpress.Cancel?refid={refid}&api_key={api_key}&format=json \
+  -d 'ppn_bundle=ABC123'
+```
+
