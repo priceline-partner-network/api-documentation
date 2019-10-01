@@ -5,39 +5,39 @@ Get familiar with the proper booking flow for your site and where to use our API
 ##### Public 
 
 1. [AutoSuggestV2](/documentation/hotel/classic#/paths/~1getAutoSuggestV2/get)  
-Provide a list of suggested cities or airports based on the user's search input
+Provide a list of suggested cities or airports based on the user's search input.
 2. [ResultsWithCacheV2](/documentation/hotel/classic#/paths/~1getResultsWithCacheV2/get)  
-Retrieve cached rates and hotel IDs based on the user's search criteria
+Retrieve cached rates and hotel IDs based on the user's search criteria.
 3. [HotelDetails](/documentation/hotel/classic#/paths/~1getHotelDetails/get) (optional)  
-Retrieve all details about the property the user has selected
+Retrieve all details about the property the user has selected.
 4. [Rates.Live.Multi](/documentation/hotel/classic#/paths/~1getRates.Live.Multi/get)  
-Displaying live property rates and availability for 1 or 2 hotel IDs
+Displaying live property rates and availability for 1 or 2 hotel IDs.
 5. [ContractRequest](/documentation/hotel/classic#/paths/~1getContractRequest/get)  
-Confirms the rate that the user has selected
+Confirms the rate that the user has selected.
 6. [BookRequest](/documentation/hotel/classic#/paths/~1getBookRequest/post)  
-Sends customer and payment information to confirm their property booking
+Sends customer and payment information to confirm their property booking.
 7. [BookDetails](/documentation/hotel/classic#/paths/~1getBookDetailsRequest/get)  
-Retrieves the post-book details
+Retrieves the post-book details and possible cancellation bundle.
+8. [CancelRequest](/documentation/hotel/classic#/paths/~1getCancelRequest/get)
+Performs the cancellation request.
+
 
 ##### Private
 
 1. [AutoSuggestV2](/documentation/hotel#/paths/~1getAutoSuggestV2/get)  
-Provide a list of suggested cities or airports based on the user's search input
+Provide a list of suggested cities or airports based on the user's search input.
 2. [Express.Results](/documentation/hotel#/paths/~1getExpress.Results/get)  
 Returns a list of up to 100 properties matching the search criteria.
-3. [Express.MultiContract](/documentation/hotel#/paths/~1getExpress.MultiContract/get) (optional)  
+3. [Express.Contract](/documentation/hotel#/paths/~1getExpress.Contract/get)  
+Confirms the single rate that the user has selected from the Express.Results response.
+4. [Express.MultiContract](/documentation/hotel#/paths/~1getExpress.MultiContract/get) (optional)  
 Returns multiple applicable rates from the property selected.
-4. [Express.Book](/documentation/hotel#/paths/~1getExpress.Book/post)  
-Passes user and payment information and responds with a success or fail
-
-#### Cancel a Booking
-
-##### Public
-
-1. [BookDetails](/documentation/hotel#/paths/~1getExpress.LookUp/post)  
-Gets the all details from the booking that was selected
-2. [CancelRequest](/documentation/hotel#/paths/~1getExpress.Cancel/get)  
-Cancels a booking
+5. [Express.Book](/documentation/hotel#/paths/~1getExpress.Book/post)  
+Passes user and payment information and responds with a success or fail.
+6. [Express.Lookup](/documentation/hotel#/paths/~1getExpress.LookUp/post)  
+Retrieves the post-book details and possible cancellation bundle.
+7. [Express.Cancel](/documentation/hotel#/paths/~1getExpress.Cancel/get)  
+Performs the cancellation request.
 
 #### Important Tips
 
