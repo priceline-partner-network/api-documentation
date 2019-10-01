@@ -4,10 +4,10 @@ Use the guides below to learn how to utilize these!
 
 ## Guides
 
-### [Unified Flow](/guides/hotel/unified.md)
+### [Unified Express Path](/guides/hotel/unified.md)
 Get familiar with the new unified booking path.
 
-### [Booking Flows](/guides/hotel/flow.md)
+### [Classic Path](/guides/hotel/flow.md)
 Get familiar with the proper booking flow for your site and where to use our API data.
 
 ### [Private Rates Cancellation](/guides/hotel/cancellable-cug-rates.md)
@@ -16,7 +16,7 @@ PPN has Private rates that are cancellable. This guide will outline how to ident
 ### [Guest and Customer/Billing Names](/guides/hotel/guest-customer-billing-names.md)
 Get familiar with how guest names are handled by the API.
 
-### [Checklist](/guides/hotel/checklist.md)
+### [Certification Checklist](/guides/hotel/checklist.md)
 A checklist to follow to make sure you meet the launch requirements.
 
 ### [Appendix](/guides/hotel/appendix.md)
