@@ -36,7 +36,7 @@ Returns multiple applicable rates from the property selected.
 Passes user and payment information and responds with a success or fail.
 6. [Express.Lookup](/documentation/hotel#/paths/~1getExpress.LookUp/post)  
 Retrieves the post-book details and possible cancellation bundle.
-7. [Express.Cancel](/documentation/hotel#/paths/~1getExpress.Cancel/get)  
+7. [Express.Cancel](/documentation/hotel#/paths/~1getExpress.Cancel/get)
 Performs the cancellation request.
 
 #### Important Tips
