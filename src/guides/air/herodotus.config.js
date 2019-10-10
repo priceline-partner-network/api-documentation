@@ -73,7 +73,7 @@ export default {
                 "requirements"
             ]
         },
-        flightsRoundTrip: {
+        "flights-round-trip": {
             title: "Flights Round Trip",
             subtitle: "",
             image: hero,
