@@ -239,7 +239,7 @@ The following rules apply:
 
 A line by line explanation of the charges the customer will receive.  Below is an example of the summary of charges section on the PPN whitelabel.
 
-![Air Summary of Charges](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/Contract%20Page%20-%20Air%20-%20Summary%20of%20Charges.png)
+![Air Summary of Charges](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/Launch%20Requirements/Contract%20Page%20-%20Air%20-%20Summary%20of%20Charges.png)
 
 #### Important Information
 Contains important disclosures that the customer must know about prior to making the purchase.  These bullets must be shown to the customer on the contract page.  The underlined words need to have a pop up box explaining the term.  The links to the pop up content are provided below and can also be found in the document titled XML Air FAQs and PopUps.
@@ -287,7 +287,7 @@ http://www.priceline.com/air_description_of_coverage
 **I agree to this purchase of `<amount><currency>`  I have read, accept and agree to the airline’s fare rules the terms and conditions and privacy policy.**
 
 Example:
-![Book Flight Now](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/Contract%20Page%20-%20Air%20-%20Book%20Flight%20Now%20Button.png)
+![Book Flight Now](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/Launch%20Requirements/Contract%20Page%20-%20Air%20-%20Book%20Flight%20Now%20Button.png)
 
 **Notes:**
 1. Dynamically populate the amount and currency code 

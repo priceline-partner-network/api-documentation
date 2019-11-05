@@ -12,7 +12,7 @@ will find:
 
 -   Reasoning behind each requirement
 
-![Flight Depart](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/FlightPathDeparting.png)
+![Flight Depart](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/Launch%20Requirements/FlightPathDeparting.png)
 
  ### 1.1 -  Total price per traveler
   
@@ -235,7 +235,7 @@ The banner (or verbiage) is displayed on the page
  
  - getAutoComplete
 
-![Flight Contract](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/Guides%20-%20Flight%20Appendix%20-%Contract.png)
+![Flight Contract](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/Launch%20Requirements/Guides%20-%20Flight%20Appendix%20-%Contract.png)
 
 
 ### 2.1 - 	Summary of Charges
@@ -459,7 +459,7 @@ The customer must agree to the price and all terms in order to book, this can be
 
 Front end change for the partner
 
-![Flight Success](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/Guides%20-%20Flight%20Appendix%20-%20Success.png)
+![Flight Success](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/Launch%20Requirements/Guides%20-%20Flight%20Appendix%20-%20Success.png)
 
 ### 3.1 - Trip Id	
 
@@ -762,7 +762,7 @@ A link to cancel or to look up the reservation (and cancel there) must be displa
 
 getFlightVoidRequest 
 
-![Flight Confirmation Email](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/Guides%20-%20Flight%20Appendix%20-%20ConfEmail.png)
+![Flight Confirmation Email](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/Launch%20Requirements/Guides%20-%20Flight%20Appendix%20-%20ConfEmail.png)
 
 
 ### 4.1 - Trip Id	
