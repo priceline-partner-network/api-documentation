@@ -13,7 +13,7 @@ will find:
 
 -   Reasoning behind each requirement
 
-![Car Results](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/Guides%20-%20Car%20Appendix%20-%20Results.png)
+![Car Results](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/Launch%20Requirements/Guides%20-%20Car%20Appendix%20-%20Results.png)
 
 
  ### 1.1 - Base rate	
@@ -111,7 +111,7 @@ A search box is accessible on the Results page
 
 - getCarAutoComplete
 
-![Car Contract](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/Guides%20-%20Car%20Appendix%20-%20Contract.png)
+![Car Contract](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/Launch%20Requirements/Guides%20-%20Car%20Appendix%20-%20Contract.png)
 
 
 ### 2.1 - Policy information
@@ -302,7 +302,7 @@ Front end change for the partner
 - \#START_ANCHOR_PREPAID#Cancellation fees#END_ANCHOR_PREPAID# pulls the 
     - "Cancellation fees" is a hyperlink
     
-![Car Success](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/Guides%20-%20Car%20Appendix%20-%20Success.png)
+![Car Success](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/Launch%20Requirements/Guides%20-%20Car%20Appendix%20-%20Success.png)
 
 
 ### 3.1 - Booking status
@@ -518,7 +518,7 @@ The driver name entered on the Contract page is displayed
 
 - getCarLookUp 
 
-![Car Confirmation Email](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/Assets/Launch%20Requirements/Guides%20-%20Car%20Appendix%20-%20ConfEmail.png)
+![Car Confirmation Email](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/Launch%20Requirements/Guides%20-%20Car%20Appendix%20-%20ConfEmail.png)
 
 ### 4.1 - Booking status
 
