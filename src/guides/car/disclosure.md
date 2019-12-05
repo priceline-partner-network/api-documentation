@@ -132,3 +132,16 @@ Here are some examples
 
 Below is a sample screenshot of front end implementation of disclosure options and informational messages to be shown.
 ![Disclosure Example of Contract Page](/Users/lbrar/Projects/api-documentation/src/assets/guides/Car-Disclosure-Advantage-Example.png)
+
+The book button should be hidden when disclosure requirements are not met and user should not be able to make a booking, but is returned with a descriptive informational message and a link to non-disclosure rates page. 
+
+Here are few examples.
+
+Please note these are the end of page screenshots, so no book button 
+
+When driver does not have a proof of round trip travel
+![Disclosure Example of Contract Page](/Users/lbrar/Projects/api-documentation/src/assets/guides/Car-disclosure-debit-no-proof-of-travel.png)
+
+
+When driver does not meet the age requirements.
+![Disclosure Example of Contract Page](/Users/lbrar/Projects/api-documentation/src/assets/guides/Car-disclosure-driver-under-age.png)
