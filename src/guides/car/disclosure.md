@@ -144,4 +144,12 @@ When driver does not have a proof of round trip travel
 
 
 When driver does not meet the age requirements.
+
 ![Disclosure Example of Contract Page](/Users/lbrar/Projects/api-documentation/src/assets/guides/Car-disclosure-driver-under-age.png)
+
+Here is an example where the disclosure requirements are met and the user is given a green light to book the car. 
+
+![Disclosure Example of Contract Page](/Users/lbrar/Projects/api-documentation/src/assets/guides/Car-disclosures-met-one.png)
+![Disclosure Example of Contract Page](/Users/lbrar/Projects/api-documentation/src/assets/guides/Car-disclosures-met-two.png)
+
+The book button is now accessible to the customer. There are no changes required for the rest of the process.
