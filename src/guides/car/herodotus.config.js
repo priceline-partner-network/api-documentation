@@ -71,6 +71,15 @@ export default {
                 "launch",
                 "requirements"
             ]
+        },
+        disclosure: {
+            title: "Merchant Disclosure Rates",
+            subtitle: "",
+            image: hero,
+            author: "Lovepreet Brar",
+            tags: [
+                ...COMMON_TAGS
+            ]
         }
     }
 };
