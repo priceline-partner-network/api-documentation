@@ -123,15 +123,15 @@ Here is an example, how the data is returned in the api response
 
 Below are some of the example how these disclosure options can be used for front end implementation.
 
-![Disclosure Options at Front End](/Users/lbrar/Projects/api-documentation/src/assets/guides/Car-Disclosure-Questions.png)
+![Disclosure Options at Front End](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/guides/Car-Disclosure-Questions.png)
 
 There are some warnings and informational messages attached to the certain options selected from the above. These informational / warning messages can be found under options as description for each disclosure returned in the api response returned.
 
 Here are some examples
-![Disclosure Messages at Front End](/Users/lbrar/Projects/api-documentation/src/assets/guides/Car-Disclosure-Warning-and-Informational-Messages.png)
+![Disclosure Messages at Front End](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/guides/Car-Disclosure-Warning-and-Informational-Messages.png)
 
 Below is a sample screenshot of front end implementation of disclosure options and informational messages to be shown.
-![Disclosure Example of Contract Page](/Users/lbrar/Projects/api-documentation/src/assets/guides/Car-Disclosure-Advantage-Example.png)
+![Disclosure Example of Contract Page](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/guides/Car-Disclosure-Advantage-Example.png)
 
 The book button should be hidden when disclosure requirements are not met and user should not be able to make a booking, but is returned with a descriptive informational message and a link to non-disclosure rates page. 
 
@@ -140,16 +140,16 @@ Here are few examples.
 Please note these are the end of page screenshots, so no book button 
 
 When driver does not have a proof of round trip travel
-![Disclosure Example of Contract Page](/Users/lbrar/Projects/api-documentation/src/assets/guides/Car-disclosure-debit-no-proof-of-travel.png)
+![Disclosure Example of Contract Page](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/guides/Car-disclosure-debit-no-proof-of-travel.png)
 
 
 When driver does not meet the age requirements.
 
-![Disclosure Example of Contract Page](/Users/lbrar/Projects/api-documentation/src/assets/guides/Car-disclosure-driver-under-age.png)
+![Disclosure Example of Contract Page](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/guides/Car-disclosure-driver-under-age.png)
 
 Here is an example where the disclosure requirements are met and the user is given a green light to book the car. 
 
-![Disclosure Example of Contract Page](/Users/lbrar/Projects/api-documentation/src/assets/guides/Car-disclosures-met-one.png)
-![Disclosure Example of Contract Page](/Users/lbrar/Projects/api-documentation/src/assets/guides/Car-disclosures-met-two.png)
+![Disclosure Example of Contract Page](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/guides/Car-disclosures-met-one.png)
+![Disclosure Example of Contract Page](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/guides/Car-disclosures-met-two.png)
 
 The book button is now accessible to the customer. There are no changes required for the rest of the process.
