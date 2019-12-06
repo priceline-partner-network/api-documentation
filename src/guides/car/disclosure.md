@@ -1,18 +1,18 @@
-#Merchant Disclosure Rates
+# Merchant Disclosure Rates
 We offer discounted prepaid merchant rates that require disclosures at the contract step of the booking flow. Once activated, these rates will appear in your result set with flags to identify them.
 
 The disclosures shown on the contract page communicate to the customer any policies surrounding topics like: Age, Security Deposit, and Rental information. These will act as a gate on your front end to ensure legitimate bookings are being made for these special rates. 
 
 
-##ResultsRequest
+## ResultsRequest
 For all of the eligible merchant rates, a flag is present in the car results as `disclosure_required`.
 
-##ResultsV3
+## ResultsV3
 ResultsV3 supports legacy output structure, where we join the prepaid and postpaid rates for one vehicle. When it comes to `disclosure_required` flag it will be set to `true` if this vehicle has a prepaid merchant rate along with a postpaid rate. 
 
 Please note that the `disclosure_required` flag is for the prepaid version of that vehicle and that does not mean that the postpaid version of this rate also needs a disclosure at the contract page.
 
-##ContractRequest
+## ContractRequest
 A new object of arrays called `disclosure_data` is added to the output.
 Here is an example, how the data is returned in the api response
 
