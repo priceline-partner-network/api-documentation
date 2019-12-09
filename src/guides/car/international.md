@@ -6,7 +6,7 @@ When a customer selects an international rate they are prompted to enter the dri
 ## Results
 A boolean flag is available in the results output called `driver_age_required` along with an output node `ancillaries` that provide the list of facilities attached to the car rate. They can be shown as follows at the front end:
 
-![Internationa_car_confirm_age](/Users/lbrar/Projects/api-documentation/src/assets/guides/International_car_listing.png)
+![Internationa_car_confirm_age](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/guides/International_car_listing.png)
 
 When a rate with `driver_age_required`=`true` is selected, a popup should be shown to confirm the driver's age.
 
@@ -16,36 +16,36 @@ _Note - The disclosure about additional fees must be provided with the age popup
 
 Example 1 for popup window:
 
-![Internationa_car_confirm_age](/Users/lbrar/Projects/api-documentation/src/assets/guides/International_car_confirm_age.png)
+![Internationa_car_confirm_age](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/guides/International_car_confirm_age.png)
 
 Example 2 for popup window:
 
-![Internationa_car_confirm_age](/Users/lbrar/Projects/api-documentation/src/assets/guides/International_car_driver_age_forth.png)
+![Internationa_car_confirm_age](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/guides/International_car_driver_age_forth.png)
 
 If the customer selects `no`, they should be prompted to enter their age.
 
 Example window 1:
 
-![Internationa_car_confirm_age](/Users/lbrar/Projects/api-documentation/src/assets/guides/International_car_driver_age_two.png)
+![Internationa_car_confirm_age](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/guides/International_car_driver_age_two.png)
 
 Example window 2:
 
-![Internationa_car_confirm_age](/Users/lbrar/Projects/api-documentation/src/assets/guides/International_car_driver_age_five.png)
+![Internationa_car_confirm_age](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/guides/International_car_driver_age_five.png)
 
 A drop down list can be provided, with the ages listed from 18 to 85:
 
-![Internationa_car_confirm_age](/Users/lbrar/Projects/api-documentation/src/assets/guides/International_car_driver_age_three.png)
+![Internationa_car_confirm_age](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/guides/International_car_driver_age_three.png)
 
 ## ContractRequest
 From the above, the customer age should be added to the ContractRequest api call using the parameter `driver_age`. Depending on the provided age an additional fee may or may not be added to the rate at the contract page. If that is the case a price increase disclosure must be provided at the top of the contract page.
 
-![Internationa_car_confirm_age](/Users/lbrar/Projects/api-documentation/src/assets/guides/International_car_price_change.png)
+![Internationa_car_confirm_age](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/guides/International_car_price_change.png)
 
 _Note - All of the additional fees added will be paid later at the counter in the local currency, and so the partial payment functionality must be supported._ 
 
 A clear difference between amount due at checkout and amount due later at the counter must be shown in the summery of charges as follows:
 
-![Internationa_car_confirm_age](/Users/lbrar/Projects/api-documentation/src/assets/guides/International_car_summary_of_charges.png)
+![Internationa_car_confirm_age](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/guides/International_car_summary_of_charges.png)
 
 When there is an amount due at the counter listed, this following disclosure must be provided right underneath the `Due at Pick-up` block
 
@@ -53,7 +53,7 @@ When there is an amount due at the counter listed, this following disclosure mus
 
 Also, the `ancillaries` node is available in the contract response, and should be shown in the details section for car as follows:
 
-![Internationa_car_confirm_age](/Users/lbrar/Projects/api-documentation/src/assets/guides/International_car_details.png)
+![Internationa_car_confirm_age](https://raw.githubusercontent.com/priceline-partner-network/api-documentation/master/src/assets/guides/International_car_details.png)
 
 If driver age is not passed for these international rates, the ContractRequest will respond with the error `2.7200.27 - Invalid drivers age.`, so it is important that these rates are identified and prompted correctly at listings.
 
