@@ -3,6 +3,7 @@ import checklist from './checklist.md';
 import flow from './flow.md';
 import launch from './launch.md';
 import home from './index.md';
+import disclosure from './disclosure.md';
 import hero from 'assets/guides/car-guides-hero.png';
 
 const COMMON_TAGS = [
@@ -76,6 +77,7 @@ export default {
             title: "Merchant Disclosure Rates",
             subtitle: "",
             image: hero,
+            content: disclosure,
             author: "Lovepreet Brar",
             tags: [
                 ...COMMON_TAGS
