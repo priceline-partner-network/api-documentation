@@ -82,6 +82,15 @@ export default {
             tags: [
                 ...COMMON_TAGS
             ]
+        },
+        international: {
+            title: "International Car Rates",
+            subtitle: "",
+            image: hero,
+            author: "Lovepreet Brar",
+            tags: [
+                ...COMMON_TAGS
+            ]
         }
     }
 };
