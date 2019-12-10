@@ -13,3 +13,6 @@ A checklist to follow to make sure you meet the launch requirements.
 Explanation of the requirements that API
 partners are required to meet in order to go-live.
 
+### [International](/guides/car/international.md)
+
+An explanation of our how international car supply functions.
