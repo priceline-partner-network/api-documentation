@@ -4,8 +4,9 @@ import flow from './flow.md';
 import launch from './launch.md';
 import home from './index.md';
 import disclosure from './disclosure.md';
-import hero from 'assets/guides/car-guides-hero.png';
+import international from './international.md'
 
+import hero from 'assets/guides/car-guides-hero.png';
 const COMMON_TAGS = [
     "guides",
     "car"
@@ -87,6 +88,7 @@ export default {
             title: "International Car Rates",
             subtitle: "",
             image: hero,
+            content: international,
             author: "Lovepreet Brar",
             tags: [
                 ...COMMON_TAGS
