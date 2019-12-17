@@ -4,7 +4,7 @@ We offer the ability to group rates into common room types. This is beneficial f
  - multi-supply partners to align room rates to their inventory suppliers
  - front-end merchandising of rate display
 
-When this feature is activated (per refid), pre-book requests that expose rates and rate information (`Express.Results`, `Express.Contract`, `Express.MultiContract`) will automatically adjust the output to have rates per room.
+When this feature is activated (per refid), pre-book requests that expose rates and rate information (`Express.Results`, `Express.Contract`, `Express.MultiContract`) will automatically adjust the output to have rates per room TYPE.
 ## Example Structure
 Here is an example of how room grouping is returned in the api response:
 
