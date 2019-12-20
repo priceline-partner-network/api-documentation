@@ -7,6 +7,7 @@ import unified from './unified.md';
 import cancellable from './cancellable-cug-rates.md';
 import hero from 'assets/guides/hotel-guides-hero.png';
 import guest from './guest-customer-billing-names.md';
+import roomID from './room-id-grouping.md';
 
 const COMMON_TAGS = [
     "guides",
@@ -102,6 +103,15 @@ export default {
             title: "Guest Customer/Billing Names",
             image: hero,
             content: guest,
+            author: "Wes Sayas",
+            tags: [
+                ...COMMON_TAGS
+            ]
+        },
+        "room-id-grouping": {
+            title: "Room ID Grouping",
+            image: hero,
+            content: roomID,
             author: "Wes Sayas",
             tags: [
                 ...COMMON_TAGS
